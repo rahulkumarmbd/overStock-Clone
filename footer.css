@@ -1,0 +1,35 @@
+#footer {
+  margin-top: 100px;
+
+  display: flex;
+  column-gap: 10px;
+  height: 500px;
+  background-color: black;
+}
+#footer > div > p {
+  margin-top: 100px;
+  width: 200px;
+  color: white;
+  font-weight: smaller;
+  font-size: 10px;
+  margin-left: 100px;
+  font-size: 20px;
+}
+#footer > div > div {
+  color: white;
+  padding: 2px;
+  margin: 2px;
+  margin-left: 100px;
+  font-size: 20px;
+  font-weight: smaller;
+}
+
+#footer > div > span {
+  font-weight: smaller;
+}
+#footer2 {
+  margin-top: 1px;
+
+  height: 50px;
+  background-color: black;
+}
