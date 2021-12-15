@@ -6,10 +6,10 @@ let errorMessage = (err) => {
   error.textContent = err;
   errorDiv.append(error);
   // clearTimeout(state);
-  let state = setTimeout(function(){
+  let state = setTimeout(function () {
     errorDiv.innerHTML = "";
     errorDiv.style.display = "none";
-  },5000)
+  }, 5000);
 };
 
 const signUpBtn = document.querySelector(".signUp button");
@@ -18,10 +18,21 @@ signUpBtn.addEventListener("click", async (e) => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("confirmPassword").value;
-  if(email === "" || password === "" || confirmPassword === "" || checkbox === false){
+  if (
+    email === "" ||
+    password === "" ||
+    confirmPassword === "" ||
+    checkbox === false
+  ) {
+    return;
+  } else if(!isEmail(email)){
+    e.preventDefault();
+    errorMessage(
+      "Email is not Valid"
+    );
     return;
   }
-  else if(password != confirmPassword) {
+  else if (password != confirmPassword) {
     e.preventDefault();
     errorMessage(
       "The passwords you have entered do not match. Please try again."
@@ -29,30 +40,36 @@ signUpBtn.addEventListener("click", async (e) => {
     return;
   } else if (password.length < 8 && password.length != 0) {
     e.preventDefault();
-    errorMessage("Password must be a minimum of 8 characters and cannot exceed 70 characters");
-    errorMessage("Password must contain at least 1 Uppercase , 1 lowercase , 1 number and 1 special Character.");
+    errorMessage(
+      "Password must be a minimum of 8 characters and cannot exceed 70 characters"
+    );
+    errorMessage(
+      "Password must contain at least 1 Uppercase , 1 lowercase , 1 number and 1 special Character."
+    );
     return;
   }
 
   let passResult = {};
-  for(let i=0; i<password.length; i++){
-    if(password.charCodeAt(i) > 64 && password.charCodeAt(i) < 90){
+  for (let i = 0; i < password.length; i++) {
+    if (password.charCodeAt(i) > 64 && password.charCodeAt(i) < 90) {
       passResult[0] = "yes1";
-    }
-    else if(password.charCodeAt(i) > 96 && password.charCodeAt(i) < 123){
+    } else if (password.charCodeAt(i) > 96 && password.charCodeAt(i) < 123) {
       passResult[1] = "yes2";
-    }
-    else if(password.charCodeAt(i) > 47 && password.charCodeAt(i) < 58){
+    } else if (password.charCodeAt(i) > 47 && password.charCodeAt(i) < 58) {
       passResult[2] = "yes3";
-    }
-    else if((password.charCodeAt(i) > 57 && password.charCodeAt(i) < 65) || (password.charCodeAt(i) > 32 && password.charCodeAt(i) < 48)){
+    } else if (
+      (password.charCodeAt(i) > 57 && password.charCodeAt(i) < 65) ||
+      (password.charCodeAt(i) > 32 && password.charCodeAt(i) < 48)
+    ) {
       passResult[3] = "yes4";
     }
   }
   console.log(passResult);
-  if(Object.keys(passResult).length != 4){
+  if (Object.keys(passResult).length != 4) {
     e.preventDefault();
-    errorMessage("Password must be a minimum of 8 characters and cannot exceed 70 characters");
+    errorMessage(
+      "Password must be a minimum of 8 characters and cannot exceed 70 characters"
+    );
     errorMessage("Password must contain at least 1 letter.");
     return;
   }
@@ -91,11 +108,10 @@ signUpBtn.addEventListener("click", async (e) => {
   });
 
   let data = await response.json();
-  console.log("data: ",data);
+  console.log("data: ", data);
   if (data.error == false) {
     errorMessage(data.message);
-  }
-  else{
+  } else {
     errorMessage(data.message);
   }
 });
@@ -105,7 +121,14 @@ const signInBtn = document.querySelector(".signIn button");
 signInBtn.addEventListener("click", async (e) => {
   const email = document.getElementById("inputEmail").value;
   const password = document.getElementById("inputPassword").value;
-  if(email === "" || password === ""){
+  if (email === "" || password === "") {
+    return;
+  }
+  else if(!isEmail(email)){
+    e.preventDefault();
+    errorMessage(
+      "Email is not Valid"
+    );
     return;
   }
   e.preventDefault();
@@ -139,12 +162,11 @@ signInBtn.addEventListener("click", async (e) => {
 
   let data = await response.json();
   console.log("data: ", data);
-  if(data.error === true){
-      errorMessage(data.message);
-  }
-  else{
-      getProfile(userName, data.token);
-      window.location.href = "landingPage.html"
+  if (data.error === true) {
+    errorMessage(data.message);
+  } else {
+    getProfile(userName, data.token);
+    window.location.href = "landingPage.html";
   }
 
   async function getProfile(username, token) {
@@ -162,6 +184,12 @@ signInBtn.addEventListener("click", async (e) => {
 
 // guest btn js
 var guest = document.querySelector(".guest button");
-guest.addEventListener("click",() => {
+guest.addEventListener("click", () => {
   window.location.href = "landingPage.html";
-})
+});
+
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
+}
