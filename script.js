@@ -50,5 +50,9 @@ function responsivewatchSlider() {
     .getElementById("nextwatch")
     .addEventListener("click", nextwatchSlide);
 }
-
+let page = (name) => {
+  var pageName = localStorage.getItem("pageName") || "";
+  localStorage.setItem("pageName", name);
+  console.log(name);
+};
 responsivewatchSlider();
