@@ -166,3 +166,46 @@ frameImg2.addEventListener("click",function(){
   frameImg2.parentElement.parentElement.setAttribute("class","frame-img2");
   previewNextSlide(5);
 })
+let filterdiv = document.querySelectorAll(".filterDiv .dropDownContainer")
+filterdiv[0].addEventListener("mouseover",function(){
+  filterdiv[0].style.display = "block";
+})
+filterdiv[1].addEventListener("mouseover",function(){
+  filterdiv[1].style.display = "block";
+})
+filterdiv[0].addEventListener("mouseout",function(){
+  filterdiv[0].style.display = "none";
+})
+filterdiv[1].addEventListener("mouseout",function(){
+  filterdiv[1].style.display = "none";
+})
+let dropDownHead = document.querySelectorAll(".filterDiv .dropDownHead");
+dropDownHead[0].addEventListener("click",function(){
+  filterdiv[0].style.display = "block";
+})
+dropDownHead[1].addEventListener("click",function(){
+  filterdiv[1].style.display = "block";
+})
+
+let navi = 0;
+let Navi = document.querySelectorAll(".navigations > div");
+Navi[0].addEventListener("click",function(){
+  if(navi != 0){
+    console.log("hello1")
+    navi--;
+  }
+
+  if(navi < 0){
+    navi = 0;
+  }
+});
+Navi[1].addEventListener("click",function(){
+  if(navi !=2 ){
+    navi++;
+    console.log("hello2");
+  }
+
+  if(navi > 2){
+    navi = 2;
+  }
+});
