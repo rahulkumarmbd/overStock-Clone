@@ -107,6 +107,7 @@ a {
 
 .cardSet {
   margin-left: 1rem;
+  margin-bottom: 1rem;
   display: grid;
   grid-gap: 1.6rem;
   grid-template-columns: 1fr 1fr 1fr;

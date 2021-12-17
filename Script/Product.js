@@ -251,3 +251,9 @@ Navi[1].addEventListener("click", function () {
     svg[0].removeAttribute("id", "tips-inpsiration-chevron")
   }
 })
+// import header from "/components/navbar.js"
+
+// document.querySelector("#navPut").innerHTML = header()
+import footer from "/components/footer.js"
+
+document.querySelector("#footerPut").innerHTML = footer()
