@@ -1015,6 +1015,7 @@ body {
 .shoping-info {
   border-radius: 3px;
   position: absolute;
+  transition: 0.6s;
 }
 .shoping-info > div {
   padding: 20px;
@@ -1035,45 +1036,77 @@ body {
   font-size: 12px;
   margin-bottom: 5px;
 }
-.shoping-info > div:nth-child(even){
-  background-color: #FAFAFA;
+.shoping-info > div:nth-child(even) {
+  background-color: #fafafa;
 }
-.shoping-info > div:hover{
-  background-color: #F5F5F5;
+.shoping-info > div:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
 }
-.shoping-info-div{
+.shoping-info-div {
   position: relative;
-  border: 1px solid #E8E8E8;
+  border: 1px solid #e8e8e8;
   height: 510px;
   overflow: hidden;
 }
-.navigations{
+.navigations {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 13px;
 }
-.navigations > div{
+.navigations > div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.navigations svg{
+.navigations svg {
   fill: #94979b;
   height: 20px;
   cursor: pointer;
   width: 20px;
 }
-.navigations-div{
+.navigations-div {
   border: 1px solid black;
   display: flex;
   justify-content: flex-end;
   padding: 15px 20px;
-  border: 1px solid #E8E8E8;
+  border: 1px solid #e8e8e8;
   border-top: none;
   border-radius: 3px;
 }
 #tips-inpsiration-chevron {
   fill: #b6b9bd;
   cursor: default;
+}
+.anchor-links > div:nth-child(1) {
+  color: #2f3337;
+  font-weight: 400;
+  margin: 20px 0px;
+  margin-top: 60px;
+  font-size: 18px;
+}
+.anchor-links > div:nth-child(2) {
+  border: 1px solid black;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: auto auto;
+  border: 1px solid #e8e8e8;
+  grid-row-gap: 4px;
+  border-radius: 3px;
+}
+.anchor-links > div a {
+  min-height: 35px;
+  padding-bottom: 4px;
+  padding-right: 10px;
+  color: #2a7ab0;
+  font-size: 12px;
+  display: block;
+  line-height: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.anchor-links > div a:hover {
+  text-decoration: underline;
 }

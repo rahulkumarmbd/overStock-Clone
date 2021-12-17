@@ -189,23 +189,42 @@ dropDownHead[1].addEventListener("click",function(){
 
 let navi = 0;
 let Navi = document.querySelectorAll(".navigations > div");
+let svg = document.querySelectorAll(".navigations > div > svg");
 Navi[0].addEventListener("click",function(){
   if(navi != 0){
-    console.log("hello1")
     navi--;
+    var shopingInfo = document.querySelector(".shoping-info")
+    if(navi == 0){
+      shopingInfo.style.transform = "translateY(-0px)";
+    }
+    else{
+      shopingInfo.style.transform = "translateY(-485px)";
+      svg[1].removeAttribute("id","tips-inpsiration-chevron")
+    }
   }
-
-  if(navi < 0){
+  if(navi <= 0){
     navi = 0;
+    svg[0].setAttribute("id","tips-inpsiration-chevron")
+    svg[1].removeAttribute("id","tips-inpsiration-chevron")
   }
 });
 Navi[1].addEventListener("click",function(){
   if(navi !=2 ){
     navi++;
-    console.log("hello2");
+    var shopingInfo = document.querySelector(".shoping-info")
+
+    if(navi == 1){
+      shopingInfo.style.transform = "translateY(-485px)";
+      svg[0].removeAttribute("id","tips-inpsiration-chevron")
+    }
+    else{
+      shopingInfo.style.transform = "translateY(-570px)";
+    }
   }
 
-  if(navi > 2){
+  if(navi >= 2){
     navi = 2;
+    svg[1].setAttribute("id","tips-inpsiration-chevron")
+    svg[0].removeAttribute("id","tips-inpsiration-chevron")
   }
 });
