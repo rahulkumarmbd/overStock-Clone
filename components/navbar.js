@@ -4,8 +4,8 @@ let header = () =>{
     return `<!--------------------------------------- header start ------------------------------------>
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src = "images/svgexport-1.png"></a>
+            <div class="container-fluid navContainer">
+              <a class="navbar-brand navBrand" href="#"><img src = "images/svgexport-1.png"></a>
               <a class="mediaImage" href = "#"><img src = "images/svgexport-1.png"></a>
               <input class = "mediaSearch icon" value placeholder="Search"/>
               <img class = "mediaCart" src = "images/Cart Empty.png"/>
@@ -18,7 +18,7 @@ let header = () =>{
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit"><img src = "images/Search-1.png"/></button>
                 </form> -->
-                <div class="input-group mb-3 d-flex">
+                <div class="input-group mb-3 d-flex navForm">
                   <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
                   <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img src = "images/Search-1.png"/></button>
                 </div>
