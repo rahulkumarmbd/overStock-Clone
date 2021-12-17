@@ -39,6 +39,8 @@ document.getElementById("productName1").textContent = cart.name
 document.getElementById(
   "productprice1"
 ).innerHTML = `<span>INR</span>${cart.price}<span>00</span>`
+document.getElementById("colorImg1").src = imagesArr[0]
+document.getElementById("colorImg2").src = imagesArr[1]
 let current = 0
 let nextBtn = document.querySelector(".slider1 > .next-arr")
 let iconSlides = document.querySelectorAll(".slider2 .iconSlides > div")
@@ -130,16 +132,12 @@ let prev = document.querySelector(".slider2 > .prev")
 let click = 0
 next.addEventListener("click", function () {
   click++
-  if (click > 2) {
-    click = 2
+  if (click > 1) {
+    click = 1
   }
 
   if (click == 1) {
-    div.style.transform = "translateX(-37.9%)"
-  }
-
-  if (click == 2) {
-    div.style.transform = "translateX(-60.7%)"
+    div.style.transform = "translateX(-7.2%)"
   }
 })
 
@@ -151,10 +149,6 @@ prev.addEventListener("click", function () {
 
   if (click == 0) {
     div.style.transform = "translateX(-0%)"
-  }
-
-  if (click == 1) {
-    div.style.transform = "translateX(-37.9%)"
   }
 })
 
@@ -172,24 +166,24 @@ frameImg2.addEventListener("mouseover", function () {
   frameImg2.addEventListener("mouseout", addImage)
 })
 
-frameImg2.addEventListener("click",function(){
-  frameImg2.removeEventListener("mouseout", addImage);
-  frameImg2.parentElement.parentElement.setAttribute("class","frame-img2");
-  frameImg1.parentElement.parentElement.setAttribute("class","frame-img1");
-  previewNextSlide(0);
+frameImg2.addEventListener("click", function () {
+  frameImg2.removeEventListener("mouseout", addImage)
+  frameImg2.parentElement.parentElement.setAttribute("class", "frame-img2")
+  frameImg1.parentElement.parentElement.setAttribute("class", "frame-img1")
+  previewNextSlide(0)
 })
 
 frameImg1.addEventListener("mouseover", function () {
-  copyImg = img.src;
-  img.src = frameImg1.src;
-  frameImg1.addEventListener("mouseout", addImage);
-});
+  copyImg = img.src
+  img.src = frameImg1.src
+  frameImg1.addEventListener("mouseout", addImage)
+})
 
-frameImg1.addEventListener("click",function(){
-  frameImg1.removeEventListener("mouseout", addImage);
-  frameImg2.parentElement.parentElement.setAttribute("class","frame-img1");
-  frameImg1.parentElement.parentElement.setAttribute("class","frame-img2");
-  previewNextSlide(5);
+frameImg1.addEventListener("click", function () {
+  frameImg1.removeEventListener("mouseout", addImage)
+  frameImg2.parentElement.parentElement.setAttribute("class", "frame-img1")
+  frameImg1.parentElement.parentElement.setAttribute("class", "frame-img2")
+  previewNextSlide(1)
 })
 let filterdiv = document.querySelectorAll(".filterDiv .dropDownContainer")
 filterdiv[0].addEventListener("mouseover", function () {
@@ -250,13 +244,13 @@ Navi[1].addEventListener("click", function () {
     svg[1].setAttribute("id", "tips-inpsiration-chevron")
     svg[0].removeAttribute("id", "tips-inpsiration-chevron")
   }
-});
+})
 
 window.addEventListener("scroll", () => {
-  var scrollable = 190;
-  var scrolled = window.scrollY;
+  var scrollable = 190
+  var scrolled = window.scrollY
   console.log(scrolled)
-});
+})
 // import header from "/components/navbar.js"
 
 // document.querySelector("#navPut").innerHTML = header()
