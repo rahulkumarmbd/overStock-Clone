@@ -203,11 +203,10 @@ a {
 }
 .offerContainer,
 .categoryContainer {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   width: 100%;
   row-gap: 1rem;
-  justify-content: space-between;
 }
 
 .offerCard {
@@ -324,10 +323,11 @@ a {
 
 .buyingGuideContent {
   grid-area: right;
+  padding-top: 2.4rem;
 }
 
 .buyingGuideTitle {
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   line-height: 2.5rem;
 }
 
@@ -335,6 +335,7 @@ a {
   color: #545658;
   font-size: 1.4rem;
   line-height: 2.1rem;
+  margin-top: 30px;
 }
 
 #btnReadMore {
@@ -436,16 +437,75 @@ a {
   html {
     font-size: 55%;
   }
+
+  .popularCategories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bannerCategory {
+    display: grid;
+    grid-gap: 1.6rem;
+    grid-template-areas: "largehero largehero miniheroes";
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featuredNav {
+    display: none;
+  }
+
+  .firstImg1 {
+    grid-area: largehero;
+    max-height: 50.8rem;
+    min-height: 50.8rem;
+    min-width: 58.8rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 68.8rem;
+  }
+  .offerContainer,
+  .categoryContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 @media (max-width: 760px) {
   html {
     font-size: 40%;
   }
-  #banner1 {
+  .popularCategories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bannerCategory {
+    display: grid;
+    grid-gap: 1.6rem;
+    grid-template-areas: "largehero";
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .imagesDiv {
     display: none;
   }
-  #bannerFirst {
-    display: block;
+  .firstImg1 {
+    grid-area: largehero;
+    max-height: 50.8rem;
+    min-height: 50.8rem;
+    max-width: 68.8rem;
+    min-width: 58.8rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .buyingGuide.buyingGuide_secondGuide {
+    grid-template-areas: "left" "right";
+  }
+
+  .buyingGuide {
+    grid-gap: 1.6rem;
+    grid-template-areas: "left" "right";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+  .offerContainer,
+  .categoryContainer {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
