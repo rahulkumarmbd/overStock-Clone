@@ -36,6 +36,10 @@ fetch(`https://overstockapi.herokuapp.com/page/${pageName}`)
     document.getElementById("img2").setAttribute("src", data.img2)
     appendCategories(data.catergory)
     appendMoreCategories(data.moreCategory)
+    setTimeout(function () {
+      document.getElementById("loaderSS").style.display = "none"
+      document.getElementById("compo").style.display = "block"
+    }, 3000)
   })
 
 var appendCategories = (data) => {

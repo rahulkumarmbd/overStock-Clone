@@ -41,6 +41,12 @@ document.getElementById(
 ).innerHTML = `<span>INR</span>${cart.price}<span>00</span>`
 document.getElementById("colorImg1").src = imagesArr[0]
 document.getElementById("colorImg2").src = imagesArr[1]
+
+setTimeout(function () {
+  document.getElementById("loaderSS").style.display = "none"
+  document.getElementById("compo").style.display = "block"
+}, 3500)
+
 let current = 0
 let nextBtn = document.querySelector(".slider1 > .next-arr")
 let iconSlides = document.querySelectorAll(".slider2 .iconSlides > div")

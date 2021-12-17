@@ -6,6 +6,9 @@ body {
   margin: auto;
   overflow-x: hidden;
 }
+#compo {
+  display: none;
+}
 .Product {
   width: 89%;
   margin: auto;
