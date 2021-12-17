@@ -1,15 +1,15 @@
 
 /* container Section */
-.container-fluid{
+.navContainer{
         height: 5rem;
         background-color: #fff;
 }
-.navbar-brand{
+.navBrand{
     font-size: 2.12rem;
     margin-left: 1%;
     margin-bottom: 0.31rem;
 }
-.navbar-brand > img {
+.navBrand > img {
    width: 100%;
    height: 2.2rem;
 }
@@ -25,47 +25,47 @@
 }
 
 /* Search bar */
-.d-flex {
+.navForm {
     width: 80%;
     margin-left: 1%;
     height: 2.2rem;
     margin-top: 1.5%;
 }
-.d-flex > button{
+.navForm > button{
    width : 5%;
    border: none;
    background-color: red;
    /* padding-left: 0%; */
    height: 2.12rem;
 }
-.d-flex > input{
+.navForm > input{
    margin-right: 0rem;
    background-color: #f9fafb; 
    height: 2.12rem;
 }
 
-.nav-item {
+.navList {
    margin-left: 10%;
 }
-.nav-item > img{
+.navList > img{
 
     margin-left: 0.62rem;
     padding-top: 0.93rem;
 
 }
 
-.nav-item > a{
+.navList > a{
 
  padding-top: 0px;
  font-size: 0.875rem;
 
 }
 
-ul{
+.navUl{
  margin-left: 1%;
 }
 
-.d-flex > button > img {
+.navForm > button > img {
      
     padding-bottom: 0.25rem;
 }
@@ -83,7 +83,7 @@ ul{
   background-color: #fff;
 }
 
-nav{
+.headerNavbar{
  display : flex;
  flex-direction: column;
  
@@ -445,11 +445,11 @@ nav{
  }
 
 
-  @media (max-width: 998px) {
+  /* @media (max-width: 998px) {
         html {
             font-size: 88%;
         }
-    }
+    } */
     
     @media (max-width: 990px) {
         html {

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "images",
+			"path": "..\\..\\..\\..\\..\\navbar\\images"
+		},
+		{
+			"name": "FW13-CW-T-52-OverStock-Clone",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "FW13-CW-T-52-OverStock-Clone"
+	}
+}
