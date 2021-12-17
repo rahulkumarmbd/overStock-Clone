@@ -145,7 +145,7 @@ body {
   font-size: 22px;
 }
 .item-info {
-  width: 67%;
+  width: 100%;
 }
 .item-info .price {
   display: flex;
