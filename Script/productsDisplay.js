@@ -1,6 +1,9 @@
 var pageName = localStorage.getItem("productsPageName") || ""
 var nn = pageName
 console.log(nn)
+
+var cart = JSON.parse(localStorage.getItem("Items")) || {}
+
 document.getElementById("headingResult").textContent = nn
 fetch(`https://overstockapi.herokuapp.com/products/category=${nn}`)
   .then((response) => {
@@ -28,8 +31,6 @@ var appendCard = (data) => {
     let div = document.createElement("div")
     let productCardLink = document.createElement("a")
     productCardLink.setAttribute("class", "productCardLink")
-    productCardLink.setAttribute("href", "")
-    productCardLink.setAttribute("target", "_blank")
     let productCard = document.createElement("div")
     productCard.setAttribute("class", "productCard")
     let productCardFrontMain = document.createElement("div")
@@ -129,6 +130,12 @@ var appendCard = (data) => {
     productCardLink.append(productCard)
     div.append(productCardLink)
     productCardContainer.append(div)
+    productCardContainer.addEventListener("click", function (event) {
+      event.preventDefault()
+      localStorage.setItem("Items", JSON.stringify(item))
+      window.open("Product.html")
+    })
+
     document.getElementById("displayCard").append(productCardContainer)
   })
 }
