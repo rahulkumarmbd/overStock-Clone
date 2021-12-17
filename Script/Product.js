@@ -141,19 +141,6 @@ function addImage(){
   img.src = copyImg;
 }
 
-frameImg1.addEventListener("mouseover", function () {
-  copyImg = img.src;
-  img.src = frameImg1.src;
-  frameImg1.addEventListener("mouseout", addImage);
-});
-
-frameImg1.addEventListener("click",function(){
-  frameImg1.removeEventListener("mouseout", addImage);
-  frameImg1.parentElement.parentElement.setAttribute("class","frame-img2");
-  frameImg2.parentElement.parentElement.setAttribute("class","frame-img1");
-  previewNextSlide(0);
-})
-
 frameImg2.addEventListener("mouseover", function () {
   copyImg = img.src;
   img.src = frameImg2.src;
@@ -162,8 +149,21 @@ frameImg2.addEventListener("mouseover", function () {
 
 frameImg2.addEventListener("click",function(){
   frameImg2.removeEventListener("mouseout", addImage);
-  frameImg1.parentElement.parentElement.setAttribute("class","frame-img1");
   frameImg2.parentElement.parentElement.setAttribute("class","frame-img2");
+  frameImg1.parentElement.parentElement.setAttribute("class","frame-img1");
+  previewNextSlide(0);
+})
+
+frameImg1.addEventListener("mouseover", function () {
+  copyImg = img.src;
+  img.src = frameImg1.src;
+  frameImg1.addEventListener("mouseout", addImage);
+});
+
+frameImg1.addEventListener("click",function(){
+  frameImg1.removeEventListener("mouseout", addImage);
+  frameImg2.parentElement.parentElement.setAttribute("class","frame-img1");
+  frameImg1.parentElement.parentElement.setAttribute("class","frame-img2");
   previewNextSlide(5);
 })
 let filterdiv = document.querySelectorAll(".filterDiv .dropDownContainer")
@@ -227,4 +227,10 @@ Navi[1].addEventListener("click",function(){
     svg[1].setAttribute("id","tips-inpsiration-chevron")
     svg[0].removeAttribute("id","tips-inpsiration-chevron")
   }
+});
+
+window.addEventListener("scroll", () => {
+  var scrollable = 190;
+  var scrolled = window.scrollY;
+  console.log(scrolled)
 });
