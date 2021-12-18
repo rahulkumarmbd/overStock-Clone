@@ -6,7 +6,7 @@ let header = () =>{
       <div type="button"
       data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasExample"
-      aria-controls="offcanvasExample" class="btn sdfasf menupng"><img src="https://i.postimg.cc/9F9jVtWk/Menu.png" alt=""></div>
+      aria-controls="offcanvasExample" class="menupng"><img src="https://i.postimg.cc/9F9jVtWk/Menu.png" alt=""></div>
       <div class="overStlogo"><img src="https://i.postimg.cc/tgcjprVL/Overstock-Logo.png" alt=""></div>
       <div class="overstocklogo">
         <img src="https://i.postimg.cc/0yCKC2SV/svgexport-1.png" alt="" />
