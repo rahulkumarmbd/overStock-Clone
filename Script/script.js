@@ -56,6 +56,8 @@ window.page = (name) => {
 
 // document.querySelector("#navPut").innerHTML = header()
 import footer from "/components/footer.js"
+import mobileNav from "/components/mobilenav.js"
 
+document.querySelector("#mobilePtn").innerHTML = mobileNav()
 document.querySelector("#footerPut").innerHTML = footer()
 responsivewatchSlider()
