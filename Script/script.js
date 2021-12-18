@@ -52,12 +52,30 @@ window.page = (name) => {
   console.log(name)
   window.location.href = "category.html"
 }
-// import header from "/components/navbar.js"
+import header from "/components/navbar.js"
 
-// document.querySelector("#navPut").innerHTML = header()
+document.querySelector("#navPut").innerHTML = header()
 import footer from "/components/footer.js"
 import mobileNav from "/components/mobilenav.js"
 
 document.querySelector("#mobilePtn").innerHTML = mobileNav()
 document.querySelector("#footerPut").innerHTML = footer()
 responsivewatchSlider()
+
+for(let i=0; i<13; i++){
+  let sectionDiv = document.querySelectorAll(".section-div > div");
+  sectionDiv[i].addEventListener("mouseover", function () {
+    let dropDownContainer = document.querySelectorAll(".dropdown-content-part");
+    dropDownContainer[i].style.display = "flex";
+  });
+  sectionDiv[i].addEventListener("mouseout", function () {
+    let dropDownContainer = document.querySelectorAll(".dropdown-content-part");
+    dropDownContainer[i].style.display = "none";
+    dropDownContainer[i].addEventListener("mouseover", function () {
+      dropDownContainer[i].style.display = "flex";
+    });
+    dropDownContainer[i].addEventListener("mouseout", function () {
+      dropDownContainer[i].style.display = "none";
+    });
+  });
+}

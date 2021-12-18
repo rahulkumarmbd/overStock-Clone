@@ -1,1119 +1,1023 @@
 
 let header = () =>{
 
-    return `<!--------------------------------------- header start ------------------------------------>
-    <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid navContainer">
-              <a class="navbar-brand navBrand" href="#"><img src = "images/svgexport-1.png"></a>
-              <a class="mediaImage" href = "#"><img src = "images/svgexport-1.png"></a>
-              <input class = "mediaSearch icon" value placeholder="Search"/>
-              <img class = "mediaCart" src = "images/Cart Empty.png"/>
-              <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span> -->
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!------------------------------ Search bar ---------------------------------->
-                <!-- <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit"><img src = "images/Search-1.png"/></button>
-                </form> -->
-                <div class="input-group mb-3 d-flex navForm">
-                  <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img src = "images/Search-1.png"/></button>
-                </div>
-                <!--------------------------- side drop down ---------------------------------->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item" id = "dropdown">
-                      <img  class = "img1" src = "images/User.png"/>
-                      <a class="nav-link active" id="dropbtn" aria-current="page" href="#">Account</a>
-                        <div id="dropdown-content">
-                          <a href="">My Accounts</a>
-                          <a href="">My Orders</a>
-                          <a href="">My Reviews</a>
-                          <a href="">Gift Cards</a>
-                          <a href="">Help</a>
-                          <div></div>
-                          <a class = "logout" href="#">Signout</a>
-                      </div>
-  
-  
-                    </li>
-                    <li class="nav-item" id = "dropdown">
-                        <img class = "img2" src = "images/Heart.png"/>
-                        <a class="nav-link active" id="dropbtn" aria-current="page" href="#">&nbsp;&nbsp;Lists</a>
-                        <div id="dropdown-content" class = "drdown">
-                          <a href="">Favorites</a>
-                          <a href="">Save for Later</a>
-                          <div></div>
-                          <a class = "logout" href="#">View All my Lists</a>
-                          <a href="">Find a Lists</a>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                       <img src = "images/Cart Empty.png"/>
-                        <a class="nav-link active" aria-current="page" href="#">Cart</a>
-                      </li>
-                  </ul>
-              </div>
+    return `<div class="header">
+    <div>
+      <div class="menupng"><img src="https://i.postimg.cc/9F9jVtWk/Menu.png" alt=""></div>
+      <div class="overStlogo"><img src="https://i.postimg.cc/tgcjprVL/Overstock-Logo.png" alt=""></div>
+      <div class="overstocklogo">
+        <img src="https://i.postimg.cc/0yCKC2SV/svgexport-1.png" alt="" />
+      </div>
+      <div class="class-input">
+        <div>
+          <input type="text" placeholder="Search" />
+        </div>
+        <div>
+          <img src="https://i.postimg.cc/tgWqzB8p/Search-1.png alt="">
+        </div>
+      </div>
+      <div class="class-account class-account-common">
+        <div>
+          <img src="https://i.postimg.cc/RCb3PDNz/User.png" alt="" />
+        </div>
+        <div>Account</div>
+        <div class="chevronup">
+          <img src="https://i.postimg.cc/DZHpvK2K/Chevron-Up.png" alt="" />
+        </div>
+        <div class="account-dropdown-content">
+          <div>My Account</div>
+          <div>My Orders</div>
+          <div>My Reviews</div>
+          <div>Gift Cards</div>
+          <div>Help</div>
+          <div>Sign Out</div>
+        </div>
+      </div>
+      <div class="class-account class-account-common">
+        <div>
+          <img src="https://i.postimg.cc/B6TrjykP/Heart.png" alt="" />
+        </div>
+        <div>Lists</div>
+        <div class="chevronup">
+          <img src="https://i.postimg.cc/DZHpvK2K/Chevron-Up.png" alt="" />
+        </div>
+        <div class="account-dropdown-content" style="right: -100%">
+          <div>Favorites</div>
+          <div>Save for Later</div>
+          <div>View All My Lists</div>
+          <div>Find a List</div>
+        </div>
+      </div>
+      <div class="class-account">
+        <div>
+          <img src="https://i.postimg.cc/DyZNh8vX/Cart-Empty.png" alt="" />
+        </div>
+        <div>Cart</div>
+      </div>
+    </div>
+    <div class="section-div">
+      <div>Furniture</div>
+      <div>Rugs</div>
+      <div>Decor</div>
+      <div>Bed & Bath</div>
+      <div>Home Improvement</div>
+      <div>Kitchen</div>
+      <div>Outdoor</div>
+      <div>Jewelry</div>
+      <div>Lighting</div>
+      <div>Kids & Baby</div>
+      <div>More</div>
+      <div>Holiday & Gifts</div>
+      <div>Sales & Deals</div>
+    </div>
+    <div class="dropdown-content-main dropdown-content-part">
+      <div>
+        <div>
+          <div class="dark-div">Living Room Furniture</div>
+          <div>Sofas & Couches</div>
+          <div>Sectionals</div>
+          <div>Benches</div>
+          <div>Ottomans & Poufs</div>
+          <div>Accent Chairs</div>
+          <div>Recliners</div>
+          <div>Coffee & Accent Tables</div>
+          <div>TV Stands</div>
+        </div>
+        <div>
+          <div class="dark-div">Patio & Outdoor Furniture</div>
+          <div>Patio Furniture Sets</div>
+          <div>Sofas, Chairs & Sectionals</div>
+          <div>Dining Sets</div>
+          <div>Coffee & Side Tables</div>
+          <div>Chaise Lounges</div>
+          <div>Adirondack Chairs</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Bedroom Furniture</div>
+          <div>Beds</div>
+          <div>Bedroom Sets</div>
+          <div>Headboards</div>
+          <div>Bed Frames</div>
+          <div>Dressers & Chests</div>
+          <div>Nightstands</div>
+          <div>Armoires & Wardrobes</div>
+          <div>Mattresses</div>
+          <div>Kids Beds</div>
+        </div>
+        <div>
+          <div class="dark-div">Office Furniture</div>
+          <div>Desks</div>
+          <div>Office Chairs</div>
+          <div>Small Space Desks</div>
+          <div>Office Shelves & Storage</div>
+          <div>File Cabinets</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Dining, Kitchen & Bar</div>
+          <div>Kitchen & Dining Sets</div>
+          <div>Kitchen & Dining Chairs</div>
+          <div>Kitchen & Dining Tables</div>
+          <div>Counter & Bar Stools</div>
+          <div>Bar Tables</div>
+          <div>Buffets & Sideboards</div>
+          <div>Home Bars</div>
+          <div>Kitchen Islands & Carts</div>
+          <div>Kitchen Furniture</div>
+        </div>
+        <div>
+          <div class="dark-div">More</div>
+          <div>Entryway</div>
+          <div>Bathroom</div>
+          <div>Home Gym</div>
+          <div>Rec Room</div>
+          <div>Small Space Living</div>
+        </div>
+      </div>
+      <div>
+        <div class="dropdown-img-cont">
+          <div>
+            <img
+              src="https://ak1.ostkcdn.com/images/products/is/images/direct/3a6dcd1fee11be0b04bbd63a725ac507e0b95afc/Warrenton-Boho-Handcrafted-2-Door-Acacia-Wood-Sideboard-by-Christopher-Knight-Home.jpg?imwidth=320"
+              alt=""
+            />
+          </div>
+          <div>extra 15% off</div>
+          <div>Select Furniture by Christopher Knight*</div>
+        </div>
+        <div>
+          <div class="dark-div">More Ways to Shop</div>
+          <div class="red-div">Featured Sales</div>
+          <div class="red-div">New Arrivals</div>
+          <div class="red-div">Clearance</div>
+          <div class="red-div">Furniture Advice</div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-content-main dropdown-content-part">
+      <div>
+        <div>
+          <div class="dark-div">Area Rugs</div>
+          <div>3'x5'</div>
+          <div>4'x6'</div>
+          <div>5'x8'</div>
+          <div>6'x9'</div>
+          <div>7'x9'</div>
+          <div>8'x10'</div>
+          <div>9'x12'</div>
+          <div>10'x14'</div>
+        </div>
+        <div>
+          <div class="dark-div">One of a Kind Rugs</div>
+          <div>3'x5'</div>
+          <div>4'x6'</div>
+          <div>5'x8'</div>
+          <div>6'x9'</div>
+          <div>7'x9'</div>
+          <div>8'x10'</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Rug Pads</div>
+          <div>5'x8'</div>
+          <div>6'x9'</div>
+          <div>8'x10'</div>
+          <div>9'x12'</div>
+          <div>10'x14'</div>
+          <div>Non-Slip</div>
+          <div>Round</div>
+          <div>Runner</div>
+        </div>
+        <div>
+          <div class="dark-div">Runner Rugs</div>
+          <div>6'</div>
+          <div>8'</div>
+          <div>10'</div>
+          <div>12'</div>
+          <div>14'</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Rugs by Type</div>
+          <div>Shag Rugs</div>
+          <div>Outdoor Rugs</div>
+          <div>Handmade Rugs</div>
+          <div>Washable Rugs</div>
+          <div>Kids & Tweens Rugs</div>
+          <div>Doormats</div>
+          <div>Stair Treads</div>
+          <div>Kitchen Rugs & Mats</div>
+        </div>
+        <div>
+          <div class="dark-div">Area Rugs by Shape</div>
+          <div>Round</div>
+          <div>Rectangle</div>
+          <div>Runner</div>
+          <div>Square</div>
+          <div>Oval</div>
+        </div>
+      </div>
+      <div>
+        <div class="dropdown-img-cont">
+          <div>
+            <img
+              src="https://ak1.ostkcdn.com/images/products/is/images/direct/38c737152d4da3fc898a3dd5435bbe6513bb87ea/SAFAVIEH-Handmade-Luxe-Shag-Bahija-Solid-Polyester-Rug.jpg"
+              alt=""
+            />
+          </div>
+          <div>extra 15% off</div>
+          <div>Select Rugs*</div>
+        </div>
+        <div>
+          <div class="dark-div">More Ways to Shop</div>
+          <div class="red-div">Featured Sales</div>
+          <div class="red-div">New Arrivals</div>
+          <div class="red-div">Clearance</div>
+          <div class="red-div">Rugs Advice</div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-content-main dropdown-content-part">
+      <div>
+        <div>
+          <div class="dark-div">Mirrors</div>
+          <div>Wall Mirrors</div>
+          <div>Bathroom Vanity Mirrors</div>
+          <div>Floor Mirrors</div>
+          <div>Full Length Mirrors</div>
+          <div>Rectangular Mirrors</div>
+          <div>Round Mirrors</div>
+          <div>Window Mirrors</div>
+          <div>Mirror Sets</div>
+        </div>
+        <div>
+          <div class="dark-div">Art Gallery</div>
+          <div>Gallery Wrapped Canvas</div>
+          <div>Canvas Art</div>
+          <div>Framed Prints</div>
+          <div>Unframed Prints</div>
+          <div>Metal Art</div>
+          <div>Wood wall Art</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Decorative Accessories</div>
+          <div>Indoor Fireplaces</div>
+          <div>Outdoor Decor</div>
+          <div>Accent Pieces</div>
+          <div>Silk Plants</div>
+          <div>Candles & Holders</div>
+          <div>Vases</div>
+          <div>Room Dividers</div>
+          <div>Photo Frames & Albums</div>
+          <div>Planters,Hangers & Stands</div>
+        </div>
+        <div>
+          <div class="dark-div">Window Treatments</div>
+          <div>Curtains & Drapes</div>
+          <div>Blinds & Shades</div>
+          <div>Curtain Rods & Hardware</div>
+          <div>Sheer Curtains</div>
+          <div>Blackout Curtains</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Wall Decor</div>
+          <div>Wall Sculptures</div>
+          <div>Decorative Shelves</div>
+          <div>Wall Tapestries</div>
+          <div>Clocks</div>
+          <div>Wall Decals</div>
+          <div>Acrylic Wall Art</div>
+        </div>
+        <div>
+          <div class="dark-div">Throw Pillows</div>
+          <div>Accent Pillows</div>
+          <div>Outdoor Pillows</div>
+          <div>Floor Pillows</div>
+          <div>Poufs</div>
+          <div>Pillow Covers</div>
+          <div>Bed Rest</div>
+        </div>
+      </div>
+      <div>
+        <div class="dropdown-img-cont">
+          <div>
+            <img
+              src="https://ak1.ostkcdn.com/images/products/23545904/24-Mixed-Spruce-Christmas-Wreath-50-Warm-White-LED-Lights-Frosted-Branches-Red-Berries-Pinecones-by-Christopher-Knight-Home-2da73100-4fe7-4742-ab34-6322fc7eed04_320.jpg"
+              alt=""
+            />
+          </div>
+          <div>extra 15% off</div>
+          <div>Select Rugs*</div>
+        </div>
+        <div>
+          <div class="dark-div">More Ways to Shop</div>
+          <div class="red-div">Featured Sales</div>
+          <div class="red-div">New Arrivals</div>
+          <div class="red-div">Clearance</div>
+          <div class="red-div">Decor Advice</div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-content-main dropdown-content-part">
+      <div>
+        <div>
+          <div class="dark-div">Bedding</div>
+          <div>Comforter Sets</div>
+          <div>Duvet Covers</div>
+          <div>Bed-in-a-Bag</div>
+          <div>Quilts & Coverlets</div>
+          <div>Blankets & Throws</div>
+          <div>Bedspreads</div>
+        </div>
+        <div>
+          <div class="dark-div">Bath & Towels</div>
+          <div>Shower Curtains</div>
+          <div>Towels</div>
+          <div>Bath Rugs & Mats</div>
+          <div>Bath Accessories</div>
+          <div>Bath Robes</div>
+          <div>Kids Bath</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Bedding Basics</div>
+          <div>Sheets & Pillowcases</div>
+          <div>Mattress Pads & Toppers</div>
+          <div>Comforters & Duvet Inserts</div>
+          <div>Pillows</div>
+          <div>Cotton Bedding</div>
+        </div>
+        <div>
+          <div class="dark-div">Kids Bedding</div>
+          <div>Kids Sheets</div>
+          <div>Kids Comforter Sets</div>
+          <div>Kids Bed-in-a-Bag</div>
+          <div>Kids Quilts</div>
+          <div>Kids Bed Tents & Canopies</div>
+          <div>Kids Mattresses</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Mattresses</div>
+          <div>Twin</div>
+          <div>Twin XL</div>
+          <div>Full</div>
+          <div>Queen</div>
+          <div>King</div>
+          <div>California King</div>
+          <div>Air Mattresses</div>
+          <div>Mattresses in a Box</div>
+        </div>
+        <div>
+          <div class="dark-div">Bathroom Furniture</div>
+          <div>Bathroom Vanities</div>
+          <div>Bathroom Vanity Mirrors</div>
+          <div>Bathroom Sinks</div>
+          <div>Bathroom Faucets</div>
+          <div>Bathroom Cabinets</div>
+        </div>
+      </div>
+      <div>
+        <div class="dropdown-img-cont">
+          <div>
+            <img
+              src="https://ak1.ostkcdn.com/images/products/27799771/Madison-Park-Signature-Urban-Cabin-Brown-Cotton-Jacquard-Comforter-Set-e747cc3a-7a09-4642-bd6c-de46de63aaee_320.jpg"
+              alt=""
+            />
+          </div>
+          <div>extra 15% off</div>
+          <div>Select Rugs*</div>
+        </div>
+        <div>
+          <div class="dark-div">More Ways to Shop</div>
+          <div class="red-div">Featured Sales</div>
+          <div class="red-div">New Arrivals</div>
+          <div class="red-div">Clearance</div>
+          <div class="red-div">Bedding Advice</div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-content-main dropdown-content-part">
+      <div>
+        <div>
+          <div class="dark-div">Kitchen</div>
+          <div>Ranges & Ovens</div>
+          <div>Refrigerators</div>
+          <div>Kitchen Carts & Islands</div>
+          <div>Kitchen Sinks</div>
+          <div>Kitchen Faucets</div>
+          <div>Kitchen Cabinets</div>
+          <div>Backsplash</div>
+        </div>
+        <div>
+          <div class="dark-div">Flooring & Wall</div>
+          <div>Tile</div>
+          <div>Laminate Flooring</div>
+          <div>Vinyl Flooring</div>
+          <div>Hardwood Flooring</div>
+          <div>Wallpaper</div>
+          <div>Wall Tiles</div>
+          <div>Ceiling Tiles</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Bathroom</div>
+          <div>Bathroom Vanities</div>
+          <div>Bathroom Vanity Mirrors</div>
+          <div>Bathroom Sinks</div>
+          <div>Bathroom Faucets</div>
+          <div>Bathroom Cabinets</div>
+          <div>Tubs</div>
+          <div>Showers</div>
+          <div>Toilets</div>
+        </div>
+        <div>
+          <div class="dark-div">Home Essentials</div>
+          <div>Vacuums & Floorcare</div>
+          <div>Heating & Cooling</div>
+          <div>Air Quality</div>
+          <div>Sewing Machines</div>
+          <div>Cratt Machines</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Storage & Organization</div>
+          <div>Outdoor Storage</div>
+          <div>Laundry Room</div>
+          <div>Garage Storage</div>
+          <div>Decorative Storage</div>
+          <div>Closet Organizers</div>
+          <div>Kitchen & Pantry</div>
+          <div>Cabinets</div>
+          <div>Furniture Storage</div>
+          <div>Safes</div>
+        </div>
+        <div></div>
+      </div>
+      <div>
+        <div class="dropdown-img-cont">
+          <div>
+            <img
+              src="https://ak1.ostkcdn.com/images/products/is/images/direct/8ae6687667c075d1d993a7673053bbbf74e0ba26/Louise-48in-Bath-Vanity.jpg"
+              alt=""
+            />
+          </div>
+          <div>extra 15% off</div>
+          <div>Select Home Improvement*</div>
+        </div>
+        <div>
+          <div class="dark-div">More Ways to Shop</div>
+          <div class="red-div">Featured Sales</div>
+          <div class="red-div">New Arrivals</div>
+          <div class="red-div">Clearance</div>
+          <div class="red-div">Home Improvement Advice</div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-content-main dropdown-content-part">
+      <div>
+        <div>
+          <div class="dark-div">Dinnerware</div>
+          <div>Dinnerware Sets</div>
+          <div>Formal Dinnerware</div>
+          <div>Plates</div>
+          <div>Bowls</div>
+          <div>Cups & Saucers</div>
+          <div>Mugs</div>
+          <div>Flatware</div>
+          <div>Tumblers</div>
+          <div>Glasses & Barware</div>
+        </div>
+        <div>
+          <div class="dark-div">Cookware & Bakeware</div>
+          <div>Cookware Sets</div>
+          <div>Pots & Pans</div>
+          <div>Specialty Cookware</div>
+          <div>Grill Pans & Griddles</div>
+          <div>Cooking Essentials</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Kitchen Furniture</div>
+          <div>Counter & Bar Stools</div>
+          <div>Kitchen & Dining Sets</div>
+          <div>Kitchen & Dining Chairs</div>
+          <div>Kitchen & Dining Tables</div>
+          <div>Buffets & Sideboards</div>
+          <div>Home Bars</div>
+          <div>Kitchen Carts</div>
+          <div>Bar Tables</div>
+          <div>Kitchen Cabinets</div>
+        </div>
+        <div>
+          <div class="dark-div">Kitchen Appliances</div>
+          <div>Mixers</div>
+          <div>Blenders</div>
+          <div>Coffee Makers</div>
+          <div>Air Fryers</div>
+          <div>Pressure Cookers</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Serveware</div>
+          <div>Serving Platters & Trays</div>
+          <div>Serving Bowls</div>
+          <div>Warming Buffet & Trays</div>
+          <div>Drink Pitchers</div>
+          <div>Salt & Pepper Shakers</div>
+          <div>Chip & Dip Sets</div>
+          <div>Table Linens</div>
+        </div>
+        <div>
+          <div class="dark-div">Kitchen Storage</div>
+          <div>Wine Racks</div>
+          <div>Kitchen Trash Cans</div>
+          <div>Pot Racks</div>
+          <div>Pantry Storage</div>
+          <div>Kitchen Canisters</div>
+          <div>Plastic Storage Containers</div>
+        </div>
+      </div>
+      <div>
+        <div class="dropdown-img-cont">
+          <div>
+            <img
+              src="https://ak1.ostkcdn.com/img/mxc/09062021_FALL2021_Kitchen_PopCat_4.jpg?imwidth=320&impolicy=medium"
+              alt=""
+            />
+          </div>
+          <div>extra 15% off</div>
+          <div>Select Kitchen & Dining*</div>
+        </div>
+        <div>
+          <div class="dark-div">More Ways to Shop</div>
+          <div class="red-div">Featured Sales</div>
+          <div class="red-div">New Arrivals</div>
+          <div class="red-div">Clearance</div>
+          <div class="red-div">Kitchen Advice</div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-content-main dropdown-content-part">
+      <div>
+        <div>
+          <div class="dark-div">Patio Furniture</div>
+          <div>Patio Furniture Sets</div>
+          <div>Sofas, Chairs & Sectionals</div>
+          <div>Dining Sets</div>
+          <div>Dining Tables</div>
+          <div>Dining Chairs</div>
+          <div>Coffee & Side Tables</div>
+          <div>Chaise Lounges</div>
+          <div>Adirondack Chairs</div>
+          <div>Hammock & Swings</div>
+        </div>
+        <div>
+          <div class="dark-div">Gardening & Yard Care</div>
+          <div>Sheds & Outdoor Storage</div>
+          <div>Greenhouses</div>
+          <div>Gardening & Yard Tools</div>
+          <div>Mowers & Trimmers</div>
+          <div>Hoses & Sprinklers</div>
+          <div>Fencing & Privacy Screens</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">OutDoor Decor</div>
+          <div>Fire Pits</div>
+          <div>Outdoor Rugs</div>
+          <div>Doormats</div>
+          <div>Outdoor Lighting</div>
+          <div>Garden Accents</div>
+          <div>Outdoor Curtains & Shades</div>
+          <div>Outdoor Cushions & Pillows</div>
+          <div>Planters, Hangers & Stands</div>
+          <div>Patio Furniture Covers</div>
+        </div>
+        <div>
+          <div class="dark-div">Grills & Outdoor Cooking</div>
+          <div>Gas Grills</div>
+          <div>Charcoal Grills</div>
+          <div>Smokers</div>
+          <div>Grilling Accessories</div>
+          <div>Grilling Tools & Cookware</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Umbrellas & Shades</div>
+          <div>Patio Umbrellas</div>
+          <div>Sunsails</div>
+          <div>Gazebos & Pergolas</div>
+          <div>Umbrella Bases</div>
+          <div>Beach Umbrellas</div>
+        </div>
+        <div>
+          <div class="dark-div">Sports & Outdoors</div>
+          <div>Swing Sets</div>
+          <div>Trampolines</div>
+          <div>Hot Tubs & Spas</div>
+          <div>Bicycles</div>
+          <div>Skating & Scooters</div>
+          <div>Lawn Games</div>
+          <div>Tents & Outdoor Canopies</div>
+          <div>Sport Nets & Hoops</div>
+        </div>
+      </div>
+      <div>
+        <div class="dropdown-img-cont">
+          <div>
+            <img
+              src="https://ak1.ostkcdn.com/images/products/is/images/direct/6c0262a56423950c883c86911ad5b6f4e5d1380e/Glitzhome-42%22H-Christmas-Wooden-Word-Porch-Sign.jpg"
+              alt=""
+            />
+          </div>
+          <div>extra 15% off</div>
+          <div>Select Garden & Patio*</div>
+        </div>
+        <div>
+          <div class="dark-div">More Ways to Shop</div>
+          <div class="red-div">Featured Sales</div>
+          <div class="red-div">New Arrivals</div>
+          <div class="red-div">Clearance</div>
+          <div class="red-div">Patio Advice</div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-content-main dropdown-content-part">
+      <div>
+        <div>
+          <div class="dark-div">All Jewelry</div>
+          <div>Rings</div>
+          <div>Necklaces</div>
+          <div>Earrings</div>
+          <div>Bracelets</div>
+          <div>Mosissanite Rings</div>
+          <div>Jewelry Boxes</div>
+        </div>
+        <div>
+          <div class="dark-div">Men's Jewelry</div>
+          <div>Men's Rings</div>
+          <div>Men's Necklaces</div>
+          <div>Cuff Links</div>
+        </div>
+        <div>
+          <div class="dark-div">Wedding Rings</div>
+          <div>Engagement Rings</div>
+          <div>Bridal Sets</div>
+          <div>Semi-Mount Rings</div>
+          <div>Women's Wedding Brands</div>
+          <div>Men's Wedding Brands</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Watches</div>
+          <div>Men's Watches</div>
+          <div>Women's Watches</div>
+          <div>Kids Watches</div>
+          <div>Luxury Watches</div>
+          <div>Watch Accessories</div>
+        </div>
+        <div>
+          <div class="dark-div">Fine Jewelry</div>
+          <div>Diamond Rings</div>
+          <div>Gold Necklaces</div>
+          <div>Diamond Studs</div>
+          <div>One-of-a-Kind</div>
+          <div>Vintage & Estate</div>
+          <div>Gemstone Rings</div>
+        </div>
+      </div>
+      <div>
+        <div class="dropdown-img-cont">
+          <div>
+            <img
+              src="https://ak1.ostkcdn.com/images/products/is/images/direct/fc96378420c308052d095897a4a17c0c545a8e30/Quad-Crossover-Diamond-Bridal-Set-in-Sterling-Silver-by-Miadora.jpg"
+              alt=""
+            />
+          </div>
+          <div>extra 15% off</div>
+          <div>Select Jewelry & Watches*</div>
+        </div>
+        <div>
+          <div class="dark-div">More Ways to Shop</div>
+          <div class="red-div">Featured Sales</div>
+          <div class="red-div">New Arrivals</div>
+          <div class="red-div">Clearance</div>
+          <div class="red-div">Jewelry Advice</div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-content-main dropdown-content-part">
+      <div>
+        <div>
+          <div class="dark-div">Ceiling Lights</div>
+          <div>Chandeliers</div>
+          <div>Pendants Lights</div>
+          <div>Chandeliers</div>
+          <div>Pendant Lights</div>
+          <div>Flush Mount Lights</div>
+          <div>Track Lighting</div>
+          <div>Recessed Lights</div>
+          <div>Semi-Flush Mount Lights</div>
+          <div>Wagon Wheels Chandeliers</div>
+        </div>
+        <div>
+          <div class="dark-div">Ceiling Fans</div>
+          <div>Indoor Ceiling Fans</div>
+          <div>Fandeliers</div>
+          <div>Outdoor Ceiling Fans</div>
+          <div>Ceiling Fans Light Kits</div>
+          <div>Ceiling Fan Accessories</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Lighting</div>
+          <div>Mount Wall Lights</div>
+          <div>Wall Sconces</div>
+          <div>Night Lights</div>
+          <div>Picture Lights</div>
+          <div>Swing Arm Lights</div>
+          <div>Step & Hall Lights</div>
+        </div>
+        <div>
+          <div class="dark-div">Outdoor Lighting</div>
+          <div>Outdoor Wall Lights</div>
+          <div>Outdoor Ceiling Lights</div>
+          <div>Landscape Lighting</div>
+          <div>String Lights</div>
+          <div>Post Lights</div>
+          <div>Security & Motion Sensor Lights</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Lamps & Lamp Shades</div>
+          <div>Table Lamps</div>
+          <div>Floor Lamps</div>
+          <div>Lamp Sets</div>
+          <div>Desk Lamps</div>
+          <div>Lamp Shades</div>
+          <div>Accent Lamps</div>
+        </div>
+        <div>
+          <div class="dark-div">Kitchen & Bath Lighting</div>
+          <div>Kitchen Island Lights</div>
+          <div>Under Cabinet Lights</div>
+          <div>Bathroom Vanity Lights</div>
+          <div>Bathroom Sconces</div>
+          <div>Bath Bar Lights</div>
+        </div>
+      </div>
+      <div>
+        <div class="dropdown-img-cont">
+          <div>
+            <img
+              src="https://ak1.ostkcdn.com/images/products/is/images/direct/7e7823f4d38f87ed1ea8da61cd0b8505d02ccb9d/Light-Society-Bella-8-Light-Chandelier.jpg"
+              alt=""
+            />
+          </div>
+          <div>extra 15% off</div>
+          <div>Select Lighting</div>
+        </div>
+        <div>
+          <div class="dark-div">More Ways to Shop</div>
+          <div class="red-div">Sales</div>
+          <div class="red-div">New Arrivals</div>
+          <div class="red-div">Clearance</div>
+          <div class="red-div">Lighting Advice</div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-content-main dropdown-content-part">
+      <div>
+        <div>
+          <div class="dark-div">Baby</div>
+          <div>Cribs</div>
+          <div>Crib Mattresses</div>
+          <div>Beby Bedding</div>
+          <div>Glinders & Ottomans</div>
+          <div>Changing Tables</div>
+        </div>
+        <div>
+          <div class="dark-div">Toys by Age</div>
+          <div>2-4 Years</div>
+          <div>5-7 Years</div>
+          <div>8-11 Years</div>
+          <div>12-15 Years</div>
+          <div>Teen</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Kids Furniture</div>
+          <div>Kids Beds</div>
+          <div>Kids Mattresses</div>
+          <div>Kids Dressers</div>
+          <div>Kids Desks</div>
+          <div>Kids Storage & Toy Boxes</div>
+          <div>Bean Bags</div>
+          <div>Kids Chairs</div>
+        </div>
+        <div>
+          <div class="dark-div">Ioys & Play</div>
+          <div>Outdoor Play</div>
+          <div>Swing Sets</div>
+          <div>Pretend Play</div>
+          <div>Inflatable Bounce Houses</div>
+          <div>Kide Outdoor Furniture</div>
+          <div>Playhouses & Play Tents</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="dark-div">Kids Bedding</div>
+          <div>Kids Comforter Sets</div>
+          <div>Kids Quilts</div>
+          <div>Kids Bed-in-a-Bag</div>
+          <div>Kids Sheets</div>
+          <div>Kids Duvet Covers</div>
+          <div>Kids Canopies</div>
+          <div>Kids Blankets & Throws</div>
+        </div>
+      </div>
+      <div>
+        <div>
+            <div><img src="https://ak1.ostkcdn.com/images/products/is/images/direct/7e7823f4d38f87ed1ea8da61cd0b8505d02ccb9d/Light-Society-Bella-8-Light-Chandelier.jpg" alt=""></div>
+            <div>extra 15% off</div>
+            <div>Select Baby Products*</div>
+        </div>
+        <div>
+          <div class="dark-div">More Ways to Shop</div>
+          <div class="red-div">Featured Sales</div>
+          <div class="red-div">New Arrivals</div>
+          <div class="red-div">Clearance</div>
+          <div class="red-div">Jewelry Advice</div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-content-main dropdown-content-part">
+        <div>
+            <div>
+              <div class="dark-div">Holiday</div>
+              <div>Halloween</div>
+              <div>Thanks Giving</div>
+              <div>Christmas</div>
+              <div>Hanukkah</div>
+              <div>Gifting Ideas</div>
             </div>
-  
-            <!-------------------------------- topnavbar ------------------------------------>
-              <div class = "topnav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-  
-                  <!-- furniture -->
-                  <li class="topnav-item topdropdown">
-                    <a class="nav-link active topdropbtn" aria-current="page" href="#">Furniture</a>
-                    <div class="topdropdown-content">
-                     
-                      <div class = "topdropdown_div">
-                        <div class = "topdropdown_div1">
-                          <div class = "firstDiv1">
-                            <a href="" class="headanchor">Living Room Furniture</a>
-                            <a href="" class="anchor">Sofa and Couches</a>
-                            <a href="" class="anchor">Sectional</a>
-                            <a href="" class="anchor">Benches</a>
-                            <a href="" class="anchor">Ottomans & Poufs</a>
-                            <a href="" class="anchor">Accent Chairs</a>
-                            <a href="" class="anchor">Recliners</a>
-                            <a href="" class="anchor">Coffee & Accent Tables</a>
-                            <a href="" class="anchor">TV Stands</a>
-                            <a href="" class="headanchor">Patio & Outdoor Furniture</a>
-                            <a href="" class="anchor">Patio Furniture Sets</a>
-                            <a href="" class="anchor">Sofas,Chairs & Sectionals</a>
-                            <a href="" class="anchor">Dining Sets</a>
-                            <a href="" class="anchor">Coffee & Side Tables</a>
-                            <a href="" class="anchor">Chaise Lounges</a>
-                            <a href="" class="anchor">Adirondack Chairs</a>
-                            <a href="" class="anchor">Hammocks & Swings</a>
-                          </div>
-                          <!-- <div class = "secondDiv1"></div> -->
-                        </div>
-                        <div class = "topdropdown_div1">
-                          <div class = "firstDiv1">
-                            <a href="" class="headanchor">Bedroom Furniture</a>
-                            <a href="" class="anchor">Beds</a>
-                            <a href="" class="anchor">Bedroom Sets</a>
-                            <a href="" class="anchor">Headboards</a>
-                            <a href="" class="anchor">Bed Frames</a>
-                            <a href="" class="anchor">Dressers & Chests</a>
-                            <a href="" class="anchor">Nightstands</a>
-                            <a href="" class="anchor">Armoires & Wardrobes</a>
-                            <a href="" class="anchor">Mattresses</a>
-                            <a href="" class="anchor">Kids Beds</a>
-                            <a href="" class="headanchor">Office Furniture</a>
-                            <a href="" class="anchor">Desks</a>
-                            <a href="" class="anchor">Office Chairs</a>
-                            <a href="" class="anchor">Small Space Desks</a>
-                            <a href="" class="anchor">Office Shelves & Storage</a>
-                            <a href="" class="anchor">File Cabinets</a>
-                            <a href="" class="anchor">Office & Confrence Tables</a>
-                         </div>
-                        </div>
-                        <div class = "topdropdown_div1">
-                         <div class = "firstDiv1">
-                            <a href="" class="headanchor">Dining Kitchen & Bar</a>
-                            <a href="" class="anchor">Kitchen & Dining Sets</a>
-                            <a href="" class="anchor">Kitchen & Dining Chairs</a>
-                            <a href="" class="anchor">Kitchen & Dining Tables</a>
-                            <a href="" class="anchor">Counter & Bar Stools</a>
-                            <a href="" class="anchor">Bar Tables</a>
-                            <a href="" class="anchor">Buffets & Sideboards</a>
-                            <a href="" class="anchor">Home Bars</a>
-                            <a href="" class="anchor">Kitchen Islands & Carts</a>
-                            <a href="" class="headanchor">More</a>
-                            <a href="" class="anchor">Entryway</a>
-                            <a href="" class="anchor">Bathroom</a>
-                            <a href="" class="anchor">Home Gym</a>
-                            <a href="" class="anchor">Rec Room</a>
-                            <a href="" class="anchor">Small Space Living</a>
-                            <a href="" class="anchor">Kids & Baby Furniture</a>
-                        </div>
-                        </div>
-                        <div class = "topdropdown_div1">
-                          <div class = "firstDiv1">
-                          <div class = topimgDiv> 
-                            <img class="furniture_div" src = "images/furniture_divimg.jpg"/>
-                            <p class= "extra">extra 15% off</p>
-                            <p class= "about">Select Furniture by Christopher Knight</p>
-                          </div>
-                          <div class = "firstDiv1">
-                          <a href="" class="blackanchor">More Ways to Shop</a>
-                            <a href="" class="redanchor">Fetured Sales</a>
-                            <a href="" class="redanchor">New Arrivals</a>
-                             <a href="" class="redanchor">Clearance</a>
-                             <a href="" class="redanchor">Furniture Advice</a>
-                          </div>
-                        </div> 
-                      </div>
-  
-                  </div>
-                  </li>
-  
-                  <!-- Rugs -->
-                  <li class="topnav-item topdropdown">
-                      <a class="nav-link active topdropbtn" aria-current="page" href="#">Rugs</a>
-                      <div class="topdropdown-content">
-                        <div class = "topdropdown_div">
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Area and Rugs</a>
-                              <a href="" class="anchor">3'*5'</a>
-                              <a href="" class="anchor">4'*6'</a>
-                              <a href="" class="anchor">5'*8'</a>
-                              <a href="" class="anchor">6'*9'</a>
-                              <a href="" class="anchor">7'*9'</a>
-                              <a href="" class="anchor">8'*10'</a>
-                              <a href="" class="anchor">9'*12'</a>
-                              <a href="" class="anchor">10'*14'</a>
-                              <a href="" class="headanchor">One of a Kind Rugs</a>
-                              <a href="" class="anchor">3'*5'</a>
-                              <a href="" class="anchor">4'*6'</a>
-                              <a href="" class="anchor">5'*8'</a>
-                              <a href="" class="anchor">6'*9'</a>
-                              <a href="" class="anchor">7'*9'</a>
-                              <a href="" class="anchor">8'*10'</a>
-                              <a href="" class="anchor">9'*12'</a>
-                            </div>
-                            <div class = "secondDiv1"></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Rug Pads</a>
-                              <a href="" class="anchor">5'*8'</a>
-                              <a href="" class="anchor">6'*9'</a>
-                              <a href="" class="anchor">8'*10'</a>
-                              <a href="" class="anchor">9'*12'</a>
-                              <a href="" class="anchor">10'*14'</a>
-                              <a href="" class="anchor">Non-Slip</a>
-                              <a href="" class="anchor">Round</a>
-                              <a href="" class="anchor">Runner</a>
-                              <a href="" class="headanchor">Runner Rugs</a>
-                              <a href="" class="anchor">6'</a>
-                              <a href="" class="anchor">8'</a>
-                              <a href="" class="anchor">10'</a>
-                              <a href="" class="anchor">12'</a>
-                              <a href="" class="anchor">14'</a>
-                           </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Rugs by Type</a>
-                              <a href="" class="anchor">Shag Rugs</a>
-                              <a href="" class="anchor">Outdoor Rugs</a>
-                              <a href="" class="anchor">Handmade Rugs</a>
-                              <a href="" class="anchor">Washable Rugs</a>
-                              <a href="" class="anchor">Kids & Tweens Rugs</a>
-                              <a href="" class="anchor">Doormates</a>
-                              <a href="" class="anchor">Stair Treads</a>
-                              <a href="" class="anchor">Kitchen Rugs & Mats</a>
-                              <a href="" class="headanchor">Area Rugs by Shape</a>
-                              <a href="" class="anchor">Round</a>
-                              <a href="" class="anchor">Rectangle</a>
-                              <a href="" class="anchor">Runner</a>
-                              <a href="" class="anchor">Square</a>
-                              <a href="" class="anchor">Oval</a>
-                          </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <div class = topimgDiv> 
-                                <img class="furniture_div" src = "images/Rug.jpg"/>
-                                <p class= "extra">extra 15% off</p>
-                                <p class= "about">Select Rugs*</p>
-                              </div>
-                              <div class = "firstDiv1">
-                              <a href="" class="blackanchor">More Ways to Shop</a>
-                                <a href="" class="redanchor">Fetured Sales</a>
-                                <a href="" class="redanchor">New Arrivals</a>
-                                 <a href="" class="redanchor">Clearance</a>
-                                 <a href="" class="redanchor">Rugs Advice</a>
-                              </div>
-                            </div> 
-                            <div></div>
-                          </div>
-                        </div>
-                    </div>
-                  </li>
-  
-                  <!-- Decor -->
-                  <li class="topnav-item topdropdown">
-                      <a class="nav-link active topdropbtn" aria-current="page" href="#">Decor</a>
-                      <div class="topdropdown-content">
-                        <div class = "topdropdown_div">
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Mirrors</a>
-                              <a href="" class="anchor">Wall Mirrors</a>
-                              <a href="" class="anchor">Bathroom Vanity Mirrors</a>
-                              <a href="" class="anchor">Floor Mirrors</a>
-                              <a href="" class="anchor">Full Length Mirrors</a>
-                              <a href="" class="anchor">Rectangular Mirrors</a>
-                              <a href="" class="anchor">Round Mirrors</a>
-                              <a href="" class="anchor">Window Mirrors</a>
-                              <a href="" class="headanchor">Mirror sets</a>
-                              <a href="" class="anchor">Gallery Wrapped Canvas</a>
-                              <a href="" class="anchor">Canvas Art</a>
-                              <a href="" class="anchor">Framed Prints</a>
-                              <a href="" class="anchor">Unframed Prints</a>
-                              <a href="" class="anchor">Metal Art</a>
-                              <a href="" class="anchor">Wood Wall Art</a>
-                              <a href="" class="anchor">Matching Sets</a>
-                            </div>
-                            <div class = "secondDiv1"></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Decorative Accessories</a>
-                              <a href="" class="anchor">Indoor Fireplaces</a>
-                              <a href="" class="anchor">Outdoor Decor</a>
-                              <a href="" class="anchor">Accent Pieces</a>
-                              <a href="" class="anchor">Silk Plants</a>
-                              <a href="" class="anchor">Candles & Holders</a>
-                              <a href="" class="anchor">Vases</a>
-                              <a href="" class="anchor">Room Dividers</a>
-                              <a href="" class="anchor">Photo Frames & Albums</a>
-                              <a href="" class="anchor">Planters,Hangers & Stands</a>
-                              <a href="" class="headanchor">Window Treatments</a>
-                              <a href="" class="anchor">Curtains & Drapes</a>
-                              <a href="" class="anchor">Blinds & Shades</a>
-                              <a href="" class="anchor">Curtain Rods & Hardware</a>
-                              <a href="" class="anchor">Sheer Curtains</a>
-                              <a href="" class="anchor">Blackout Curtains</a>
-                              <a href="" class="anchor">Kitchen Curtains</a>
-                              
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Wall Decor</a>
-                              <a href="" class="anchor">Wall Sculptures</a>
-                              <a href="" class="anchor">Decorative Shelves</a>
-                              <a href="" class="anchor">Wall Tapestries</a>
-                              <a href="" class="anchor">Clocks</a>
-                              <a href="" class="anchor">Wall Decals</a>
-                              <a href="" class="anchor">Acrylic Wall Art</a>
-                              <a href="" class="headanchor">Throw Pillows</a>
-                              <a href="" class="anchor">Accent Pillows</a>
-                              <a href="" class="anchor">Floor Pillows</a>
-                              <a href="" class="anchor">Poufs</a>
-                              <a href="" class="anchor">Pillow Covers</a>
-                              <a href="" class="anchor">Bed Rest</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <div class = topimgDiv> 
-                                <img class="furniture_div" src = "images/Decor.jpg"/>
-                                <p class= "extra">extra 15% off</p>
-                                <p class= "about">Select Home Decor*</p>
-                              </div>
-                              <div class = "firstDiv1">
-                              <a href="" class="blackanchor">More Ways to Shop</a>
-                                <a href="" class="redanchor">Fetured Sales</a>
-                                <a href="" class="redanchor">New Arrivals</a>
-                                 <a href="" class="redanchor">Clearance</a>
-                                 <a href="" class="redanchor">Decor Advice</a>
-                              </div>
-                            </div> 
-                            <div></div>
-                          </div>
-                        </div>
-                    </div>
-                    </li>
-  
-                    <!-- Bed & Bath -->
-                    <li class="topnav-item topdropdown">
-                      <a class="nav-link active topdropbtn" aria-current="page" href="#">Bed & Bath</a>
-                      <div class="topdropdown-content">
-                        <div class = "topdropdown_div">
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Bedding</a>
-                              <a href="" class="anchor">Comforter Sets</a>
-                              <a href="" class="anchor">Duvet Covers</a>
-                              <a href="" class="anchor">Bed-in-a-Bag</a>
-                              <a href="" class="anchor">Quilts & Coverlets</a>
-                              <a href="" class="anchor">Blankets & Throws</a>
-                              <a href="" class="anchor">Bedspreads</a>
-                              <a href="" class="headanchor">Bath & Towels</a>
-                              <a href="" class="anchor">Shower Curtains</a>
-                              <a href="" class="anchor">Towels</a>
-                              <a href="" class="anchor">Bath Rugs & Mats</a>
-                              <a href="" class="anchor">Bath Accessories</a>
-                              <a href="" class="anchor">Bath Robes</a>
-                              <a href="" class="anchor">Kids Bath</a>
-                            </div>
-                            <div class = "secondDiv1"></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Bedding Basics</a>
-                              <a href="" class="anchor">Sheets & Pillowcases</a>
-                              <a href="" class="anchor">Mattress Pads & Toppers</a>
-                              <a href="" class="anchor">Comforters & Duvet Inserts</a>
-                              <a href="" class="anchor">Pillow</a>
-                              <a href="" class="anchor">Cotton Bedding</a>
-                              <a href="" class="headanchor">Kids Bedding</a>
-                              <a href="" class="anchor">Kids Comforter Sets</a>
-                              <a href="" class="anchor">Kids Bed-in-a-Bag</a>
-                              <a href="" class="anchor">Kids Quilts</a>
-                              <a href="" class="anchor">Kids Bed Tents & Canopies</a>
-                              <a href="" class="anchor">Kids Matteresses</a>
-                             
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Mattresses</a>
-                              <a href="" class="anchor">Twin</a>
-                              <a href="" class="anchor">Twin XL</a>
-                              <a href="" class="anchor">Full</a>
-                              <a href="" class="anchor">Queen</a>
-                              <a href="" class="anchor">King</a>
-                              <a href="" class="anchor">California King</a>
-                              <a href="" class="anchor">Air Mattresses</a>
-                              <a href="" class="anchor">Mattresses in a Box</a>
-                              <a href="" class="headanchor">Bathroom Furniture</a>
-                              <a href="" class="anchor">Bathroom Vanities</a>
-                              <a href="" class="anchor">Bathroom Vanity Mirrors</a>
-                              <a href="" class="anchor">Bathroom Sinks</a>
-                              <a href="" class="anchor">Bathroom Faucents</a>
-                              <a href="" class="anchor">Bathroom Cabinats</a>
-                              <a href="" class="anchor">Tubs</a>
-                              <a href="" class="anchor">Showers</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <div class = topimgDiv> 
-                                <img class="furniture_div" src = "images/bednbath.jpg"/>
-                                <p class= "extra">extra 15% off</p>
-                                <p class= "about">Select Bedding & Bath*</p>
-                              </div>
-                              <div class = "firstDiv1">
-                              <a href="" class="blackanchor">More Ways to Shop</a>
-                                <a href="" class="redanchor">Fetured Sales</a>
-                                <a href="" class="redanchor">New Arrivals</a>
-                                 <a href="" class="redanchor">Clearance</a>
-                                 <a href="" class="redanchor">Bedding Advice</a>
-                              </div>
-                            </div> 
-                            <div></div>
-                          </div>
-                        </div>
-                    </div>
-                    </li>
-  
-                    <!-- Home Improvement -->
-                    <li class="topnav-item topdropdown">
-                      <a class="nav-link active topdropbtn" aria-current="page" href="#">Home Improvement</a>
-                      <div class="topdropdown-content">
-                       
-                        <div class = "topdropdown_div">
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Kitchen</a>
-                              <a href="" class="anchor">Ranges & Ovens</a>
-                              <a href="" class="anchor">Refrigerators</a>
-                              <a href="" class="anchor">Kitchen Carts & Islands</a>
-                              <a href="" class="anchor">Kitchen Sinks</a>
-                              <a href="" class="anchor">Kitchen Faucets</a>
-                              <a href="" class="anchor">Kitchen Cabinets</a>
-                              <a href="" class="anchor">Backsplash</a>
-                              <a href="" class="headanchor">Flooring & Wall</a>
-                              <a href="" class="anchor">Tile</a>
-                              <a href="" class="anchor">Laminate Flooring</a>
-                              <a href="" class="anchor">Vinyl Flooring</a>
-                              <a href="" class="anchor">Hardwood Flooring</a>
-                              <a href="" class="anchor">Wall Tiles</a>
-                              <a href="" class="anchor">Ceiling Tiles</a>
-                              
-                            </div>
-                            <div class = "secondDiv1"></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Bathroom</a>
-                              <a href="" class="anchor">Bathroom Vanities</a>
-                              <a href="" class="anchor">Bathroom Vanity Mirrors</a>
-                              <a href="" class="anchor">Bathroom Sinks</a>
-                              <a href="" class="anchor">Bathroom Faucets</a>
-                              <a href="" class="anchor">Bathroom Cabinets</a>
-                              <a href="" class="anchor">Tubs</a>
-                              <a href="" class="anchor">Showers</a>
-                              <a href="" class="anchor">Toilets</a>
-                              <a href="" class="headanchor">Home Essentials</a>
-                              <a href="" class="anchor">Vaccums & Floorcare</a>
-                              <a href="" class="anchor">Heating & cooling</a>
-                              <a href="" class="anchor">Air & Quality</a>
-                              <a href="" class="anchor">Sewing Machines</a>
-                              <a href="" class="anchor">Craft Machines</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Storage & Organization</a>
-                              <a href="" class="anchor">Outdoor Storage</a>
-                              <a href="" class="anchor">Laundry Room</a>
-                              <a href="" class="anchor">Garage Storage</a>
-                              <a href="" class="anchor">Decorative Storage</a>
-                              <a href="" class="anchor">Closet Organizers</a>
-                              <a href="" class="anchor">Kitchen & Pantry</a>
-                              <a href="" class="anchor">Cabinates</a>
-                              <a href="" class="anchor">Furniture Storage</a>
-                              <a href="" class="anchor">Safes</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <div class = topimgDiv> 
-                                <img class="furniture_div" src = "images/home.jpg"/>
-                                <p class= "extra">extra 15% off</p>
-                                <p class= "about">Select Home Improvement*</p>
-                              </div>
-                              <div class = "firstDiv1">
-                              <a href="" class="blackanchor">More Ways to Shop</a>
-                                <a href="" class="redanchor">Fetured Sales</a>
-                                <a href="" class="redanchor">New Arrivals</a>
-                                 <a href="" class="redanchor">Clearance</a>
-                                 <a href="" class="redanchor">Home Improvements Advice</a>
-                              </div>
-                            </div> 
-                            <div></div>
-                          </div>
-                        </div>
-                    </div>
-                    </li>
-  
-                    <!-- Kitchen -->
-                    <li class="topnav-item topdropdown">
-                      <a class="nav-link active topdropbtn" aria-current="page" href="#">Kitchen</a>
-                      <div class="topdropdown-content">
-                        <div class = "topdropdown_div">
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Dinnerware Sets</a>
-                              <a href="" class="anchor">Formal Dinnerware</a>
-                              <a href="" class="anchor">Plates</a>
-                              <a href="" class="anchor">Bowls</a>
-                              <a href="" class="anchor">Cups & Saucers</a>
-                              <a href="" class="anchor">Mugs</a>
-                              <a href="" class="anchor">Flateware</a>
-                              <a href="" class="anchor">Tumblers</a>
-                              <a href="" class="headanchor">Cookware & Bakeware</a>
-                              <a href="" class="anchor">Cookware Sets</a>
-                              <a href="" class="anchor">Pots & Pans</a>
-                              <a href="" class="anchor">Speciality Cookware</a>
-                              <a href="" class="anchor">Grill Pans & Griddles</a>
-                              <a href="" class="anchor">Cooking Essentials</a>
-                              <a href="" class="anchor">Cutlery</a>
-                              <a href="" class="anchor">Bakeware</a>
-                            </div>
-                            <div class = "secondDiv1"></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Kitchen Furniture</a>
-                              <a href="" class="anchor">Couter & Bar Stools</a>
-                              <a href="" class="anchor">Kitchen & Dinning Sets</a>
-                              <a href="" class="anchor">Kitchen & Dinning Chairs</a>
-                              <a href="" class="anchor">Kitchen & Dinning Tables</a>
-                              <a href="" class="anchor">Buffers & Sideboards</a>
-                              <a href="" class="anchor">Home Bars</a>
-                              <a href="" class="anchor">Kitchen Carts</a>
-                              <a href="" class="anchor">Bar Tables</a>
-                              <a href="" class="anchor">Kitchen Cabinets</a>
-                              <a href="" class="headanchor">Kitchen Appliances</a>
-                              <a href="" class="anchor">Mixers</a>
-                              <a href="" class="anchor">Blenders</a>
-                              <a href="" class="anchor">Coffee Makers</a>
-                              <a href="" class="anchor">Air Fryers</a>
-                              <a href="" class="anchor">Pressure Cookers</a>
-                              <a href="" class="anchor">Food Processors</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Serveware</a>
-                              <a href="" class="anchor">Serving Palatters</a>
-                              <a href="" class="anchor">Serving Bowls</a>
-                              <a href="" class="anchor">Warming Buffet & Trays</a>
-                              <a href="" class="anchor">Drink Pitches</a>
-                              <a href="" class="anchor">Salt & Pepper Shakers</a>
-                              <a href="" class="anchor">Chip & Dip Sets</a>
-                              <a href="" class="anchor">Table Linens</a>
-                              <a href="" class="headanchor">Kitchen Storage</a>
-                              <a href="" class="anchor">Wine Racks</a>
-                              <a href="" class="anchor">Kitchen Trash Cans</a>
-                              <a href="" class="anchor">Pot Racks</a>
-                              <a href="" class="anchor">Panntry Storage</a>
-                              <a href="" class="anchor">Kitchen Canisters</a>
-                              <a href="" class="anchor">Plastic Storage Containers</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <div class = topimgDiv> 
-                                <img class="furniture_div" src = "images/kitchen.jpg"/>
-                                <p class= "extra">extra 15% off</p>
-                                <p class= "about">Select Kitchen & Dining*</p>
-                              </div>
-                              <div class = "firstDiv1">
-                              <a href="" class="blackanchor">More Ways to Shop</a>
-                                <a href="" class="redanchor">Fetured Sales</a>
-                                <a href="" class="redanchor">New Arrivals</a>
-                                 <a href="" class="redanchor">Clearance</a>
-                                 <a href="" class="redanchor">Kitchen Advice</a>
-                              </div>
-                            </div> 
-                            <div></div>
-                          </div>
-                        </div>
-                    </div>
-                    </li>
-  
-                    <!-- Outdoor -->
-                    <li class="topnav-item topdropdown">
-                      <a class="nav-link active topdropbtn" aria-current="page" href="#">Outdoor</a>
-                      <div class="topdropdown-content">
-                        <div class = "topdropdown_div">
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Patio Furniture</a>
-                              <a href="" class="anchor">Patio Furniture Sets</a>
-                              <a href="" class="anchor">Sofas,Chairs & Sectionals</a>
-                              <a href="" class="anchor">Dinning Sets</a>
-                              <a href="" class="anchor">Dinning Tables</a>
-                              <a href="" class="anchor">Dinning Chairs</a>
-                              <a href="" class="anchor">Coffee & Side Tables</a>
-                              <a href="" class="anchor">Chaise Lounges</a>
-                              <a href="" class="anchor">Adirondack Chairs</a>
-                              <a href="" class="anchor">Hammocks & Swings</a>
-                              <a href="" class="headanchor">Gardening & Yard Care</a>
-                              <a href="" class="anchor">Sheds & Outdoor Storage</a>
-                              <a href="" class="anchor">Greenhouses</a>
-                              <a href="" class="anchor">Gardening & Yard Tools</a>
-                              <a href="" class="anchor">Mowers & Trimmers</a>
-                              <a href="" class="anchor">Houses & Sprinklers</a>
-                              <a href="" class="anchor">Fencing & Privacy Screens</a>
-                            </div>
-                            <div class = "secondDiv1"></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Outdoor Decor</a>
-                              <a href="" class="anchor">Fire Pits</a>
-                              <a href="" class="anchor">Outdoor Rugs</a>
-                              <a href="" class="anchor">Doormates</a>
-                              <a href="" class="anchor">Outdoor Lightning</a>
-                              <a href="" class="anchor">Garden Accents</a>
-                              <a href="" class="anchor">Outdoor Curtains & Shades</a>
-                              <a href="" class="anchor">Outdoor Cushions & Pillows</a>
-                              <a href="" class="anchor">Planters,Hangers & Stands</a>
-                              <a href="" class="anchor">Patio Furniture Covers</a>
-                              <a href="" class="headanchor">Grills & Outdoor Cooking</a>
-                              <a href="" class="anchor">Gas Grills</a>
-                              <a href="" class="anchor">Charcoal Grills</a>
-                              <a href="" class="anchor">Smokers</a>
-                              <a href="" class="anchor">Grilling Accessroies</a>
-                              <a href="" class="anchor">Grilling Tools & Cookware</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Umbrellas & Shades</a>
-                              <a href="" class="anchor">Patio Umbrella</a>
-                              <a href="" class="anchor">Sunsails</a>
-                              <a href="" class="anchor">Gazebos & Pergolas</a>
-                              <a href="" class="anchor">Umbrella Bases</a>
-                              <a href="" class="anchor">Beach Umbrellas</a>
-                              <a href="" class="headanchor">Sports & Outdoors</a>
-                              <a href="" class="anchor">Swing Sets</a>
-                              <a href="" class="anchor">Trampolines'</a>
-                              <a href="" class="anchor">Hot Tubes & Spas</a>
-                              <a href="" class="anchor">Bicycles</a>
-                              <a href="" class="anchor">Skating & Scooters</a>
-                              <a href="" class="anchor">Lawn Games</a>
-                              <a href="" class="anchor">Tents & Outdoor canopies</a>
-                              <a href="" class="anchor">Sport nets & Hoops</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <div class = topimgDiv> 
-                                <img class="furniture_div" src = "images/furniture_divimg.jpg"/>
-                                <p class= "extra">extra 15% off</p>
-                                <p class= "about">Select Garden & Patio*</p>
-                              </div>
-                              <div class = "firstDiv1">
-                              <a href="" class="blackanchor">More Ways to Shop</a>
-                                <a href="" class="redanchor">Fetured Sales</a>
-                                <a href="" class="redanchor">New Arrivals</a>
-                                 <a href="" class="redanchor">Clearance</a>
-                                 <a href="" class="redanchor">Patio Advice</a>
-                              </div>
-                            </div> 
-                            <div></div>
-                          </div>
-                        </div>
-                    </div>
-                    </li>
-  
-                    <!-- jewelary -->
-                    <li class="topnav-item topdropdown">
-                      <a class="nav-link active topdropbtn" aria-current="page" href="#">Jewelry</a>
-                      <div class="topdropdown-content">
-                        <!-- <a href="">Favorites</a>
-                        <a href="">Save for Later</a>
-                        <div></div>
-                        <a class = "logout" href="#">View All my Lists</a>
-                        <a href="">Find a Lists</a> -->
-                        <div class = "topdropdown_div">
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">All Jewelary</a>
-                              <a href="" class="anchor">Rings</a>
-                              <a href="" class="anchor">Necklaces</a>
-                              <a href="" class="anchor">Earings</a>
-                              <a href="" class="anchor">Bracelets</a>
-                              <a href="" class="anchor">Moissanite Rings</a>
-                              <a href="" class="anchor">Jewelary Boxes</a>
-                              <a href="" class="headanchor">Men's Jewelary</a>
-                              <a href="" class="anchor">Men's Rings</a>
-                              <a href="" class="anchor">Men's Necklaces</a>
-                              <a href="" class="anchor">Men's Bracelets</a>
-                              <a href="" class="anchor">Cuff Links</a>
-                              <a href="" class="headanchor">Wedding Rings</a>
-                              <a href="" class="anchor">Engagement Rings</a>
-                              <a href="" class="anchor">Bridal Sets</a>
-                              <a href="" class="anchor">Semi-Mount Rings</a>
-                              <!-- <a href="" class="anchor">9'*12'</a> -->
-                            </div>
-                            <div class = "secondDiv1"></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Watches</a>
-                              <a href="" class="anchor">Men's Watches</a>
-                              <a href="" class="anchor">Women's Watches</a>
-                              <a href="" class="anchor">Kids Watches</a>
-                              <a href="" class="anchor">Luxury Watches</a>
-                              <a href="" class="anchor">Watch Accessories</a>
-                              <a href="" class="headanchor">Fine jewelary</a>
-                              <a href="" class="anchor">Diamond Rings</a>
-                              <a href="" class="anchor">Gold Necklaces</a>
-                              <a href="" class="anchor">Diamond Studs</a>
-                              <a href="" class="anchor">One-of-a-Kind</a>
-                              <a href="" class="anchor">Vintage & Estate</a>
-                              <a href="" class="anchor">Gemstone Rings</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <div class = topimgDiv> 
-                                <img class="furniture_div" src = "images/jewelary.webp"/>
-                                <p class= "extra">extra 15% off</p>
-                                <p class= "about">Select Jewelary & Watches*</p>
-                              </div>
-                              <div class = "firstDiv1">
-                              <a href="" class="blackanchor">More Ways to Shop</a>
-                                <a href="" class="redanchor">Fetured Sales</a>
-                                <a href="" class="redanchor">New Arrivals</a>
-                                 <a href="" class="redanchor">Clearance</a>
-                                 <a href="" class="redanchor">Jewelary Advice</a>
-                              </div>
-                            </div> 
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div></div>
-                            <div></div>
-                          </div>
-                        </div>
-                    </div>
-                    </li>
-                    <!-- /lighting -->
-                    <li class="topnav-item topdropdown">
-                      <a class="nav-link active topdropbtn" aria-current="page" href="#">Lighting</a>
-                      <div class="topdropdown-content">
-                        
-                        <div class = "topdropdown_div">
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Ceiling Lights</a>
-                              <a href="" class="anchor">Chandeliers</a>
-                              <a href="" class="anchor">Pendant Lights</a>
-                              <a href="" class="anchor">Flush Mount Lights</a>
-                              <a href="" class="anchor">Track Lighting</a>
-                              <a href="" class="anchor">Recessed Lights</a>
-                              <a href="" class="anchor">Semi-Flush Mount Lights</a>
-                              <a href="" class="anchor">Wagon Wheels Chandeliers</a>
-                              <a href="" class="headanchor">Ceiling Fans</a>
-                              <a href="" class="anchor">Indoor Ceiling Fans</a>
-                              <a href="" class="anchor">Fandeliers</a>
-                              <a href="" class="anchor">Outdoor Ceiling Fans</a>
-                              <a href="" class="anchor">Ceiling Fans Light Kits</a>
-                              <a href="" class="anchor">Ceiling Fan Accessories</a>
-                            </div>
-                            <div class = "secondDiv1"></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Wall Lighting</a>
-                              <a href="" class="anchor">Flush Mount Wall Lights</a>
-                              <a href="" class="anchor">Wall Sconces</a>
-                              <a href="" class="anchor">Night Lights</a>
-                              <a href="" class="anchor">Picture Lights</a>
-                              <a href="" class="anchor">Swing Arm Lights</a>
-                              <a href="" class="anchor">Step & Hall Lights</a>
-                              <a href="" class="headanchor">Outdoor Lighting</a>
-                              <a href="" class="anchor">Outdoor Wall Lights</a>
-                              <a href="" class="anchor">Outdoor Ceiling Lights</a>
-                              <a href="" class="anchor">Landscape Lighting</a>
-                              <a href="" class="anchor">String Lights</a>
-                              <a href="" class="anchor">Post Lights</a>
-                              <a href="" class="anchor">Security & Motion Sensor Lights</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Lamps & Lamp Shades</a>
-                              <a href="" class="anchor">Table Lamps</a>
-                              <a href="" class="anchor">Floor Lamps</a>
-                              <a href="" class="anchor">Lamp Sets</a>
-                              <a href="" class="anchor">Desk Lamps</a>
-                              <a href="" class="anchor">Lamp Shades</a>
-                              <a href="" class="anchor">Accent Lamps</a>
-                              <a href="" class="headanchor">Kitchen & Bath Lighting</a>
-                              <a href="" class="anchor">Kitchen Island Lights</a>
-                              <a href="" class="anchor">Under Cabinet Lights</a>
-                              <a href="" class="anchor">Bathroom Vanity Lights</a>
-                              <a href="" class="anchor">Bathroom Sconces</a>
-                              <a href="" class="anchor">Bath Bar Lights</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <div class = topimgDiv> 
-                                <img class="furniture_div" src = "images/lighting.webp"/>
-                                <p class= "extra">extra 15% off</p>
-                                <p class= "about">Select Lighting*</p>
-                              </div>
-                              <div class = "firstDiv1">
-                              <a href="" class="blackanchor">More Ways to Shop</a>
-                                <a href="" class="redanchor">Fetured Sales</a>
-                                <a href="" class="redanchor">New Arrivals</a>
-                                 <a href="" class="redanchor">Clearance</a>
-                                 <a href="" class="redanchor">Lighting Advice</a>
-                              </div>
-                            </div> 
-                            <div></div>
-                          </div>
-                        </div>
-                    </div>
-                    </li>
-  
-                    <!-- Kids & Baby -->
-                    <li class="topnav-item topdropdown">
-                      <a class="nav-link active topdropbtn" aria-current="page" href="#">Kids & Baby</a>
-                      <div class="topdropdown-content lefthov">
-                        <!-- <a href="">Favorites</a>
-                        <a href="">Save for Later</a>
-                        <div></div>
-                        <a class = "logout" href="#">View All my Lists</a>
-                        <a href="">Find a Lists</a> -->
-                        <div class = "topdropdown_div">
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Baby</a>
-                              <a href="" class="anchor">Cribs</a>
-                              <a href="" class="anchor">Crib Mattresses</a>
-                              <a href="" class="anchor">Beby Bedding</a>
-                              <a href="" class="anchor">Glinders & Ottomans</a>
-                              <a href="" class="anchor">Changing Tables</a>
-                              <a href="" class="headanchor">Toys by Age</a>
-                              <a href="" class="anchor">2-4 Years</a>
-                              <a href="" class="anchor">5-7 Years</a>
-                              <a href="" class="anchor">8-11 Years</a>
-                              <a href="" class="anchor">12-15 Years</a>
-                              <a href="" class="anchor">Teen</a>
-                              
-                            </div>
-                            <div class = "secondDiv1"></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Kids Furniture</a>
-                              <a href="" class="anchor">Kids Beds</a>
-                              <a href="" class="anchor">Kids Mattresses</a>
-                              <a href="" class="anchor">Kids Dressers</a>
-                              <a href="" class="anchor">Kids Desks</a>
-                              <a href="" class="anchor">Kids Storage & Toy Boxes</a>
-                              <a href="" class="anchor">Bean Bags</a>
-                              <a href="" class="anchor">Kids Chairs</a>
-                              <a href="" class="headanchor">Ioys & Play</a>
-                              <a href="" class="anchor">Outdoor Play</a>
-                              <a href="" class="anchor">Swing Sets</a>
-                              <a href="" class="anchor">Pretend Play</a>
-                              <a href="" class="anchor">Inflatable Bounce Houses</a>
-                              <a href="" class="anchor">Kide Outdoor Furniture</a>
-                              <a href="" class="anchor">Playhouses & Play Tents</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Kids Bedding</a>
-                              <a href="" class="anchor">Kids Comforter Sets</a>
-                              <a href="" class="anchor">Kids Quilts</a>
-                              <a href="" class="anchor">Kids Bed-in-a-Bag</a>
-                              <a href="" class="anchor">Kids Sheets</a>
-                              <a href="" class="anchor">Kids Duvet Covers</a>
-                              <a href="" class="anchor">Kids Canopies</a>
-                              <a href="" class="anchor">Kids Blankets & Throws</a>
-                              
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <div class = topimgDiv> 
-                                <img class="furniture_div" src = "images/kids.webp"/>
-                                <p class= "extra">extra 15% off</p>
-                                <p class= "about">Select Baby Products*</p>
-                              </div>
-                              <div class = "firstDiv1">
-                              <a href="" class="blackanchor">More Ways to Shop</a>
-                                <a href="" class="redanchor">Fetured Sales</a>
-                                <a href="" class="redanchor">New Arrivals</a>
-                                 <a href="" class="redanchor">Clearance</a>
-                                 <a href="" class="redanchor">Kids & Baby Advice</a>
-                              </div>
-                            </div> 
-                            <div></div>
-                          </div>
-                        </div>
-                    </div>
-                    </li>
-                    <!-- More -->
-                    <li class="topnav-item topdropdown">
-                      <a class="nav-link active topdropbtn" aria-current="page" href="#">More</a>
-                      <div class="topdropdown-content lefthov">
-                        <!-- <a href="">Favorites</a>
-                        <a href="">Save for Later</a>
-                        <div></div>
-                        <a class = "logout" href="#">View All my Lists</a>
-                        <a href="">Find a Lists</a> -->
-                        <div class = "topdropdown_div">
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Holiday</a>
-                              <a href="" class="anchor">Halloween</a>
-                              <a href="" class="anchor">Thanks Giving</a>
-                              <a href="" class="anchor">Christmas</a>
-                              <a href="" class="anchor">Hanukkah</a>
-                              <a href="" class="anchor">Gifting Ideas</a>
-                              <a href="" class="headanchor">Health & Beauty</a>
-                              <a href="" class="anchor">Skin Care</a>
-                              <a href="" class="anchor">Hair Care</a>
-                              <a href="" class="headanchor">Makeup</a>
-                              <a href="" class="anchor">Perfumes & Fragrances</a>
-                              <a href="" class="anchor">Holistic Supplies</a>
-                            </div>
-                            <div class = "secondDiv1"></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Apprael</a>
-                              <a href="" class="anchor">Women's Clothing</a>
-                              <a href="" class="anchor">Women's Shoes</a>
-                              <a href="" class="anchor">men's Clothing</a>
-                              <a href="" class="anchor">men's Shoes</a>
-                              <a href="" class="anchor">Beauty</a>
-                              <a href="" class="anchor">Accessories</a>
-                              <a href="" class="headanchor">Exercise Equipment</a>
-                              <a href="" class="anchor">Home Gym Systems</a>
-                              <a href="" class="anchor">Treadmills</a>
-                              <a href="" class="anchor">Exercise Bikes</a>
-                              <a href="" class="anchor">Ellipticals</a>
-                              <a href="" class="anchor">Rowers</a>
-                              <a href="" class="anchor">Strength & Conditioning</a>
-                              <a href="" class="anchor">Yoga & Pilates</a>
-                              <a href="" class="anchor">Home Gym Mats</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <a href="" class="headanchor">Pet Supplies</a>
-                              <a href="" class="anchor">Dog Supplies</a>
-                              <a href="" class="anchor">Cat Supplies</a>
-                              <a href="" class="anchor">Bird Supplies</a>
-                              <a href="" class="anchor">Fish Supplies</a>
-                              <a href="" class="anchor">Small Animal Supplies</a>
-                              <a href="" class="anchor">Pet Friendly Home</a>
-                              <a href="" class="headanchor">Entryway</a>
-                              <a href="" class="anchor">Hall Trees</a>
-                              <a href="" class="anchor">Console Tables</a>
-                              <a href="" class="anchor">Coat Racks</a>
-                              <a href="" class="anchor">Benches</a>
-                              <a href="" class="anchor">Wall Hocks</a>
-                            </div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div class = "firstDiv1">
-                              <div class = topimgDiv> 
-                                <img class="furniture_div" src = "images/more.webp"/>
-                                <p class= "extra">extra 15% off</p>
-                                <p class= "about">Select Christmas Decorations*</p>
-                              </div>
-                              <div class = "firstDiv1">
-                              <a href="" class="blackanchor">More Ways to Shop</a>
-                                <a href="" class="redanchor">Fetured Sales</a>
-                                <a href="" class="redanchor">New Arrivals</a>
-                                 <a href="" class="redanchor">Clearance</a>
-                                 <a href="" class="redanchor">Rugs Advice</a>
-                              </div>
-                            </div> 
-                            <div></div>
-                          </div>
-                        </div>
-                    </div>
-                    </li>
-                    <li class="topnav-item topdropdown">
-                      <a class="nav-link active topdropbtn" aria-current="page" href="#">Holiday & Gifts</a>
-                      <div class="topdropdown-content lefthov holiday">
-                        <!-- <a href="">Favorites</a>
-                        <a href="">Save for Later</a>
-                        <div></div>
-                        <a class = "logout" href="#">View All my Lists</a>
-                        <a href="">Find a Lists</a> -->
-                        <div class = "holiday_div">
-                          <!-- <div class = "topdropdown_div1">
-                            <div class = "firstDiv1"></div>
-                            <div class = "secondDiv1"></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div></div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div></div>
-                            <div></div>
-                          </div>
-                          <div class = "topdropdown_div1">
-                            <div></div>
-                            <div></div>
-                          </div> -->
-                          <p class="holidayPara">Holiday & Gifting</p>
-                          <div class = "firstHolidayDiv">
-                            <div class="holidayImgDiv">
-                              <img src = "images/christmas.webp"/>
-                              <p>Christmas</p>
-                            </div>
-                            <div class="holidayImgDiv">
-                              <img src = "images/gift-ideas.webp"/>
-                              <p> Gift Ideas</p>
-                            </div>
-                            <div class="holidayImgDiv">
-                              <img src = "images/giftcards.webp"/>
-                              <p>Gift Cards</p>
-                            </div>
-                            <div class="holidayImgDiv">
-                              <img src = "images/shopallholidaygifts.webp"/>
-                              <p>Shop all Holiday & Gifts</p>
-                            </div>
-                          </div>
-                          <p class="holidayPara">Inspiration & Ideas</p>
-                          <div class = "firstHolidayDiv">
-                            <div class="holidayImgDiv">
-                              <img src = "images/HoliGift.webp"/>
-                              <p>Best Home Gifts For Christmas</p>
-                            </div>
-                            <div class="holidayImgDiv">
-                              <img src = "images/HoliGift2.jpg"/>
-                              <p>Christmas Decorating Themes</p>
-                            </div>
-                            <div class="holidayImgDiv">
-                              <img src = "images/HoliGift3.jpg"/>
-                              <p>Christmas Tree Buying Guide</p>
-                            </div>
-                            <div class="holidayImgDiv">
-                              <img src = "images/HoliGift4.jpg"/>
-                              <p>The Best Appliance Gifts</p>
-                            </div>
-                          </div>
-                    
-                        </div>
-                    </div>
-                    </li>
-                    <li class="topnav-item topdropdown">
-                      <a class="nav-link active topdropbtn" aria-current="page" href="#">Sales & Deals</a>
-                      <div class="topdropdown-content lefthov sales">
-                        <div class = "topdropdown_div sales_div">
-                          <div class = "salesDiv1">
-                            <h1>sales & deals</h1>
-                            <p>shop. save. love. repeat</p>
-                            <button>Shop now</button>
-                          </div>
-                          <div class = "salesDiv2">
-                            <div class="imgDivSales">
-                              <img src = "images/christmas_sales.jpg"/>
-                              <p>huge savings </br> on beautiful home updates</p>
-                            </div>
-                            <div class="imgDivSales">
-                              <img src = "images/StorageWithStyle.png"/>
-                              <p>storage with style</br> organise with ease</p>
-                            </div>
-                            <div class="imgDivSales">
-                              <img src = "images/ShagRugs.webp"/>
-                              <p>chic shag rugs</br> shop rugs both pulse & pretty</p>
-                            </div>
-                            <div class="imgDivSales">
-                              <img src = "images/MultifunctionalFurniture.webp"/>
-                              <p>multifunctional furniture</br> furnish with form and function</p>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    </li>
-                </ul>
+            <div>
+              <div class="dark-div">Health & Beauty</div>
+              <div>Skin Care</div>
+              <div>Hair Care</div>
+            </div>
+            <div>
+              <div class="dark-div">Makeup</div>
+              <div>Perfumes & Fragrances</div>
+              <div>Holistic Supplies</div>
+            </div>
+        </div>
+        <div>
+            <div>
+              <div class="dark-div">Apprael</div>
+              <div>Women's Clothing</div>
+              <div>Women's Shoes</div>
+              <div>men's Clothing</div>
+              <div>men's Shoes</div>
+              <div>Beauty</div>
+              <div>Accessories</div>
+            </div>
+            <div>
+              <div class="dark-div">Exercise Equipment</div>
+              <div>Home Gym Systems</div>
+              <div>Treadmills</div>
+              <div>Exercise Bikes</div>
+              <div>Ellipticals</div>
+              <div>Rowers</div>
+              <div>Strength & Conditioning</div>
+              <div>Yoga & Pilates</div>
+              <div>Home Gym Mats</div>
+            </div>
+        </div>
+        <div>
+            <div>
+              <div class="dark-div"> Supplies</div>
+              <div>Dog Supplies</div>
+              <div>Cat Supplies</div>
+              <div>Bird Supplies</div>
+              <div>Fish Supplies</div>
+              <div>Small Animal Supplies</div>
+              <div>Pet Friendly Home</div>
+            </div>
+            <div>
+              <div class="dark-div">Entryway</div>
+              <div>Hall Trees</div>
+              <div>Console Tables</div>
+              <div>Coat Racks</div>
+              <div>Benches</div>
+              <div>Wall Hocks</div>
+            </div>
+        </div>
+        <div>
+            <div class="dropdown-img-cont">
+                <div><img src="https://ak1.ostkcdn.com/images/products/is/images/direct/a0eb23a4dd8d07719aaec229f679d11dd28c4866/24%22-Berry-Mixed-Holly-Wreath.jpg" alt=""></div>
+                <div>extra 15% off</div>
+                <div>Select Christmas Decorations</div>
+            </div>
+        </div>
+    </div>
+    <div class="holidayGifts dropdown-content-part">
+      <div>Holiday & Gifting</div>
+      <div>
+          <div>
+              <div><img src="https://ak1.ostkcdn.com/img/mxc/09182021-HolidayGifting-Christmasv2.jpg" alt=""></div>
+              <div>Christmas</div>
+          </div>
+          <div>
+              <div><img src="https://ak1.ostkcdn.com/img/mxc/10182021-HoliGift-MODT4.jpg" alt=""></div>
+              <div>Gift Ideas</div>
+          </div>
+          <div>
+              <div><img src="https://ak1.ostkcdn.com/img/mxc/11152021-ideas-giftcards.png" alt=""></div>
+              <div>Gift Cards</div>
+          </div>
+          <div>
+              <div><img src="https://ak1.ostkcdn.com/img/mxc/11152021-ideas-shopallholidaygifts.png" alt=""></div>
+              <div>Shop All Holiday & Gifts</div>
+          </div>
+      </div>
+      <div>Inspiration & Ideas</div>
+      <div>
+          <div>
+              <div><img src="https://ak1.ostkcdn.com/img/mxc/10182021-HoliGift-MODB1.jpg" alt=""></div>
+              <div>Best Home Gifts for Christmas</div>
+          </div>
+          <div>
+              <div><img src="https://ak1.ostkcdn.com/img/mxc/10182021-HoliGift-MODB2.jpg" alt=""></div>
+              <div>Christmas Decorating Themes</div>
+          </div>
+          <div>
+              <div><img src="https://ak1.ostkcdn.com/img/mxc/10182021-HoliGift-MODB3.jpg" alt=""></div>
+              <div>Christmas Tree Buying Guide</div>
+          </div>
+          <div>
+              <div><img src="https://ak1.ostkcdn.com/img/mxc/10182021-HoliGift-MODB4.jpg" alt=""></div>
+              <div>The Best Appliances Gifts</div>
+          </div>
+      </div>
+    </div>
+    <div class="salesDeals dropdown-content-part">
+      <div><img src="https://ak1.ostkcdn.com/img/mxc/05142018DealsSales_OUTLINED.svg" alt=""></div>
+      <div>
+          <div>
+              <div><img src="https://ak1.ostkcdn.com/img/mxc/12132021-TNFlyoutCC.jpg?imwidth=320" alt=""></div>
+              <div class="salesinfo">
+                  <div>huge savings</div>
+                  <div>On Beautiful Home Updates</div>
               </div>
-          </nav>
-  
-          <!-- <div class = "topnav">fdkjbgl</div> -->
-  
-           
-    </header>
-  
-    <!-- Optional JavaScript; choose one of the two! -->
-  
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->`
+          </div>
+          <div>
+              <div><img src="https://ak1.ostkcdn.com/img/mxc/12132021-MOPS-StorageWithStyle.png?imwidth=320" alt=""></div>
+              <div class="salesinfo">
+                  <div>storage with style</div>
+                  <div>Organize with ease</div>
+              </div>
+          </div>
+          <div>
+              <div><img src="https://ak1.ostkcdn.com/img/mxc/12132021-MOPS-ShagRugs.png?imwidth=320" alt=""></div>
+              <div class="salesinfo">
+                  <div>chic shag rugs</div>
+                  <div>Shop rugs both plush & pretty</div>
+              </div>
+          </div>
+          <div>
+              <div><img src="https://ak1.ostkcdn.com/img/mxc/12132021-MOPS-MultifunctionalFurniture.png?imwidth=320" alt=""></div>
+              <div class="salesinfo">
+                  <div>Multifunctional furniture</div>
+                  <div>Furnish with form & function</div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>`
   }
   
   export default header;
