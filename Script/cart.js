@@ -118,3 +118,6 @@ function removeItem(index) {
   }
   displayItems()
 }
+import footer from "/components/footer.js"
+
+document.querySelector("#footerPut").innerHTML = footer()

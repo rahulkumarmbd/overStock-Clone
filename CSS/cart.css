@@ -122,10 +122,6 @@ a{
 .oe .oy .pa a {
   text-decoration: none;
 }
-.qg {
-  overflow-y: scroll;
-  height: 93rem;
-}
 .qg::-webkit-scrollbar {
   display: none;
 }
