@@ -50,6 +50,7 @@ window.page = (name) => {
   var pageName = localStorage.getItem("pageName") || ""
   localStorage.setItem("pageName", name)
   console.log(name)
+  window.location.href = "category.html"
 }
 // import header from "/components/navbar.js"
 
