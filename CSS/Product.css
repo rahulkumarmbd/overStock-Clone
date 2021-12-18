@@ -5,6 +5,10 @@ body {
   max-width: 1600px;
   margin: auto;
   position: relative;
+  overflow-x: hidden;
+}
+#compo {
+  display: none;
 }
 .Product {
   width: 89%;
@@ -272,9 +276,9 @@ body {
   border: 1px solid #2a7ab0;
   border-radius: 3px;
   text-align: center;
-  background-color: #2a7ab0;
+  background-color: #27865f;
   transition: 0.3s;
-  border-color: #005f8b;
+  border-color: #27865f;
 }
 .item-info .shop button:hover {
   background-color: #095b81;

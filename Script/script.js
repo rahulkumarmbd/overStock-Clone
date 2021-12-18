@@ -46,7 +46,7 @@ function responsivewatchSlider() {
   document.getElementById("prevwatch").addEventListener("click", prevwatchSlide)
   document.getElementById("nextwatch").addEventListener("click", nextwatchSlide)
 }
-let page = (name) => {
+window.page = (name) => {
   var pageName = localStorage.getItem("pageName") || ""
   localStorage.setItem("pageName", name)
   console.log(name)

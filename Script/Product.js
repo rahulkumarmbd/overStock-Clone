@@ -39,6 +39,14 @@ document.getElementById("productName1").textContent = cart.name
 document.getElementById(
   "productprice1"
 ).innerHTML = `<span>INR</span>${cart.price}<span>00</span>`
+document.getElementById("colorImg1").src = imagesArr[0]
+document.getElementById("colorImg2").src = imagesArr[1]
+
+setTimeout(function () {
+  document.getElementById("loaderSS").style.display = "none"
+  document.getElementById("compo").style.display = "block"
+}, 3500)
+
 let current = 0
 let nextBtn = document.querySelector(".slider1 > .next-arr")
 let iconSlides = document.querySelectorAll(".slider2 .iconSlides > div")
@@ -130,16 +138,12 @@ let prev = document.querySelector(".slider2 > .prev")
 let click = 0
 next.addEventListener("click", function () {
   click++
-  if (click > 2) {
-    click = 2
+  if (click > 1) {
+    click = 1
   }
 
   if (click == 1) {
-    div.style.transform = "translateX(-37.9%)"
-  }
-
-  if (click == 2) {
-    div.style.transform = "translateX(-60.7%)"
+    div.style.transform = "translateX(-7.2%)"
   }
 })
 
@@ -151,10 +155,6 @@ prev.addEventListener("click", function () {
 
   if (click == 0) {
     div.style.transform = "translateX(-0%)"
-  }
-
-  if (click == 1) {
-    div.style.transform = "translateX(-37.9%)"
   }
 })
 
@@ -172,24 +172,24 @@ frameImg2.addEventListener("mouseover", function () {
   frameImg2.addEventListener("mouseout", addImage)
 })
 
-frameImg2.addEventListener("click",function(){
-  frameImg2.removeEventListener("mouseout", addImage);
-  frameImg2.parentElement.parentElement.setAttribute("class","frame-img2");
-  frameImg1.parentElement.parentElement.setAttribute("class","frame-img1");
-  previewNextSlide(0);
+frameImg2.addEventListener("click", function () {
+  frameImg2.removeEventListener("mouseout", addImage)
+  frameImg2.parentElement.parentElement.setAttribute("class", "frame-img2")
+  frameImg1.parentElement.parentElement.setAttribute("class", "frame-img1")
+  previewNextSlide(0)
 })
 
 frameImg1.addEventListener("mouseover", function () {
-  copyImg = img.src;
-  img.src = frameImg1.src;
-  frameImg1.addEventListener("mouseout", addImage);
-});
+  copyImg = img.src
+  img.src = frameImg1.src
+  frameImg1.addEventListener("mouseout", addImage)
+})
 
-frameImg1.addEventListener("click",function(){
-  frameImg1.removeEventListener("mouseout", addImage);
-  frameImg2.parentElement.parentElement.setAttribute("class","frame-img1");
-  frameImg1.parentElement.parentElement.setAttribute("class","frame-img2");
-  previewNextSlide(5);
+frameImg1.addEventListener("click", function () {
+  frameImg1.removeEventListener("mouseout", addImage)
+  frameImg2.parentElement.parentElement.setAttribute("class", "frame-img1")
+  frameImg1.parentElement.parentElement.setAttribute("class", "frame-img2")
+  previewNextSlide(1)
 })
 let filterdiv = document.querySelectorAll(".filterDiv .dropDownContainer")
 filterdiv[0].addEventListener("mouseover", function () {
@@ -250,11 +250,12 @@ Navi[1].addEventListener("click", function () {
     svg[1].setAttribute("id", "tips-inpsiration-chevron")
     svg[0].removeAttribute("id", "tips-inpsiration-chevron")
   }
-});
+})
 
 window.addEventListener("scroll", () => {
-  var scrollable = 572;
+  var scrollable = 531;
   var scrolled = window.scrollY;
+  console.log(scrolled);
   let ProductHeader = document.getElementById("Product-header");
   if(scrolled >= scrollable){
     ProductHeader.style.display = 'block';
@@ -263,19 +264,19 @@ window.addEventListener("scroll", () => {
     ProductHeader.style.display = 'none';
   }
   let divs = document.querySelectorAll("#Product-header .anchor-box > div");
-  if(scrolled < 1346){
+  if(scrolled < 1299){
     divs.forEach((div) => {
       div.removeAttribute("id","active-anchor-box");
     })
     divs[0].setAttribute("id","active-anchor-box");
   }
-  else if(scrolled < 2919){
+  else if(scrolled < 2879){
     divs.forEach((div) => {
       div.removeAttribute("id","active-anchor-box");
     })
     divs[1].setAttribute("id","active-anchor-box");
   }
-  else if(scrolled < 4134){
+  else if(scrolled < 4090){
     divs.forEach((div) => {
       div.removeAttribute("id","active-anchor-box");
     })
@@ -295,16 +296,16 @@ window.addEventListener("scroll", () => {
       })
       divs[i].setAttribute("id","active-anchor-box");
       if(i==0){
-        window.scrollTo(0,572);
+        window.scrollTo(0,531);
       }
       else if(i==1){
-        window.scrollTo(0,1346);
+        window.scrollTo(0,1299);
       }
       else if(i==2){
-        window.scrollTo(0,2919);
+        window.scrollTo(0,2879);
       }
       else{
-        window.scrollTo(0,4134);
+        window.scrollTo(0,4090);
       }
     })
     

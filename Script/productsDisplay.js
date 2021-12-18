@@ -32,6 +32,10 @@ fetch(`https://overstockapi.herokuapp.com/products/category=${nn}`)
     console.log(data)
     appendCard(data)
   })
+setTimeout(function () {
+  document.getElementById("loaderSS").style.display = "none"
+  document.getElementById("compo").style.display = "block"
+}, 4000)
 var appendCard = (data) => {
   data.forEach((item) => {
     let productCardContainer = document.createElement("div")
