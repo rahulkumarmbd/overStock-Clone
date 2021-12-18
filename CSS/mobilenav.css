@@ -1,0 +1,71 @@
+
+.MobileNavDrawer.iconBar {
+  background-color: #ff1f2c;
+  height: 44px;
+  width: 100%;
+  fill: #fff;
+}
+.MobileNavDrawerLink.MobileNavDrawertitleLink {
+  font-weight: 500;
+  font-size: 18px;
+  color: #2f3337;
+  background-color: #fff;
+  height: 60px;
+}
+.MobileNavDrawerLink {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 25px;
+  color: #000;
+  font-size: 15px;
+  border-bottom: 1px solid #dadcdf;
+  background-color: #f9fafb;
+}
+.MobileNavDrawer_CategoriesDefault_80 {
+  position: static;
+  transition: left 0.3s ease-in-out;
+}
+
+.MobileNavDrawer_testSubDrawer_44 {
+  width: 100%;
+  background-color: #f9fafb;
+  transition: right 0.3s ease-in-out;
+  z-index: 6;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.MobileNavDrawerlevelOne {
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.MobileNavDrawerlevelOne .MobileNavDrawerLink {
+  display: flex;
+  justify-content: space-between;
+}
+
+.MobileNavDrawerLink {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 25px;
+  color: #000;
+  font-size: 15px;
+  border-bottom: 1px solid #dadcdf;
+  background-color: #f9fafb;
+}
+
+.MobileNavDrawerLink .MobileNavDrawer_drillDownIcon_f2 {
+  right: 20px;
+}
+
+.MobileNavDrawerLink > svg {
+  position: relative;
+  stroke: #000;
+  width: 15px;
+}

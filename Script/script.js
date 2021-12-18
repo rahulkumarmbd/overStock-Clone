@@ -50,12 +50,15 @@ window.page = (name) => {
   var pageName = localStorage.getItem("pageName") || ""
   localStorage.setItem("pageName", name)
   console.log(name)
+  window.location.href = "category.html"
 }
 import header from "/components/navbar.js"
 
 document.querySelector("#navPut").innerHTML = header()
 import footer from "/components/footer.js"
+import mobileNav from "/components/mobilenav.js"
 
+document.querySelector("#mobilePtn").innerHTML = mobileNav()
 document.querySelector("#footerPut").innerHTML = footer()
 responsivewatchSlider()
 

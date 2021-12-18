@@ -4,8 +4,6 @@ body {
   font: 12px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
   max-width: 1600px;
   margin: auto;
-  position: relative;
-  overflow-x: hidden;
 }
 #compo {
   display: none;

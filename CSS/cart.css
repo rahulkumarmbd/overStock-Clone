@@ -11,7 +11,12 @@ html {
 body {
   overflow-x: hidden;
 }
-
+a{
+  cursor: pointer;
+}
+#compo {
+  display: none;
+}
 .zp {
   box-sizing: border-box;
   color: #2f3337;
@@ -116,10 +121,6 @@ body {
 }
 .oe .oy .pa a {
   text-decoration: none;
-}
-.qg {
-  overflow-y: scroll;
-  height: 93rem;
 }
 .qg::-webkit-scrollbar {
   display: none;
