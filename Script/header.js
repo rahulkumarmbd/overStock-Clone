@@ -1,6 +1,7 @@
 
 for(let i=0; i<13; i++){
     let sectionDiv = document.querySelectorAll(".section-div > div");
+    // console.log(sectionDiv)
     sectionDiv[i].addEventListener("mouseover", function () {
       let dropDownContainer = document.querySelectorAll(".dropdown-content-part");
       dropDownContainer[i].style.display = "flex";

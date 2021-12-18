@@ -79,3 +79,30 @@ for(let i=0; i<13; i++){
     });
   });
 }
+
+// let mains = document.querySelectorAll(".dropdown-content-part > div > div > div");
+// for(let i=0; i<mains.length; i++){
+//   mains[i].addEventListener("click",function(){
+//     console.log(mains[i].textContent);
+//     localStorage.setItem("Items",mains[i].textContent);
+//     window.location.href = "productsDisplay.html";
+//   })
+// }
+
+let sectionDiv = document.querySelectorAll(".section-div > div");
+for(let i=0; i<sectionDiv.length; i++){
+  sectionDiv[i].addEventListener("click",function(){
+    console.log(sectionDiv[i].textContent);
+    localStorage.setItem("pageName",sectionDiv[i].textContent);
+    window.location.href = "category.html";
+  })
+}
+
+// let blackDiv = document.querySelectorAll(".dark-div");
+// for(let i=0; i<blackDiv.length; i++){
+//   blackDiv[i].addEventListener("click",function(){
+//     console.log(blackDiv[i].textContent);
+//     localStorage.setItem("productsPageName",blackDiv[i].textContent);
+//     window.location.href = "productsDisplay.html";
+//   })
+// }
