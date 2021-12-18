@@ -6,7 +6,7 @@ console.log(cart)
 //   "https://ak1.ostkcdn.com/images/products/is/images/direct/f1ad2500ef7a1d4d19797bd52ebe030f5c358d46/Candace-Mid-Century-Modern-Fabric-Loveseat-by-Christopher-Knight-Home.jpg",
 //   "https://ak1.ostkcdn.com/images/products/is/images/direct/5c62873758b77c179517b6812908fdbb8a828c57/Candace-Mid-Century-Modern-Fabric-Loveseat-by-Christopher-Knight-Home.jpg",
 //   "https://ak1.ostkcdn.com/images/products/is/images/direct/10a3a215b27fb8a0e6907497680bf6a31ac93d14/Candace-Mid-Century-Modern-Fabric-Loveseat-by-Christopher-Knight-Home.jpg",
-//   "https://ak1.ostkcdn.com/images/products/is/images/direct/3397010c7f690a3f0aec545dac9064090ff11cf1/Candace-Mid-Century-Modern-Fabric-Loveseat-by-Christopher-Knight-Home.jpg",
+//   "https://ak1.ostkcdn.com/images/products/is/images/direct/3397010c7f690a3f0aec545dac9064279ff11cf1/Candace-Mid-Century-Modern-Fabric-Loveseat-by-Christopher-Knight-Home.jpg",
 //   "https://ak1.ostkcdn.com/images/products/is/images/direct/826a72957e43d5a4be68ff9730515fe3f1c7a378/Candace-Mid-Century-Modern-Fabric-Loveseat-by-Christopher-Knight-Home.jpg",
 //   "https://ak1.ostkcdn.com/images/products/is/images/direct/dd0062388afe8240aa7c46ad29981e98664b6420/Candace-Mid-Century-Modern-Fabric-Loveseat-by-Christopher-Knight-Home.jpg",
 //   "https://ak1.ostkcdn.com/images/products/is/images/direct/4fcffcffe7c2309bc91ebc89f1ebdd60c7dd67d0/Candace-Mid-Century-Modern-Fabric-Loveseat-by-Christopher-Knight-Home.jpg",
@@ -94,7 +94,7 @@ function previewNextSlide(index) {
     click = 0
   }
   if (current >= 4) {
-    div.style.transform = "translateX(-30.3%)"
+    div.style.transform = "translateX(-7.6%)"
     click = 1
   }
   if (current >= 8) {
@@ -120,7 +120,7 @@ function previewPrevSlide() {
     click = 0
   }
   if (current <= 8 && current > 4) {
-    div.style.transform = "translateX(-30.3%)"
+    div.style.transform = "translateX(-7.6%)"
     click = 1
   }
   if (current <= 12 && current > 8) {
@@ -143,7 +143,7 @@ next.addEventListener("click", function () {
   }
 
   if (click == 1) {
-    div.style.transform = "translateX(-7.2%)"
+    div.style.transform = "translateX(-7.6%)"
   }
 })
 
@@ -253,7 +253,7 @@ Navi[1].addEventListener("click", function () {
 })
 
 window.addEventListener("scroll", () => {
-  var scrollable = 531;
+  var scrollable = 720;
   var scrolled = window.scrollY;
   console.log(scrolled);
   let ProductHeader = document.getElementById("Product-header");
@@ -264,25 +264,25 @@ window.addEventListener("scroll", () => {
     ProductHeader.style.display = 'none';
   }
   let divs = document.querySelectorAll("#Product-header .anchor-box > div");
-  if(scrolled < 1299){
+  if(scrolled < 1494){
     divs.forEach((div) => {
       div.removeAttribute("id","active-anchor-box");
     })
     divs[0].setAttribute("id","active-anchor-box");
   }
-  else if(scrolled < 2879){
+  else if(scrolled < 3080){
     divs.forEach((div) => {
       div.removeAttribute("id","active-anchor-box");
     })
     divs[1].setAttribute("id","active-anchor-box");
   }
-  else if(scrolled < 4090){
+  else if(scrolled < 4289){
     divs.forEach((div) => {
       div.removeAttribute("id","active-anchor-box");
     })
     divs[2].setAttribute("id","active-anchor-box");
   }
-  else if(scrolled > 4134){
+  else if(scrolled > 4289){
     divs.forEach((div) => {
       div.removeAttribute("id","active-anchor-box");
     })
@@ -296,16 +296,16 @@ window.addEventListener("scroll", () => {
       })
       divs[i].setAttribute("id","active-anchor-box");
       if(i==0){
-        window.scrollTo(0,531);
+        window.scrollTo(0,720);
       }
       else if(i==1){
-        window.scrollTo(0,1299);
+        window.scrollTo(0,1494);
       }
       else if(i==2){
-        window.scrollTo(0,2879);
+        window.scrollTo(0,3080);
       }
       else{
-        window.scrollTo(0,4090);
+        window.scrollTo(0,4289);
       }
     })
     
