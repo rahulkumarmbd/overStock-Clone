@@ -3,11 +3,15 @@ body {
   padding: 0px;
   font: 12px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: cadetblue;
+  position: relative;
 }
 .header {
+  width: 100%;
   background-color: white;
   padding-top: 20px;
   padding-bottom: 0px;
+  position: fixed;
+  z-index: 10;
 }
 .header div {
   color: #2f3337;
@@ -315,13 +319,13 @@ body {
   display: none;
 }
 .overStlogo {
-    display: block;
-    width: 34px;
-    height: 32px;
-    display: none !important;
+  display: block;
+  width: 34px;
+  height: 32px;
+  display: none !important;
 }
-.overStlogo img{
-    background-color: #ff1f2c;
+.overStlogo img {
+  background-color: #ff1f2c;
 }
 @media screen and (max-width: 1100px) {
   .menupng {
@@ -353,5 +357,5 @@ body {
   }
 }
 .header .class-input input {
-    width: 100%;
+  width: 100%;
 }
