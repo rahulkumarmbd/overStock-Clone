@@ -253,9 +253,62 @@ Navi[1].addEventListener("click", function () {
 });
 
 window.addEventListener("scroll", () => {
-  var scrollable = 190;
+  var scrollable = 572;
   var scrolled = window.scrollY;
-  console.log(scrolled)
+  let ProductHeader = document.getElementById("Product-header");
+  if(scrolled >= scrollable){
+    ProductHeader.style.display = 'block';
+  }
+  if(scrolled < scrollable){
+    ProductHeader.style.display = 'none';
+  }
+  let divs = document.querySelectorAll("#Product-header .anchor-box > div");
+  if(scrolled < 1346){
+    divs.forEach((div) => {
+      div.removeAttribute("id","active-anchor-box");
+    })
+    divs[0].setAttribute("id","active-anchor-box");
+  }
+  else if(scrolled < 2919){
+    divs.forEach((div) => {
+      div.removeAttribute("id","active-anchor-box");
+    })
+    divs[1].setAttribute("id","active-anchor-box");
+  }
+  else if(scrolled < 4134){
+    divs.forEach((div) => {
+      div.removeAttribute("id","active-anchor-box");
+    })
+    divs[2].setAttribute("id","active-anchor-box");
+  }
+  else if(scrolled > 4134){
+    divs.forEach((div) => {
+      div.removeAttribute("id","active-anchor-box");
+    })
+    divs[3].setAttribute("id","active-anchor-box");
+  }
+
+  for(let i=0; i<divs.length; i++){
+    divs[i].addEventListener("click",() => {
+      divs.forEach((div) => {
+        div.removeAttribute("id","active-anchor-box");
+      })
+      divs[i].setAttribute("id","active-anchor-box");
+      if(i==0){
+        window.scrollTo(0,572);
+      }
+      else if(i==1){
+        window.scrollTo(0,1346);
+      }
+      else if(i==2){
+        window.scrollTo(0,2919);
+      }
+      else{
+        window.scrollTo(0,4134);
+      }
+    })
+    
+  }
 });
 // import header from "/components/navbar.js"
 
