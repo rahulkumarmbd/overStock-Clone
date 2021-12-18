@@ -318,9 +318,64 @@ window.addEventListener("scroll", () => {
     })
   }
 })
-// import header from "/components/navbar.js"
 
-// document.querySelector("#navPut").innerHTML = header()
+window.page = (name) => {
+  var pageName = localStorage.getItem("pageName") || ""
+  localStorage.setItem("pageName", name)
+  console.log(name)
+  window.location.href = "category.html"
+}
+import header from "/components/navbar.js"
+
+document.querySelector("#navPut").innerHTML = header()
 import footer from "/components/footer.js"
+import mobileNav from "/components/mobilenav.js"
 
+// document.querySelector("#mobilePtn").innerHTML = mobileNav()
 document.querySelector("#footerPut").innerHTML = footer()
+responsivewatchSlider()
+
+for(let i=0; i<13; i++){
+  let sectionDiv = document.querySelectorAll(".section-div > div");
+  sectionDiv[i].addEventListener("mouseover", function () {
+    let dropDownContainer = document.querySelectorAll(".dropdown-content-part");
+    dropDownContainer[i].style.display = "flex";
+  });
+  sectionDiv[i].addEventListener("mouseout", function () {
+    let dropDownContainer = document.querySelectorAll(".dropdown-content-part");
+    dropDownContainer[i].style.display = "none";
+    dropDownContainer[i].addEventListener("mouseover", function () {
+      dropDownContainer[i].style.display = "flex";
+    });
+    dropDownContainer[i].addEventListener("mouseout", function () {
+      dropDownContainer[i].style.display = "none";
+    });
+  });
+}
+
+// let mains = document.querySelectorAll(".dropdown-content-part > div > div > div");
+// for(let i=0; i<mains.length; i++){
+//   mains[i].addEventListener("click",function(){
+//     console.log(mains[i].textContent);
+//     localStorage.setItem("Items",mains[i].textContent);
+//     window.location.href = "productsDisplay.html";
+//   })
+// }
+
+let sectionDiv = document.querySelectorAll(".section-div > div");
+for(let i=0; i<sectionDiv.length; i++){
+  sectionDiv[i].addEventListener("click",function(){
+    console.log(sectionDiv[i].textContent);
+    localStorage.setItem("pageName",sectionDiv[i].textContent);
+    window.location.href = "category.html";
+  })
+}
+
+// let blackDiv = document.querySelectorAll(".dark-div");
+// for(let i=0; i<blackDiv.length; i++){
+//   blackDiv[i].addEventListener("click",function(){
+//     console.log(blackDiv[i].textContent);
+//     localStorage.setItem("productsPageName",blackDiv[i].textContent);
+//     window.location.href = "productsDisplay.html";
+//   })
+// }

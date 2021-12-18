@@ -2,15 +2,13 @@ body {
   margin: 0px;
   padding: 0px;
   font: 12px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: cadetblue;
-  position: relative;
 }
 .header {
   width: 100%;
   background-color: white;
   padding-top: 20px;
   padding-bottom: 0px;
-  position: fixed;
+  position: sticky;
   z-index: 10;
 }
 .header div {
