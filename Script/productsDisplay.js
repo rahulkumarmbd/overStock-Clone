@@ -12,30 +12,37 @@ fetch(`https://overstockapi.herokuapp.com/products/subCategory=${nn}`)
   .then((response) => {
     var data = response
     console.log(data)
-    appendCard(data)
+    if (data.length !== 0) {
+      appendCard(data)
+    } else {
+      fetch(`https://overstockapi.herokuapp.com/products/mainSubCategory=${nn}`)
+        .then((response) => {
+          return response.json()
+        })
+        .then((response) => {
+          var data = response
+          console.log(data)
+          if (data.length !== 0) {
+            appendCard(data)
+          } else {
+            fetch(`https://overstockapi.herokuapp.com/products/category=${nn}`)
+              .then((response) => {
+                return response.json()
+              })
+              .then((response) => {
+                var data = response
+                console.log(data)
+                appendCard(data)
+              })
+          }
+        })
+    }
+    setTimeout(function () {
+      document.getElementById("loaderSS").style.display = "none"
+      document.getElementById("compo").style.display = "block"
+    }, 4000)
   })
-fetch(`https://overstockapi.herokuapp.com/products/mainSubCategory=${nn}`)
-  .then((response) => {
-    return response.json()
-  })
-  .then((response) => {
-    var data = response
-    console.log(data)
-    appendCard(data)
-  })
-fetch(`https://overstockapi.herokuapp.com/products/category=${nn}`)
-  .then((response) => {
-    return response.json()
-  })
-  .then((response) => {
-    var data = response
-    console.log(data)
-    appendCard(data)
-  })
-setTimeout(function () {
-  document.getElementById("loaderSS").style.display = "none"
-  document.getElementById("compo").style.display = "block"
-}, 4000)
+
 var appendCard = (data) => {
   data.forEach((item) => {
     let productCardContainer = document.createElement("div")

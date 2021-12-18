@@ -11,7 +11,12 @@ html {
 body {
   overflow-x: hidden;
 }
-
+a{
+  cursor: pointer;
+}
+#compo {
+  display: none;
+}
 .zp {
   box-sizing: border-box;
   color: #2f3337;
