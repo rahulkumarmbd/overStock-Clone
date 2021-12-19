@@ -320,13 +320,3 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-@media (max-width: 480px) {
-  html {
-    font-size: 30%;
-  }
-  .offerContainer,
-  .categoryContainer {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}

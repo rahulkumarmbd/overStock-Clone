@@ -64,13 +64,13 @@ signUpBtn.addEventListener("click", async (e) => {
       passResult[3] = "yes4";
     }
   }
-  console.log(passResult);
+  // console.log(passResult);
   if (Object.keys(passResult).length != 4) {
     e.preventDefault();
     errorMessage(
       "Password must be a minimum of 8 characters and cannot exceed 70 characters"
     );
-    errorMessage("Password must contain at least 1 letter.");
+    errorMessage("Password must contain at least 1 Uppercase , 1 lowercase , 1 number and 1 special Character.");
     return;
   }
   e.preventDefault();
@@ -166,7 +166,7 @@ signInBtn.addEventListener("click", async (e) => {
     errorMessage(data.message);
   } else {
     getProfile(userName, data.token);
-    window.location.href = "landingPage.html";
+    window.location.href = "checkout.html"
   }
 
   async function getProfile(username, token) {
@@ -185,7 +185,7 @@ signInBtn.addEventListener("click", async (e) => {
 // guest btn js
 var guest = document.querySelector(".guest button");
 guest.addEventListener("click", () => {
-  window.location.href = "landingPage.html";
+  window.location.href = "checkout.html";
 });
 
 function isEmail(email) {
