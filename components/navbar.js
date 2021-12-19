@@ -7,8 +7,8 @@ let header = () =>{
       data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasExample"
       aria-controls="offcanvasExample" class="menupng">
-      <img class="overstockIndex" src="https://i.postimg.cc/9F9jVtWk/Menu.png" alt=""></div>
-      <div class="overStlogo"><img src="images/icon.png" alt=""></div>
+      <img src="https://i.postimg.cc/9F9jVtWk/Menu.png" alt=""></div>
+      <div class="overStlogo overstockIndex"><img src="images/icon.png" alt=""></div>
       <div class="overstocklogo">
         <img class="overstockIndex" src="https://i.postimg.cc/0yCKC2SV/svgexport-1.png" alt="" />
       </div>

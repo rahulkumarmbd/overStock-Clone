@@ -246,7 +246,9 @@ img {
   height: fit-content;
   padding-bottom: 20px;
   position: absolute;
-  width: 68%;
+  width: 72%;
+  padding: 0px 20px;
+  padding-bottom: 20px;
   left: auto;
   right: 0;
   background-color: white;
