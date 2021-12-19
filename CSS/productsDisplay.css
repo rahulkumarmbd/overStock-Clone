@@ -391,6 +391,9 @@ a {
   .cardSet {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .sortDiv{
+    display: none;
+  }
 }
 
 @media (max-width: 760px) {
@@ -402,5 +405,8 @@ a {
   }
   .cardSet {
     grid-template-columns: 1fr 1fr;
+  }
+  .sortDiv{
+    display: none;
   }
 }
