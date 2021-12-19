@@ -18,6 +18,16 @@ a {
   cursor: pointer;
 }
 
+.extraspace {
+  height: 100px;
+}
+
+@media screen and (max-width: 1100px) {
+  .extraspace {
+    height: 50px;
+  }
+}
+
 .mainDiv {
   color: #2f3337;
   margin: 0 auto 2.4rem;

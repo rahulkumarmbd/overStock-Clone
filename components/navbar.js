@@ -6,10 +6,11 @@ let header = () =>{
       <div type="button"
       data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasExample"
-      aria-controls="offcanvasExample" class="menupng"><img src="https://i.postimg.cc/9F9jVtWk/Menu.png" alt=""></div>
-      <div class="overStlogo"><img src="https://i.postimg.cc/tgcjprVL/Overstock-Logo.png" alt=""></div>
+      aria-controls="offcanvasExample" class="menupng">
+      <img class="overstockIndex" src="https://i.postimg.cc/9F9jVtWk/Menu.png" alt=""></div>
+      <div class="overStlogo"><img src="images/icon.png" alt=""></div>
       <div class="overstocklogo">
-        <img src="https://i.postimg.cc/0yCKC2SV/svgexport-1.png" alt="" />
+        <img class="overstockIndex" src="https://i.postimg.cc/0yCKC2SV/svgexport-1.png" alt="" />
       </div>
       <div class="class-input">
         <div>
@@ -19,7 +20,7 @@ let header = () =>{
           <img src="https://i.postimg.cc/tgWqzB8p/Search-1.png alt="">
         </div>
       </div>
-      <div class="class-account class-account-common">
+      <div id="account1" class="class-account class-account-common">
         <div>
           <img src="https://i.postimg.cc/RCb3PDNz/User.png" alt="" />
         </div>
@@ -51,7 +52,7 @@ let header = () =>{
           <div>Find a List</div>
         </div>
       </div>
-      <div class="class-account">
+      <div id="cart1" class="class-account">
         <div>
           <img src="https://i.postimg.cc/DyZNh8vX/Cart-Empty.png" alt="" />
         </div>

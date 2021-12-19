@@ -8,7 +8,7 @@ function mobileNav() {
     >
       <div class="MobileNavDrawer iconBar">
         <img
-          src="https://i.postimg.cc/kXkkYv3f/Overstock-Logo-1.png"
+          src="images/icon.png"
           height="100%"
         />
       </div>
@@ -30,7 +30,7 @@ function mobileNav() {
             style="height: 100%; transition: height 300ms ease-out 0s"
           >
             <div>
-              <div class="MobileNavDrawerLink MobileEvent">
+              <div class="MobileNavDrawerLink MobileEve">
                 <span>Furniture</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -54,7 +54,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink MobileEvent">
+              <div class="MobileNavDrawerLink MobileEve">
                 <span>Rugs</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -78,7 +78,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink MobileEvent">
+              <div class="MobileNavDrawerLink MobileEve">
                 <span>Decor</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -102,7 +102,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink MobileEvent">
+              <div class="MobileNavDrawerLink MobileEve">
                 <span>Bed &amp; Bath</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -126,7 +126,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink MobileEvent">
+              <div class="MobileNavDrawerLink MobileEve">
                 <span>Home Improvement</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -150,7 +150,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink MobileEvent">
+              <div class="MobileNavDrawerLink MobileEve">
                 <span>Kitchen</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -174,7 +174,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink MobileEvent" >
+              <div class="MobileNavDrawerLink MobileEve" >
                 <span>Outdoor</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -198,7 +198,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink MobileEvent" >
+              <div class="MobileNavDrawerLink MobileEve" >
                 <span>Jewelry</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -222,7 +222,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink MobileEvent" >
+              <div class="MobileNavDrawerLink MobileEve" >
                 <span>Lighting</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -246,7 +246,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink MobileEvent">
+              <div class="MobileNavDrawerLink MobileEve">
                 <span>Holiday &amp; Gifts</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -270,7 +270,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink MobileEvent">
+              <div class="MobileNavDrawerLink MobileEve">
                 <span>Kids &amp; Baby</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -294,7 +294,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink MobileEvent">
+              <div class="MobileNavDrawerLink MobileEve">
                 <span>More Categories</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -320,7 +320,7 @@ function mobileNav() {
             <a
               href=""
               data-tid="undefined:STICKY"
-              class="MobileNavDrawerLink MobileEvent MobileNavDrawer_sale_33"
+              class="MobileNavDrawerLink MobileEve MobileNavDrawer_sale_33"
               >Sales &amp; Deals</a
             >
           </div>
