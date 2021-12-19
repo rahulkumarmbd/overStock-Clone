@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+     #body{
+         display:flex;
+         
+     }
+
+      
+       .container{
+         
+          margin-top: 70px;
+          display:grid;
+           width:30%;
+           margin-left: 100px;
+          grid-template-columns: 250px ;
+          grid-template-rows:  380px;
+        
+      }
+      
+     
+      .container>div>span{
+          /* margin-top: auto; */
+          color:black;
+          margin-top: 2rem;
+      }
+
+      .container>div{
+          padding:5px;
+          /* border:1px solid grey; */
+
+
+      } 
+     
+     
+      .container2{
+          /* border:1px solid blue; */
+          display:flex;
+          flex-direction:column;
+          width : 38%;
+          height:17.6rem;
+          /* padding:5px; */
+          /* margin-left: 100px; */
+          /* grid-template-columns: 80px 80px 80px  80px;
+          grid-template-rows: 80px 80px;
+          grid-gap:4px; */
+          margin-top: 4rem;
+          margin-left: 25%;
+      }
+      
+      .container2>img{
+            width : 100px;
+            height :115px;
+            margin-left: 7.5rem;
+      
+      }
+
+      
+      .container2>p{
+       
+           font-size: 16px;
+          color: rgb(47, 51, 55);
+          /* font-weight: 700; */
+          text-align: center;
+          margin-top: 0.6rem;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .container2>button{
+        width: 180px;
+        height:40px;
+        margin-left: 85px;
+        background-color: black;
+        color: white;
+        margin-top: 30px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-align: center;
+        border-radius: 5px;
+        border: none;
+
+      }
+      .container2 >h4{
+        /* width: 230px;
+        height:10px;
+        margin-left: 50px;
+          margin-top: auto; */
+          font-size: 16px;
+          color: rgb(47, 51, 55);;
+          font-weight: 700;
+          text-align: center;
+          margin-top: 0.6rem;
+          margin-bottom: 0rem;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .container2>div>button:hover{
+          color: blue;
+
+      }
+
+      /* .container2>div{
+           border: 1px solid black; 
+         
+
+      }  */
+     
+      h3{
+          margin-left: 120px;
+          margin-top: 50px;
+
+      }
+      #body1 {
+           width: 75%;
+          height: 30rem;
+          /* border: 1px solid black; */
+          margin-top: 4.5rem;
+          display: flex;
+          margin-left: 0%;
+          flex-direction:column;
+      }
+      
+      a{
+          text-decoration: none;
+          color: black;
+      }
+
+      .sidebarAnchor a{
+           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+           font-size: 14px;
+           color: rgb(47, 51, 55);
+           font-weight: 700;
+           /* padding: 0.8rem; */
+           padding-left: 0.8rem;
+           vertical-align: middle;
+          
+           
+      }
+      .sidebarAnchor {
+            width: 100%;
+            height: 2.5rem;
+            /* border: 1px solid red; */
+           
+      }
+
+      .sidebar_div{
+            height : 24.8rem;
+            border-right: 1px solid rgb(238, 238, 238);
+      }
+
+      /* .sidebarAnchor > span {
+            margin-top: 1rem;
+      } */
+     #mainAnchor {
+            margin-top: 1rem;
+     }
+
+     .sidebarAnchor:hover{
+         border-left: 2px solid black;
+         background-color: rgb(233, 231, 233);
+     }
+
+     .checkInternational {
+          width: 86%;
+          height: 2.8rem;
+          /* border: 1px solid black; */
+          display: flex;
+          border-radius :5px;
+          background-color: #c8e8f6;
+          /* color :  */
+          color: #026089;
+          font-size: 14px;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          align-items: center;
+          
+     }
+     .checkInternational > a {
+         color : #026089;
+         margin-left: 58%;
+     }
+     .checkInternational > p {
+          margin-left: 1.5%;
+     }
+     #body1 > h1 {
+            margin-top: 0.6rem;
+            margin-left: 0rem;
+            font-size: 18px;
+            font-weight: bold;
+            color: rgb(47, 51, 55);
+            line-height: 22px;
+            width: 100%;
+     }
+
+    </style>
+</head>
+<body>
+
+    <div id = "body">
+    <div class="container">
+      
+
+        <div class = "sidebar_div">
+            <div class = "sidebarAnchor">
+                <a href="overview.html">Overview</a>
+            </div>
+            <div class = "sidebarAnchor">
+                <a  href="orderandreturn.html"> Orders & Returns</a>
+            </div>
+            <div class = "sidebarAnchor">
+                <a href="">My Lists </a>
+            </div>
+            <div class = "sidebarAnchor">
+                <a href="">Account Setting</a> 
+            </div>
+            <div class = "sidebarAnchor"> 
+                <a href="">Overview</a>
+            </div>
+            <div class = "sidebarAnchor">
+                <a href="">Overview</a>
+            </div>
+            
+            <div class = "sidebarAnchor">
+                <a href="">Alert & Communication</a>
+            </div>
+            <div class = "sidebarAnchor">
+                <a id = "mainAnchor" href="">  Help Center</a>
+            </div>
+            
+           
+          
+           
+        </div>
+        
+
+    </div>
+
+      <div id ="body1">
+        <div class = "checkInternational">
+            <p class= "left">Not An International Customer?</p>
+            <a href = "index.html">Back to Us Site</a>
+        </div>
+        <h1>Order And Returns</h1>
+    <div class="container2">
+    
+            <h4>Hi there!</h4>
+            <p>It looks like you haven't placed any orders yet.</p>
+            <img 
+            
+              src="https://xp.io/storage/2GY1nsQS.png"/>
+         
+             <button id ="button">Let's go shopping</button>
+
+
+    
+    
+    
+   
+</div>
+</div>
+</body>
+</html>
