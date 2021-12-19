@@ -3,15 +3,15 @@ var nn = pageName;
 console.log(nn);
 
 var cart = JSON.parse(localStorage.getItem("Items")) || {};
-
+var data;
 document.getElementById("headingResult").textContent = nn;
 fetch(`https://overstockapi.herokuapp.com/products/subCategory=${nn}`)
   .then((response) => {
     return response.json();
   })
   .then((response) => {
-    var data = response;
-    console.log(data);
+      data = response;
+      console.log(data);
     if (data.length !== 0) {
       appendCard(data);
     } else {
@@ -277,3 +277,28 @@ document.querySelector(".sort-drop-down").addEventListener("mouseover",function(
 document.querySelector(".sort-drop-down").addEventListener("mouseout",function(){
   document.querySelector(".sort-drop-down").style.display = "none";
 })
+
+
+// function  for sorting..
+
+let high = document.getElementById("high");
+let low = document.getElementById("low");
+
+high.addEventListener("click",function(){
+  document.getElementById("displayCard").innerHTML = "";
+    data.sort(function(a,b){
+       return b.price - a.price;
+       
+    })
+    appendCard(data);
+})
+
+low.addEventListener("click",function(){
+  document.getElementById("displayCard").innerHTML = "";
+    data.sort(function(a,b){
+      return a.price - b.price;
+  })
+  appendCard(data);
+
+})
+
