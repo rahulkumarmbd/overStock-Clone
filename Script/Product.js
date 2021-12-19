@@ -333,7 +333,7 @@ import mobileNav from "/components/mobilenav.js"
 
 // document.querySelector("#mobilePtn").innerHTML = mobileNav()
 document.querySelector("#footerPut").innerHTML = footer()
-responsivewatchSlider()
+
 
 for(let i=0; i<13; i++){
   let sectionDiv = document.querySelectorAll(".section-div > div");

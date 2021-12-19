@@ -39,7 +39,7 @@ fetch(`https://overstockapi.herokuapp.com/page/${pageName}`)
     setTimeout(function () {
       document.getElementById("loaderSS").style.display = "none"
       document.getElementById("compo").style.display = "block"
-    }, 3000)
+    }, 2000)
   })
 
 var appendCategories = (data) => {
@@ -123,7 +123,7 @@ import mobileNav from "/components/mobilenav.js"
 
 document.querySelector("#mobilePtn").innerHTML = mobileNav()
 document.querySelector("#footerPut").innerHTML = footer()
-responsivewatchSlider()
+
 
 for(let i=0; i<13; i++){
   let sectionDiv = document.querySelectorAll(".section-div > div");

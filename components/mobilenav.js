@@ -30,8 +30,7 @@ function mobileNav() {
             style="height: 100%; transition: height 300ms ease-out 0s"
           >
             <div>
-              <div class="MobileNavDrawerLink" ${(
-                  onclick="page(`Furniture`)")}>
+              <div class="MobileNavDrawerLink MobileEvent">
                 <span>Furniture</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -55,7 +54,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink"  ${(onclick = "page(`Rugs`)")}>
+              <div class="MobileNavDrawerLink MobileEvent">
                 <span>Rugs</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -79,8 +78,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink" ${(onclick =
-                "page(`Home Decor`)")}>
+              <div class="MobileNavDrawerLink MobileEvent">
                 <span>Decor</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -104,8 +102,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink" ${(onclick =
-                "page(`Bedding & Bath`)")}>
+              <div class="MobileNavDrawerLink MobileEvent">
                 <span>Bed &amp; Bath</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -129,8 +126,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink" ${(onclick =
-                "page(`Home Improvement`)")}>
+              <div class="MobileNavDrawerLink MobileEvent">
                 <span>Home Improvement</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -154,8 +150,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink" ${(onclick =
-                "page(`Kitchen & Dining`)")}>
+              <div class="MobileNavDrawerLink MobileEvent">
                 <span>Kitchen</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -179,7 +174,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink" ${(onclick = "page(`Outdoor`)")}>
+              <div class="MobileNavDrawerLink MobileEvent" >
                 <span>Outdoor</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -203,7 +198,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink" ${(onclick = "page(`Jewelry`)")}>
+              <div class="MobileNavDrawerLink MobileEvent" >
                 <span>Jewelry</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -227,8 +222,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink" ${(onclick =
-                "page(`Lighting`)")}>
+              <div class="MobileNavDrawerLink MobileEvent" >
                 <span>Lighting</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -252,8 +246,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink" ${(onclick =
-                "page(`Gift Ideas`)")}>
+              <div class="MobileNavDrawerLink MobileEvent">
                 <span>Holiday &amp; Gifts</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -277,8 +270,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink" ${(onclick =
-                "page(`Lighting`)")}>
+              <div class="MobileNavDrawerLink MobileEvent">
                 <span>Kids &amp; Baby</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -302,8 +294,7 @@ function mobileNav() {
               </div>
             </div>
             <div>
-              <div class="MobileNavDrawerLink" ${(onclick =
-                "page(`Lighting`)")}>
+              <div class="MobileNavDrawerLink MobileEvent">
                 <span>More Categories</span
                 ><svg
                   class="MobileNavDrawer_drillDownIcon_f2"
@@ -329,7 +320,7 @@ function mobileNav() {
             <a
               href=""
               data-tid="undefined:STICKY"
-              class="MobileNavDrawerLink MobileNavDrawer_sale_33"
+              class="MobileNavDrawerLink MobileEvent MobileNavDrawer_sale_33"
               >Sales &amp; Deals</a
             >
           </div>
