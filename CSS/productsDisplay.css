@@ -4,6 +4,96 @@
   box-sizing: border-box;
 }
 
+.side-bar-container {
+  border: none;
+  color: #2f3337;
+  -webkit-align-items: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  outline-offset: 0;
+  padding: 15px 0;
+  text-align: left;
+  width: 100%;
+  border-top: 1px solid #dadcdf;
+}
+.side-bar-container img {
+  height: 17px;
+  margin-left: auto;
+  margin-right: 10px;
+  width: 17px;
+}
+.side-bar-content{
+  display: none;
+}
+.side-bar-content > div{
+  display: flex;
+  gap: 4%;
+  color: #545658;
+  align-items: center;
+  font-size: 14px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  margin-right: 8px;
+  color: #2f3337;
+  line-height: 20px;
+  padding: 8px 0 16px;
+  cursor: pointer;
+}
+.side-bar-content > div > div:nth-child(2){
+  border-bottom: 1px solid white;
+}
+.side-bar-content > div > div:nth-child(2):hover {
+  border-bottom: 1px solid black;
+}
+.sortDiv{
+  padding: 0px 3%;
+  display: flex;
+  justify-content: flex-end;
+}
+.sortDiv > div{
+  padding: 0px 12px;
+  margin-bottom: 25px;
+}
+.sortDiv div{
+  color: #2f3337;
+  font-size: 16px;
+  line-height: 34px;
+}
+.sortDiv > div:nth-child(2){
+  width: 17%;
+  border: 1px solid #DADCDF;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+.sort-drop-down > div:hover{
+  background-color: #DADCDF;
+}
+.sort-drop-down > div{
+  padding-left: 12px;
+  cursor: pointer;
+}
+.sort-drop-down{
+  display: none;
+  position: absolute;
+  background-color: white;
+  z-index: 4;
+  width: 100%;
+  left: 0;
+  border: 1px solid #DADCDF;
+  height: 200px;
+  overflow-y: scroll;
+}
+.sort-drop-down:hover{
+  display: block;
+}
 html {
   font-size: 62.5%;
 }
