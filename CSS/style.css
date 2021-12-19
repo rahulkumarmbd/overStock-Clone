@@ -15,6 +15,16 @@ a {
   text-decoration: none;
 }
 
+.extraspace {
+  height: 100px;
+}
+
+@media screen and (max-width: 1100px) {
+  .extraspace {
+    height: 50px;
+  }
+}
+
 .banner {
   position: relative;
   width: 100%;

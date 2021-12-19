@@ -218,3 +218,20 @@ for(let i=0; i<sectionDiv.length; i++){
 //     window.location.href = "productsDisplay.html";
 //   })
 // }
+
+let overstockIndex = document.querySelectorAll(".overstockIndex")
+for (let i = 0; i < overstockIndex.length; i++) {
+  overstockIndex[i].addEventListener("click", function () {
+    window.location.href = "index.html"
+  })
+}
+
+let account1 = document.getElementById("account1")
+account1.addEventListener("click", function () {
+  window.location.href = "signup.html"
+})
+
+let cart1 = document.getElementById("cart1")
+cart1.addEventListener("click", function () {
+  window.location.href = "cart.html"
+})
