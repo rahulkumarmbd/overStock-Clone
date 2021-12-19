@@ -160,6 +160,7 @@ document.querySelector(".button").addEventListener("click",function(){
          console.log(1)
          if (paymentDetails.name == "abhi" && paymentDetails.cvv == 123){
             //  alert("Not valid Credentials")
+            localStorage.clear();
             window.location.href = "congr.html"
          } else {
              
