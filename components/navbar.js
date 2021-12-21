@@ -145,7 +145,7 @@ let header = () =>{
         <div class="dropdown-img-cont">
           <div>
             <img
-              src="https://ak1.ostkcdn.com/images/products/is/images/direct/3a6dcd1fee11be0b04bbd63a725ac507e0b95afc/Warrenton-Boho-Handcrafted-2-Door-Acacia-Wood-Sideboard-by-Christopher-Knight-Home.jpg?imwidth=320"
+              src="https://i.postimg.cc/tg7z1Kz4/Warrenton-Boho-Handcrafted-2-Door-Acacia-Wood-Sideboard-by-Christopher-Knight-Home.jpg"
               alt=""
             />
           </div>
@@ -230,7 +230,7 @@ let header = () =>{
         <div class="dropdown-img-cont">
           <div>
             <img
-              src="https://ak1.ostkcdn.com/images/products/is/images/direct/38c737152d4da3fc898a3dd5435bbe6513bb87ea/SAFAVIEH-Handmade-Luxe-Shag-Bahija-Solid-Polyester-Rug.jpg"
+              src="https://i.postimg.cc/FF0VJg03/SAFAVIEH-Handmade-Luxe-Shag-Bahija-Solid-Polyester-Rug.jpg"
               alt=""
             />
           </div>
@@ -315,7 +315,7 @@ let header = () =>{
         <div class="dropdown-img-cont">
           <div>
             <img
-              src="https://ak1.ostkcdn.com/images/products/23545904/24-Mixed-Spruce-Christmas-Wreath-50-Warm-White-LED-Lights-Frosted-Branches-Red-Berries-Pinecones-by-Christopher-Knight-Home-2da73100-4fe7-4742-ab34-6322fc7eed04_320.jpg"
+              src="https://i.postimg.cc/GpZv4H2X/White-LED-Lights-Frosted-Branches-Red-Berries-Pinecones-by-Christopher-Knight-Home-2da73100-4fe7-47.jpg"
               alt=""
             />
           </div>
@@ -396,7 +396,7 @@ let header = () =>{
         <div class="dropdown-img-cont">
           <div>
             <img
-              src="https://ak1.ostkcdn.com/images/products/27799771/Madison-Park-Signature-Urban-Cabin-Brown-Cotton-Jacquard-Comforter-Set-e747cc3a-7a09-4642-bd6c-de46de63aaee_320.jpg"
+              src="https://i.postimg.cc/4d6HnPj3/Madison-Park-Signature-Urban-Cabin-Brown-Cotton-Jacquard-Comforter-Set-e747cc3a-7a09-4642-bd6c-de46d.jpg"
               alt=""
             />
           </div>
@@ -475,7 +475,7 @@ let header = () =>{
         <div class="dropdown-img-cont">
           <div>
             <img
-              src="https://ak1.ostkcdn.com/images/products/is/images/direct/8ae6687667c075d1d993a7673053bbbf74e0ba26/Louise-48in-Bath-Vanity.jpg"
+              src="https://i.postimg.cc/tRzVjrhS/Louise-48in-Bath-Vanity.jpg"
               alt=""
             />
           </div>
@@ -561,7 +561,7 @@ let header = () =>{
         <div class="dropdown-img-cont">
           <div>
             <img
-              src="https://ak1.ostkcdn.com/img/mxc/09062021_FALL2021_Kitchen_PopCat_4.jpg?imwidth=320&impolicy=medium"
+              src="https://i.postimg.cc/SxHnrHhs/09062021-FALL2021-Kitchen-Pop-Cat-4.jpg"
               alt=""
             />
           </div>
@@ -648,7 +648,7 @@ let header = () =>{
         <div class="dropdown-img-cont">
           <div>
             <img
-              src="https://ak1.ostkcdn.com/images/products/is/images/direct/6c0262a56423950c883c86911ad5b6f4e5d1380e/Glitzhome-42%22H-Christmas-Wooden-Word-Porch-Sign.jpg"
+              src="https://i.postimg.cc/wMxMMphW/Glitzhome-42-H-Christmas-Wooden-Word-Porch-Sign.jpg"
               alt=""
             />
           </div>
@@ -713,7 +713,7 @@ let header = () =>{
         <div class="dropdown-img-cont">
           <div>
             <img
-              src="https://ak1.ostkcdn.com/images/products/is/images/direct/fc96378420c308052d095897a4a17c0c545a8e30/Quad-Crossover-Diamond-Bridal-Set-in-Sterling-Silver-by-Miadora.jpg"
+              src="https://i.postimg.cc/9fGQBMb8/Quad-Crossover-Diamond-Bridal-Set-in-Sterling-Silver-by-Miadora.jpg"
               alt=""
             />
           </div>
@@ -795,7 +795,7 @@ let header = () =>{
         <div class="dropdown-img-cont">
           <div>
             <img
-              src="https://ak1.ostkcdn.com/images/products/is/images/direct/7e7823f4d38f87ed1ea8da61cd0b8505d02ccb9d/Light-Society-Bella-8-Light-Chandelier.jpg"
+              src="https://i.postimg.cc/SQZNdHLh/Light-Society-Bella-8-Light-Chandelier.jpg"
               alt=""
             />
           </div>
@@ -865,7 +865,7 @@ let header = () =>{
       </div>
       <div>
         <div>
-            <div><img src="https://ak1.ostkcdn.com/images/products/is/images/direct/7e7823f4d38f87ed1ea8da61cd0b8505d02ccb9d/Light-Society-Bella-8-Light-Chandelier.jpg" alt=""></div>
+            <div><img src="https://i.postimg.cc/SQZNdHLh/Light-Society-Bella-8-Light-Chandelier.jpg" alt=""></div>
             <div>extra 15% off</div>
             <div>Select Baby Products*</div>
         </div>
@@ -942,7 +942,7 @@ let header = () =>{
         </div>
         <div>
             <div class="dropdown-img-cont">
-                <div><img src="https://ak1.ostkcdn.com/images/products/is/images/direct/a0eb23a4dd8d07719aaec229f679d11dd28c4866/24%22-Berry-Mixed-Holly-Wreath.jpg" alt=""></div>
+                <div><img src="https://i.postimg.cc/L47FnSBn/24-Berry-Mixed-Holly-Wreath.jpg" alt=""></div>
                 <div>extra 15% off</div>
                 <div>Select Christmas Decorations</div>
             </div>
@@ -952,68 +952,68 @@ let header = () =>{
       <div>Holiday & Gifting</div>
       <div>
           <div>
-              <div><img src="https://ak1.ostkcdn.com/img/mxc/09182021-HolidayGifting-Christmasv2.jpg" alt=""></div>
+              <div><img src="https://i.postimg.cc/yx9K7pGf/09182021-Holiday-Gifting-Christmasv2.jpg" alt=""></div>
               <div>Christmas</div>
           </div>
           <div>
-              <div><img src="https://ak1.ostkcdn.com/img/mxc/10182021-HoliGift-MODT4.jpg" alt=""></div>
+              <div><img src="https://i.postimg.cc/kGC1tj4Y/10182021-Holi-Gift-MODT4.jpg" alt=""></div>
               <div>Gift Ideas</div>
           </div>
           <div>
-              <div><img src="https://ak1.ostkcdn.com/img/mxc/11152021-ideas-giftcards.png" alt=""></div>
+              <div><img src="https://i.postimg.cc/jdgcsqzF/11152021-ideas-giftcards.png" alt=""></div>
               <div>Gift Cards</div>
           </div>
           <div>
-              <div><img src="https://ak1.ostkcdn.com/img/mxc/11152021-ideas-shopallholidaygifts.png" alt=""></div>
+              <div><img src="https://i.postimg.cc/3xzZvLfj/11152021-ideas-shopallholidaygifts.png" alt=""></div>
               <div>Shop All Holiday & Gifts</div>
           </div>
       </div>
       <div>Inspiration & Ideas</div>
       <div>
           <div>
-              <div><img src="https://ak1.ostkcdn.com/img/mxc/10182021-HoliGift-MODB1.jpg" alt=""></div>
+              <div><img src="https://i.postimg.cc/bwSxpxYZ/10182021-Holi-Gift-MODB1.jpg" alt=""></div>
               <div>Best Home Gifts for Christmas</div>
           </div>
           <div>
-              <div><img src="https://ak1.ostkcdn.com/img/mxc/10182021-HoliGift-MODB2.jpg" alt=""></div>
+              <div><img src="https://i.postimg.cc/hjDQzTnb/10182021-Holi-Gift-MODB2.jpg" alt=""></div>
               <div>Christmas Decorating Themes</div>
           </div>
           <div>
-              <div><img src="https://ak1.ostkcdn.com/img/mxc/10182021-HoliGift-MODB3.jpg" alt=""></div>
+              <div><img src="https://i.postimg.cc/tCZZx9Kf/10182021-Holi-Gift-MODB3.jpg" alt=""></div>
               <div>Christmas Tree Buying Guide</div>
           </div>
           <div>
-              <div><img src="https://ak1.ostkcdn.com/img/mxc/10182021-HoliGift-MODB4.jpg" alt=""></div>
+              <div><img src="https://i.postimg.cc/CL3ZCWYK/10182021-Holi-Gift-MODB4.jpg" alt=""></div>
               <div>The Best Appliances Gifts</div>
           </div>
       </div>
     </div>
     <div class="salesDeals dropdown-content-part">
-      <div><img src="https://ak1.ostkcdn.com/img/mxc/05142018DealsSales_OUTLINED.svg" alt=""></div>
+      <div><img src="images/05142018DealsSales_OUTLINED.svg" alt=""></div>
       <div>
           <div>
-              <div><img src="https://ak1.ostkcdn.com/img/mxc/12132021-TNFlyoutCC.jpg?imwidth=320" alt=""></div>
+              <div><img src="https://i.postimg.cc/x1Pz06DT/12132021-TNFlyout-CC.jpg" alt=""></div>
               <div class="salesinfo">
                   <div>huge savings</div>
                   <div>On Beautiful Home Updates</div>
               </div>
           </div>
           <div>
-              <div><img src="https://ak1.ostkcdn.com/img/mxc/12132021-MOPS-StorageWithStyle.png?imwidth=320" alt=""></div>
+              <div><img src="https://i.postimg.cc/Hxrc9HJV/12132021-MOPS-Storage-With-Style.png" alt=""></div>
               <div class="salesinfo">
                   <div>storage with style</div>
                   <div>Organize with ease</div>
               </div>
           </div>
           <div>
-              <div><img src="https://ak1.ostkcdn.com/img/mxc/12132021-MOPS-ShagRugs.png?imwidth=320" alt=""></div>
+              <div><img src="https://i.postimg.cc/XNyBZjSP/12132021-MOPS-Shag-Rugs.png" alt=""></div>
               <div class="salesinfo">
                   <div>chic shag rugs</div>
                   <div>Shop rugs both plush & pretty</div>
               </div>
           </div>
           <div>
-              <div><img src="https://ak1.ostkcdn.com/img/mxc/12132021-MOPS-MultifunctionalFurniture.png?imwidth=320" alt=""></div>
+              <div><img src="https://i.postimg.cc/bNxGTmvH/12132021-MOPS-Multifunctional-Furniture.png" alt=""></div>
               <div class="salesinfo">
                   <div>Multifunctional furniture</div>
                   <div>Furnish with form & function</div>
