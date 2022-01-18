@@ -2,38 +2,44 @@ var cart = JSON.parse(localStorage.getItem("CartOverStock")) || []
 if (cart.length == 0){
   window.location.href = "Product.html"
 }
+ function sidebar(cart) {
+   console.log(1)
+//   console.log(1)
+  let totalPrice = 0
+  for (let j = 0; j < cart.length; j++) {
+    totalPrice += cart[j].price * cart[j].qty;
+  }
+  let discount = totalPrice * 0.1
+  let subTotal = totalPrice - discount
+  totalPrice = (Math.round(totalPrice * 100) / 100).toLocaleString()
+  discount = (Math.round(discount * 100) / 100).toLocaleString()
+  subTotal = (Math.round(subTotal * 100) / 100).toLocaleString()
+
+  document.getElementById("itemValue1").textContent = `(${cart.length}) Item:`
+  document.getElementById("itemValue2").textContent = `(${cart.length}) Item:`
+  document.getElementById("itemTotalValue1").textContent = `INR ${totalPrice}`
+  document.getElementById("itemTotalValue2").textContent = `INR ${totalPrice}`
+  document.getElementById(
+    "itemDiscountValue1"
+  ).textContent = `- INR ${discount}`
+  document.getElementById(
+    "itemDiscountValue2"
+  ).textContent = `- INR ${discount}`
+  document.getElementById("itemSubTotalValue1").textContent = `INR ${subTotal}`
+  document.getElementById("itemSubTotalValue2").textContent = `INR ${subTotal}`
+  document.getElementById("itemFinalValue1").textContent = `INR ${subTotal}`
+  document.getElementById("itemFinalValue2").textContent = `INR ${subTotal}`
+  document.getElementById("checkOutBtn1").addEventListener("click", () => {
+    window.location.href = "signup.html"
+  })
+  document.getElementById("checkOutBtn2").addEventListener("click", () => {
+    window.location.href = "signup.html"
+  })
+}
 let displayItems = () => {
   console.log(cart[0])
-  // let totalPrice = 0
-  // for (let j = 0; j < cart.length; j++) {
-  //   totalPrice += cart[j].price * cart[j].qty;
-  // }
-  // let discount = totalPrice * 0.1
-  // let subTotal = totalPrice - discount
-  // totalPrice = (Math.round(totalPrice * 100) / 100).toLocaleString()
-  // discount = (Math.round(discount * 100) / 100).toLocaleString()
-  // subTotal = (Math.round(subTotal * 100) / 100).toLocaleString()
-
-  // document.getElementById("itemValue1").textContent = `(${cart.length}) Item:`
-  // document.getElementById("itemValue2").textContent = `(${cart.length}) Item:`
-  // document.getElementById("itemTotalValue1").textContent = `INR ${totalPrice}`
-  // document.getElementById("itemTotalValue2").textContent = `INR ${totalPrice}`
-  // document.getElementById(
-  //   "itemDiscountValue1"
-  // ).textContent = `- INR ${discount}`
-  // document.getElementById(
-  //   "itemDiscountValue2"
-  // ).textContent = `- INR ${discount}`
-  // document.getElementById("itemSubTotalValue1").textContent = `INR ${subTotal}`
-  // document.getElementById("itemSubTotalValue2").textContent = `INR ${subTotal}`
-  // document.getElementById("itemFinalValue1").textContent = `INR ${subTotal}`
-  // document.getElementById("itemFinalValue2").textContent = `INR ${subTotal}`
-  // document.getElementById("checkOutBtn1").addEventListener("click", () => {
-  //   window.location.href = "signup.html"
-  // })
-  // document.getElementById("checkOutBtn2").addEventListener("click", () => {
-  //   window.location.href = "signup.html"
-  // })
+  sidebar(cart)
+  
 
   cart.forEach((item, index) => {
     var oe = document.createElement("div")
@@ -193,7 +199,8 @@ let displayItems = () => {
         }
       }
       localStorage.setItem("CartOverStock",JSON.stringify(cart));
-       window.location.href = "cart.html"
+      sidebar(cart)
+      // window.location.href = "cart.html"
 
     })
     iw.append(label, select)
@@ -223,38 +230,39 @@ let displayItems = () => {
     document.getElementById("loaderSS").style.display = "none"
     document.getElementById("compo").style.display = "block"
   }, 4000)
-  cart = JSON.parse(localStorage.getItem("CartOverStock")) || []
-  let totalPrice = 0
+  //sideItem()
+  // cart = JSON.parse(localStorage.getItem("CartOverStock")) || []
+  // let totalPrice = 0
 
-  for (let j = 0; j < cart.length; j++) {
-    totalPrice += cart[j].price * cart[j].qty;
-  }
-  let discount = totalPrice * 0.1
-  let subTotal = totalPrice - discount
-  totalPrice = (Math.round(totalPrice * 100) / 100).toLocaleString()
-  discount = (Math.round(discount * 100) / 100).toLocaleString()
-  subTotal = (Math.round(subTotal * 100) / 100).toLocaleString()
+  // for (let j = 0; j < cart.length; j++) {
+  //   totalPrice += cart[j].price * cart[j].qty;
+  // }
+  // let discount = totalPrice * 0.1
+  // let subTotal = totalPrice - discount
+  // totalPrice = (Math.round(totalPrice * 100) / 100).toLocaleString()
+  // discount = (Math.round(discount * 100) / 100).toLocaleString()
+  // subTotal = (Math.round(subTotal * 100) / 100).toLocaleString()
 
-  document.getElementById("itemValue1").textContent = `(${cart.length}) Item:`
-  document.getElementById("itemValue2").textContent = `(${cart.length}) Item:`
-  document.getElementById("itemTotalValue1").textContent = `INR ${totalPrice}`
-  document.getElementById("itemTotalValue2").textContent = `INR ${totalPrice}`
-  document.getElementById(
-    "itemDiscountValue1"
-  ).textContent = `- INR ${discount}`
-  document.getElementById(
-    "itemDiscountValue2"
-  ).textContent = `- INR ${discount}`
-  document.getElementById("itemSubTotalValue1").textContent = `INR ${subTotal}`
-  document.getElementById("itemSubTotalValue2").textContent = `INR ${subTotal}`
-  document.getElementById("itemFinalValue1").textContent = `INR ${subTotal}`
-  document.getElementById("itemFinalValue2").textContent = `INR ${subTotal}`
-  document.getElementById("checkOutBtn1").addEventListener("click", () => {
-    window.location.href = "signup.html"
-  })
-  document.getElementById("checkOutBtn2").addEventListener("click", () => {
-    window.location.href = "signup.html"
-  })
+  // document.getElementById("itemValue1").textContent = `(${cart.length}) Item:`
+  // document.getElementById("itemValue2").textContent = `(${cart.length}) Item:`
+  // document.getElementById("itemTotalValue1").textContent = `INR ${totalPrice}`
+  // document.getElementById("itemTotalValue2").textContent = `INR ${totalPrice}`
+  // document.getElementById(
+  //   "itemDiscountValue1"
+  // ).textContent = `- INR ${discount}`
+  // document.getElementById(
+  //   "itemDiscountValue2"
+  // ).textContent = `- INR ${discount}`
+  // document.getElementById("itemSubTotalValue1").textContent = `INR ${subTotal}`
+  // document.getElementById("itemSubTotalValue2").textContent = `INR ${subTotal}`
+  // document.getElementById("itemFinalValue1").textContent = `INR ${subTotal}`
+  // document.getElementById("itemFinalValue2").textContent = `INR ${subTotal}`
+  // document.getElementById("checkOutBtn1").addEventListener("click", () => {
+  //   window.location.href = "signup.html"
+  // })
+  // document.getElementById("checkOutBtn2").addEventListener("click", () => {
+  //   window.location.href = "signup.html"
+  // })
 
 }
 
@@ -349,3 +357,75 @@ let cart1 = document.getElementById("cart1")
 cart1.addEventListener("click", function () {
   window.location.href = "cart.html"
 })
+
+
+let sideItem = ()=>{
+
+  cart = JSON.parse(localStorage.getItem("CartOverStock")) || []
+  let totalPrice = 0
+
+  for (let j = 0; j < cart.length; j++) {
+    totalPrice += cart[j].price * cart[j].qty;
+  }
+  let discount = totalPrice * 0.1
+  let subTotal = totalPrice - discount
+  totalPrice = (Math.round(totalPrice * 100) / 100).toLocaleString()
+  discount = (Math.round(discount * 100) / 100).toLocaleString()
+  subTotal = (Math.round(subTotal * 100) / 100).toLocaleString()
+
+  document.getElementById("itemValue1").textContent = `(${cart.length}) Item:`
+  document.getElementById("itemValue2").textContent = `(${cart.length}) Item:`
+  document.getElementById("itemTotalValue1").textContent = `INR ${totalPrice}`
+  document.getElementById("itemTotalValue2").textContent = `INR ${totalPrice}`
+  document.getElementById(
+    "itemDiscountValue1"
+  ).textContent = `- INR ${discount}`
+  document.getElementById(
+    "itemDiscountValue2"
+  ).textContent = `- INR ${discount}`
+  document.getElementById("itemSubTotalValue1").textContent = `INR ${subTotal}`
+  document.getElementById("itemSubTotalValue2").textContent = `INR ${subTotal}`
+  document.getElementById("itemFinalValue1").textContent = `INR ${subTotal}`
+  document.getElementById("itemFinalValue2").textContent = `INR ${subTotal}`
+  document.getElementById("checkOutBtn1").addEventListener("click", () => {
+    window.location.href = "signup.html"
+  })
+  document.getElementById("checkOutBtn2").addEventListener("click", () => {
+    window.location.href = "signup.html"
+  })
+
+}
+
+// let sidebar = () => {
+//   console.log(1)
+//   let totalPrice = 0
+//   for (let j = 0; j < cart.length; j++) {
+//     totalPrice += cart[j].price * cart[j].qty;
+//   }
+//   let discount = totalPrice * 0.1
+//   let subTotal = totalPrice - discount
+//   totalPrice = (Math.round(totalPrice * 100) / 100).toLocaleString()
+//   discount = (Math.round(discount * 100) / 100).toLocaleString()
+//   subTotal = (Math.round(subTotal * 100) / 100).toLocaleString()
+
+//   document.getElementById("itemValue1").textContent = `(${cart.length}) Item:`
+//   document.getElementById("itemValue2").textContent = `(${cart.length}) Item:`
+//   document.getElementById("itemTotalValue1").textContent = `INR ${totalPrice}`
+//   document.getElementById("itemTotalValue2").textContent = `INR ${totalPrice}`
+//   document.getElementById(
+//     "itemDiscountValue1"
+//   ).textContent = `- INR ${discount}`
+//   document.getElementById(
+//     "itemDiscountValue2"
+//   ).textContent = `- INR ${discount}`
+//   document.getElementById("itemSubTotalValue1").textContent = `INR ${subTotal}`
+//   document.getElementById("itemSubTotalValue2").textContent = `INR ${subTotal}`
+//   document.getElementById("itemFinalValue1").textContent = `INR ${subTotal}`
+//   document.getElementById("itemFinalValue2").textContent = `INR ${subTotal}`
+//   document.getElementById("checkOutBtn1").addEventListener("click", () => {
+//     window.location.href = "signup.html"
+//   })
+//   document.getElementById("checkOutBtn2").addEventListener("click", () => {
+//     window.location.href = "signup.html"
+//   })
+// }
