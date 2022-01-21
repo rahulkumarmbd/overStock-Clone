@@ -1,5 +1,7 @@
 var item = JSON.parse(localStorage.getItem("Items")) || ""
 console.log(item)
+//var qty = document.getElementById("qtyP").value
+//console.log(qty)
 var cart = JSON.parse(localStorage.getItem("CartOverStock")) || []
 let imagesArr = [
   item.imageURL,
@@ -36,18 +38,24 @@ if (item.color[1] !== "") {
 }
 document.getElementById("_id").textContent = `ITEM #${item._id}`
 document.getElementById("addToCart").addEventListener("click", () => {
-  var qty = document.getElementById("qtyP").value
+ var qty = document.getElementById("qtyP").value
   item["qty"] = qty
+  
   console.log(item._id)
+  let tempcount = 0;
   console.log(cart)
-  if (cart.length !== 0) {
+  if (cart.length != 0) {
     for (let i = 0; i < cart.length; i++) {
       if (cart[i]._id !== item._id) {
-        cart.push(item)
-        localStorage.setItem("CartOverStock", JSON.stringify(cart))
-      } else {
-        document.getElementById("addToCart").disabled = true
+        tempcount++;
       }
+    }
+    if (tempcount == cart.length){
+         cart.push(item)
+          // console.log(cart)
+          localStorage.setItem("CartOverStock", JSON.stringify(cart))
+    }else {
+      document.getElementById("addToCart").disabled = true
     }
   } else {
     cart.push(item)
