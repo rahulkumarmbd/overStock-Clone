@@ -146,6 +146,12 @@ signInBtn.addEventListener("click", async (e) => {
       localStorage.setItem("loginCheck", "true")
       window.location.href = "checkout.html"
     }
+    else if(data.message){
+      errorMessage(data.message)
+    }
+    else{
+      errorMessage("email or password is incorrect");
+    }
   }
 
 });

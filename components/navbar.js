@@ -20,8 +20,8 @@ let header = () =>{
           <img src="https://i.postimg.cc/tgWqzB8p/Search-1.png alt="">
         </div>
       </div>
-      <div id="account1" class="class-account class-account-common">
-        <div>
+      <div class="class-account class-account-common">
+        <div id="account1">
           <img src="https://i.postimg.cc/RCb3PDNz/User.png" alt="" />
         </div>
         <div>Account</div>
