@@ -74,30 +74,15 @@ signUpBtn.addEventListener("click", async (e) => {
     return;
   }
   e.preventDefault();
-  let userName = "";
-  for (let i = 0; i < email.length; i++) {
-    if (email[i] != "@") {
-      userName += email[i];
-    } else {
-      break;
-    }
-  }
-  function random(number) {
-    return Math.floor(Math.random() * number);
-  }
 
   let signup_data = {
-    name: "Null",
     email: email,
     password: password,
-    username: userName,
-    mobile: String(random(10000000000)),
-    description: "Null",
   };
   signup_data = JSON.stringify(signup_data);
   console.log(signup_data);
 
-  let register_api = `https://masai-api-mocker.herokuapp.com/auth/register`;
+  let register_api = `https://overstock-2.herokuapp.com/register`
 
   var response = await fetch(register_api, {
     method: "POST",
@@ -132,23 +117,15 @@ signInBtn.addEventListener("click", async (e) => {
     return;
   }
   e.preventDefault();
-  let userName = "";
-  for (let i = 0; i < email.length; i++) {
-    if (email[i] != "@") {
-      userName += email[i];
-    } else {
-      break;
-    }
-  }
 
   let login_data = {
-    username: userName,
+    email: email,
     password: password,
   };
 
   login_data = JSON.stringify(login_data);
 
-  let login_api = `https://masai-api-mocker.herokuapp.com/auth/login`;
+  let login_api = `https://overstock-2.herokuapp.com/login`
 
   //fetch request
 
@@ -165,21 +142,12 @@ signInBtn.addEventListener("click", async (e) => {
   if (data.error === true) {
     errorMessage(data.message);
   } else {
-    getProfile(userName, data.token);
-    window.location.href = "checkout.html"
+    if(data.token) {
+      localStorage.setItem("loginCheck", "true")
+      window.location.href = "checkout.html"
+    }
   }
 
-  async function getProfile(username, token) {
-    let api = `https://masai-api-mocker.herokuapp.com/user/${username}`;
-    let response = await fetch(api, {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    let data = await response.json();
-    console.log("data: ", data);
-  }
 });
 
 // guest btn js

@@ -4,19 +4,19 @@ console.log(item)
 //console.log(qty)
 var cart = JSON.parse(localStorage.getItem("CartOverStock")) || []
 let imagesArr = [
-  item.imageURL,
   item.img1,
   item.img2,
   item.img3,
   item.img4,
   item.img5,
+  item.img5
 ]
-document.getElementById("productImage").src = item.imageURL
-document.getElementById("img1p").src = item.imageURL
-document.getElementById("img2p").src = item.img1
-document.getElementById("img3p").src = item.img2
-document.getElementById("img4p").src = item.img3
-document.getElementById("img5p").src = item.img4
+document.getElementById("productImage").src = item.imgURL
+document.getElementById("img1p").src = item.img1
+document.getElementById("img2p").src = item.img2
+document.getElementById("img3p").src = item.img3
+document.getElementById("img4p").src = item.img4
+document.getElementById("img5p").src = item.img5
 document.getElementById("img6p").src = item.img5
 document.getElementById("maincatergory1").textContent = item.main_catergory
 document.getElementById("mainsubcatergory2").textContent =
@@ -27,15 +27,10 @@ document.getElementById("productName1").textContent = item.name
 document.getElementById(
   "productprice1"
 ).innerHTML = `<span>INR</span>${item.price}<span>00</span>`
-document.getElementById("colorImg1").src = imagesArr[0]
-
-document.getElementById("colorName1").textContent = item.color[0]
-if (item.color[1] !== "") {
-  document.getElementById("colorName2").textContent = item.color[1]
-  document.getElementById("colorImg2").src = imagesArr[1]
-} else {
-  document.getElementById("colorImg2").style.display = "none"
-}
+document.getElementById("colorImg2").src = item.color[0].imgUrl[0].location
+document.getElementById("colorName2").textContent = item.color[0].name
+document.getElementById("colorName1").textContent = item.color[1].name
+document.getElementById("colorImg1").src = item.color[1].imgUrl[0].location
 document.getElementById("_id").textContent = `ITEM #${item._id}`
 document.getElementById("addToCart").addEventListener("click", () => {
  var qty = document.getElementById("qtyP").value
@@ -67,7 +62,7 @@ document.getElementById("addToCart").addEventListener("click", () => {
 setTimeout(function () {
   document.getElementById("loaderSS").style.display = "none"
   document.getElementById("compo").style.display = "block"
-}, 3500)
+}, 1000)
 
 let current = 0
 let nextBtn = document.querySelector(".slider1 > .next-arr")
@@ -188,11 +183,11 @@ function addImage() {
   img.src = copyImg
 }
 
-frameImg2.addEventListener("mouseover", function () {
-  copyImg = img.src
-  img.src = frameImg2.src
-  frameImg2.addEventListener("mouseout", addImage)
-})
+// frameImg2.addEventListener("mouseover", function () {
+//   copyImg = img.src
+//   img.src = frameImg2.src
+//   frameImg2.addEventListener("mouseout", addImage)
+// })
 
 frameImg2.addEventListener("click", function () {
   frameImg2.removeEventListener("mouseout", addImage)
@@ -201,11 +196,11 @@ frameImg2.addEventListener("click", function () {
   previewNextSlide(0)
 })
 
-frameImg1.addEventListener("mouseover", function () {
-  copyImg = img.src
-  img.src = frameImg1.src
-  frameImg1.addEventListener("mouseout", addImage)
-})
+// frameImg1.addEventListener("mouseover", function () {
+//   copyImg = img.src
+//   img.src = frameImg1.src
+//   frameImg1.addEventListener("mouseout", addImage)
+// })
 
 frameImg1.addEventListener("click", function () {
   frameImg1.removeEventListener("mouseout", addImage)

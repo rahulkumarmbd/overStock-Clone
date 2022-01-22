@@ -34,7 +34,7 @@ let header = () =>{
           <div>My Reviews</div>
           <div>Gift Cards</div>
           <div>Help</div>
-          <div>Sign Out</div>
+          <div id="signout">Sign In</div>
         </div>
       </div>
       <div class="class-account class-account-common">

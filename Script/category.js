@@ -1,15 +1,15 @@
 var pageName = localStorage.getItem("pageName") || ""
 var nn = pageName
 console.log(nn)
-fetch(`https://overstockapi.herokuapp.com/page/${pageName}`)
+fetch(`https://overstock-2.herokuapp.com/pages/${pageName}`)
   .then((response) => {
     return response.json()
   })
   .then((response) => {
     var data = response
     console.log(data)
-    document.getElementById("bimg").setAttribute("src", data.imgURL)
-    document.getElementById("bimg1").setAttribute("src", data.imgURL)
+    document.getElementById("bimg").setAttribute("src", data.imgUrl)
+    document.getElementById("bimg1").setAttribute("src", data.imgUrl)
     document.getElementById("pageName").textContent = data.pageName
     document.getElementById("offerCat").textContent = `Select ${data.pageName}*`
     document.getElementById(
@@ -34,16 +34,18 @@ fetch(`https://overstockapi.herokuapp.com/page/${pageName}`)
     document.getElementById("text4").textContent = data.text4
     document.getElementById("img1").setAttribute("src", data.img1)
     document.getElementById("img2").setAttribute("src", data.img2)
-    appendCategories(data.catergory)
+    appendCategories(data.category)
     appendMoreCategories(data.moreCategory)
     setTimeout(function () {
       document.getElementById("loaderSS").style.display = "none"
       document.getElementById("compo").style.display = "block"
-    }, 2000)
+    }, 1000)
   })
 
 var appendCategories = (data) => {
+  console.log(data)
   data.forEach((item) => {
+    console.log(item)
     let li = document.createElement("li")
     li.setAttribute("class", "featuredNavLi")
     let a = document.createElement("a")
@@ -124,23 +126,22 @@ import mobileNav from "/components/mobilenav.js"
 document.querySelector("#mobilePtn").innerHTML = mobileNav()
 document.querySelector("#footerPut").innerHTML = footer()
 
-
-for(let i=0; i<13; i++){
-  let sectionDiv = document.querySelectorAll(".section-div > div");
+for (let i = 0; i < 13; i++) {
+  let sectionDiv = document.querySelectorAll(".section-div > div")
   sectionDiv[i].addEventListener("mouseover", function () {
-    let dropDownContainer = document.querySelectorAll(".dropdown-content-part");
-    dropDownContainer[i].style.display = "flex";
-  });
+    let dropDownContainer = document.querySelectorAll(".dropdown-content-part")
+    dropDownContainer[i].style.display = "flex"
+  })
   sectionDiv[i].addEventListener("mouseout", function () {
-    let dropDownContainer = document.querySelectorAll(".dropdown-content-part");
-    dropDownContainer[i].style.display = "none";
+    let dropDownContainer = document.querySelectorAll(".dropdown-content-part")
+    dropDownContainer[i].style.display = "none"
     dropDownContainer[i].addEventListener("mouseover", function () {
-      dropDownContainer[i].style.display = "flex";
-    });
+      dropDownContainer[i].style.display = "flex"
+    })
     dropDownContainer[i].addEventListener("mouseout", function () {
-      dropDownContainer[i].style.display = "none";
-    });
-  });
+      dropDownContainer[i].style.display = "none"
+    })
+  })
 }
 
 // let mains = document.querySelectorAll(".dropdown-content-part > div > div > div");
@@ -152,12 +153,12 @@ for(let i=0; i<13; i++){
 //   })
 // }
 
-let sectionDiv = document.querySelectorAll(".section-div > div");
-for(let i=0; i<sectionDiv.length; i++){
-  sectionDiv[i].addEventListener("click",function(){
-    console.log(sectionDiv[i].textContent);
-    localStorage.setItem("pageName",sectionDiv[i].textContent);
-    window.location.href = "category.html";
+let sectionDiv = document.querySelectorAll(".section-div > div")
+for (let i = 0; i < sectionDiv.length; i++) {
+  sectionDiv[i].addEventListener("click", function () {
+    console.log(sectionDiv[i].textContent)
+    localStorage.setItem("pageName", sectionDiv[i].textContent)
+    window.location.href = "category.html"
   })
 }
 
@@ -169,7 +170,6 @@ for(let i=0; i<sectionDiv.length; i++){
 //     window.location.href = "productsDisplay.html";
 //   })
 // }
-
 
 let overstockIndex = document.querySelectorAll(".overstockIndex")
 for (let i = 0; i < overstockIndex.length; i++) {

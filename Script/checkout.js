@@ -206,4 +206,8 @@ document.querySelector(".button").addEventListener("click",function(){
    var rzp1 = new Razorpay(options)
    rzp1.open()
    e.preventDefault()
+
+   const cart = []
+
+   localStorage.setItem("CartOverStock", JSON.stringify(cart))
  }

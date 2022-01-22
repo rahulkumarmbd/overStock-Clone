@@ -5,43 +5,21 @@ console.log(nn);
 var cart = JSON.parse(localStorage.getItem("Items")) || {};
 var data;
 document.getElementById("headingResult").textContent = nn;
-fetch(`https://overstockapi.herokuapp.com/products/subCategory=${nn}`)
+fetch(
+  `https://overstock-2.herokuapp.com/products/mainSubCategory=${nn}`
+)
   .then((response) => {
-    return response.json();
+    return response.json()
   })
   .then((response) => {
-      data = response;
-      console.log(data);
-    if (data.length !== 0) {
-      appendCard(data);
-    } else {
-      fetch(`https://overstockapi.herokuapp.com/products/mainSubCategory=${nn}`)
-        .then((response) => {
-          return response.json();
-        })
-        .then((response) => {
-          var data = response;
-          console.log(data);
-          if (data.length !== 0) {
-            appendCard(data);
-          } else {
-            fetch(`https://overstockapi.herokuapp.com/products/category=${nn}`)
-              .then((response) => {
-                return response.json();
-              })
-              .then((response) => {
-                var data = response;
-                console.log(data);
-                appendCard(data);
-              });
-          }
-        });
-    }
+    data = response
+    console.log(data)
+    appendCard(data)
     setTimeout(function () {
-      document.getElementById("loaderSS").style.display = "none";
-      document.getElementById("compo").style.display = "block";
-    }, 4000);
-  });
+      document.getElementById("loaderSS").style.display = "none"
+      document.getElementById("compo").style.display = "block"
+    }, 1000)
+  })
 
 var appendCard = (data) => {
   data.forEach((item) => {
@@ -87,7 +65,7 @@ var appendCard = (data) => {
     productCardFrontImage.setAttribute("class", "productCardFrontImage");
     productCardFrontImage.width = "320";
     productCardFrontImage.height = "320";
-    productCardFrontImage.setAttribute("src", item.imageURL);
+    productCardFrontImage.setAttribute("src", item.imgURL);
     productCardFrontImageContainer.append(productCardFrontImage);
     productCardFrontMain.append(
       productCardInfoBannerContainer,
