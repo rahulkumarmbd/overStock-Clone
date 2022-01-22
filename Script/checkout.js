@@ -168,3 +168,42 @@ document.querySelector(".button").addEventListener("click",function(){
      }
  }
 
+ const amount = localStorage.getItem("subtotal") || 0
+ amount = Number(amount)
+
+ async function rz() {
+   const data = {
+     amount: amount,
+   }
+
+   let url = "https://overstock-2.herokuapp.com/razorpay"
+
+   let response = await fetch(url, {
+     method: "POST",
+     body: JSON.stringify(data),
+     headers: {
+       "Content-Type": "application/json",
+     },
+   })
+   let d = await response.json()
+   console.log(d)
+
+   var options = {
+     key: "rzp_test_kqeHDKDTMlfKMR", // Enter the Key ID generated from the Dashboard
+     name: "Overstock",
+     description: d.id,
+     image:
+       "https://overstock-clone.s3.ap-south-1.amazonaws.com/4a845da84a93db30e2830315562ffbb4c700b0f1af9fe3922cab9779693b5d63_200.jpg",
+     order_id: d.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+     callback_url: "https://overstock-2.herokuapp.com/razorpay/success",
+     notes: {
+       address: "Razorpay Corporate Office",
+     },
+     theme: {
+       color: "#FD2835",
+     },
+   }
+   var rzp1 = new Razorpay(options)
+   rzp1.open()
+   e.preventDefault()
+ }

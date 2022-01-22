@@ -11,6 +11,7 @@ if (cart.length == 0){
   }
   let discount = totalPrice * 0.1
   let subTotal = totalPrice - discount
+  localStorage.setItem("subtotal", Math.floor(subTotal) * 100)
   totalPrice = (Math.round(totalPrice * 100) / 100).toLocaleString()
   discount = (Math.round(discount * 100) / 100).toLocaleString()
   subTotal = (Math.round(subTotal * 100) / 100).toLocaleString()
