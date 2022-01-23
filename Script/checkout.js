@@ -111,7 +111,7 @@ let checkPaymentDetails = () => {
   }
 }
 
-const amount = localStorage.getItem("subtotal") || 0
+let amount = localStorage.getItem("subtotal") || 0
 amount = Number(amount)
 
 async function rz() {
