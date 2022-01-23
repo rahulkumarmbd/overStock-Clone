@@ -143,7 +143,7 @@ signInBtn.addEventListener("click", async (e) => {
     errorMessage(data.message);
   } else {
     if(data.token) {
-      window.location.href = "cart.html"
+      window.location.href = "checkout.html"
     }
     else if(data.message){
       errorMessage(data.message)
