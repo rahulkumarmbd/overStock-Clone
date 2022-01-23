@@ -59,11 +59,11 @@
 // })
 
 document.querySelector(".button").addEventListener("click", function () {
-  checkAddress();
-});
+  checkAddress()
+})
 
 let checkAddress = () => {
-  let checkValue = "true";
+  let checkValue = "true"
   billingAddressData = {
     email: document.getElementById("email").value,
     firstName: document.getElementById("firstName").value,
@@ -77,7 +77,7 @@ let checkAddress = () => {
     state: document.getElementById("state").value,
     zipcode: document.getElementById("zipcode").value,
     phone: document.getElementById("phone").value,
-  };
+  }
 
   for (key in billingAddressData) {
     if (billingAddressData[key] == "") {
@@ -90,19 +90,19 @@ let checkAddress = () => {
         key == "city" ||
         key == "phone"
       ) {
-        alert(`${key} is Required`);
-        checkValue = "false";
-        break;
+        alert(`${key} is Required`)
+        checkValue = "false"
+        break
       }
     }
   }
   if (checkValue != "false") {
-    checkAddress2();
+    checkAddress2()
   }
-};
+}
 
 let checkAddress2 = () => {
-  let checkValue2 = "true";
+  let checkValue2 = "true"
   billingAddressData = {
     email: document.getElementById("email2").value,
     firstName: document.getElementById("firstName2").value,
@@ -116,7 +116,7 @@ let checkAddress2 = () => {
     state: document.getElementById("state2").value,
     zipcode: document.getElementById("zipcode2").value,
     phone: document.getElementById("phone2").value,
-  };
+  }
 
   for (key in billingAddressData) {
     if (billingAddressData[key] == "") {
@@ -129,57 +129,57 @@ let checkAddress2 = () => {
         key == "city" ||
         key == "phone"
       ) {
-        alert(`${key} is Required`);
-        checkValue2 = "false";
-        return;
+        alert(`${key} is Required`)
+        checkValue2 = "false"
+        return
       }
     }
   }
   if (checkValue2 != "false") {
-    checkPaymentDetails();
+    checkPaymentDetails()
   }
-};
+}
 
 let checkPaymentDetails = () => {
-  let checkValue3 = "true";
+  let checkValue3 = "true"
 
   let paymentDetails = {
     card_type: document.getElementById("card_type").value,
     name: document.getElementById("name").value,
     exp_date: document.getElementById("exp_date").value,
     cvv: document.getElementById("cvv").value,
-  };
+  }
 
   for (key in paymentDetails) {
-    console.log(1);
+    console.log(1)
     if (paymentDetails[key] == "") {
-      alert(`${key} is required for Payment`);
-      checkValue3 = "false";
-      console.log(1);
-      return;
+      alert(`${key} is required for Payment`)
+      checkValue3 = "false"
+      console.log(1)
+      return
     }
   }
-  console.log(1);
+  console.log(1)
   if (checkValue3 != "false") {
-    console.log(1);
+    console.log(1)
     if (paymentDetails.name == "abhi" && paymentDetails.cvv == 123) {
       //  alert("Not valid Credentials")
-      localStorage.clear();
-      window.location.href = "congr.html";
+      localStorage.clear()
+      window.location.href = "congr.html"
     } else {
     }
   }
-};
+}
 
-const amount = localStorage.getItem("subtotal") || 0;
-amount = Number(amount);
+const amount = localStorage.getItem("subtotal") || 0
+amount = Number(amount)
 
 async function rz() {
   const data = {
     amount: amount,
-  };
+  }
 
-  let url = "https://overstock-2.herokuapp.com/razorpay";
+  let url = "https://overstock-2.herokuapp.com/razorpay"
 
   let response = await fetch(url, {
     method: "POST",
@@ -187,9 +187,9 @@ async function rz() {
     headers: {
       "Content-Type": "application/json",
     },
-  });
-  let d = await response.json();
-  console.log(d);
+  })
+  let d = await response.json()
+  console.log(d)
 
   var options = {
     key: "rzp_test_kqeHDKDTMlfKMR", // Enter the Key ID generated from the Dashboard
@@ -205,28 +205,26 @@ async function rz() {
     theme: {
       color: "#FD2835",
     },
-  };
-  var rzp1 = new Razorpay(options);
-  rzp1.open();
-  e.preventDefault();
-
-  const cart = [];
-
-  localStorage.setItem("CartOverStock", JSON.stringify(cart));
+  }
+  var rzp1 = new Razorpay(options)
+  rzp1.open()
+  e.preventDefault()
 }
 
-let text = document.getElementById("signout");
+let text = document.getElementById("signout")
 
-text.addEventListener("click",() => {
-  if(text.textContent == "Sign Out"){
-    localStorage.setItem("loginCheck","false");
+text.addEventListener("click", () => {
+  if (text.textContent == "Sign Out") {
+    localStorage.setItem("loginCheck", "false")
   }
-  window.location.href = "signup.html";
+  window.location.href = "signup.html"
 })
 
-const status = localStorage.getItem("loginCheck") || "false";
+const status = localStorage.getItem("loginCheck") || "false"
 if (status !== "false") {
-  text.textContent = "Sign Out";
+  text.textContent = "Sign Out"
 } else {
-  text.textContent = "Sign In";
+  text.textContent = "Sign In"
 }
+
+localStorage.setItem("loginCheck", "true")

@@ -1,7 +1,5 @@
 var item = JSON.parse(localStorage.getItem("Items")) || ""
 console.log(item)
-//var qty = document.getElementById("qtyP").value
-//console.log(qty)
 var cart = JSON.parse(localStorage.getItem("CartOverStock")) || []
 let imagesArr = [
   item.img1,
@@ -9,9 +7,10 @@ let imagesArr = [
   item.img3,
   item.img4,
   item.img5,
-  item.img5
+  item.img5,
 ]
 document.getElementById("productImage").src = item.imgURL
+document.getElementById("navProductImg").src = item.imgURL
 document.getElementById("img1p").src = item.img1
 document.getElementById("img2p").src = item.img2
 document.getElementById("img3p").src = item.img3
@@ -24,39 +23,46 @@ document.getElementById("mainsubcatergory2").textContent =
 document.getElementById("subcatergory3").textContent = item.sub_catergory
 document.getElementById("catergory4").textContent = item.catergory
 document.getElementById("productName1").textContent = item.name
+document.getElementById("navProductName").textContent = item.name
 document.getElementById(
   "productprice1"
 ).innerHTML = `<span>INR</span>${item.price}<span>00</span>`
+document.getElementById("navProductPrice").innerHTML = `Sale INR ${item.price}`
 document.getElementById("colorImg2").src = item.color[0].imgUrl[0].location
 document.getElementById("colorName2").textContent = item.color[0].name
 document.getElementById("colorName1").textContent = item.color[1].name
 document.getElementById("colorImg1").src = item.color[1].imgUrl[0].location
 document.getElementById("_id").textContent = `ITEM #${item._id}`
+
 document.getElementById("addToCart").addEventListener("click", () => {
- var qty = document.getElementById("qtyP").value
+  var qty = document.getElementById("qtyP").value
   item["qty"] = qty
+
+  let tempcount = 0
   
-  console.log(item._id)
-  let tempcount = 0;
-  console.log(cart)
   if (cart.length != 0) {
     for (let i = 0; i < cart.length; i++) {
       if (cart[i]._id !== item._id) {
-        tempcount++;
+        tempcount++
       }
     }
-    if (tempcount == cart.length){
-         cart.push(item)
-          // console.log(cart)
-          localStorage.setItem("CartOverStock", JSON.stringify(cart))
-    }else {
+    if (tempcount == cart.length) {
+      cart.push(item)
+      
+      localStorage.setItem("CartOverStock", JSON.stringify(cart))
+    } else {
       document.getElementById("addToCart").disabled = true
     }
   } else {
     cart.push(item)
     localStorage.setItem("CartOverStock", JSON.stringify(cart))
   }
-  window.location.href = "cart.html"
+  let status = localStorage.getItem("loginCheck") || "false"
+  if (status !== "false") {
+    window.location.href = "cart.html"
+  } else {
+    window.location.href = "signup.html"
+  }
 })
 
 setTimeout(function () {
@@ -87,8 +93,6 @@ iconSlides.forEach((iconSlide, index) => {
       item.classList.remove("blackBorder")
     })
     iconSlide.classList.add("blackBorder")
-    console.log(iconSlide)
-    console.log("hello")
   })
 })
 
@@ -131,7 +135,6 @@ function previewPrevSlide() {
   img.src = imagesArr[current]
   iconSlides[current + 1].classList.remove("active")
   iconSlides[current].classList.add("active")
-  console.log(current)
   if (current <= 4) {
     div.style.transform = "translateX(-0%)"
     click = 0
@@ -272,7 +275,6 @@ Navi[1].addEventListener("click", function () {
 window.addEventListener("scroll", () => {
   var scrollable = 720
   var scrolled = window.scrollY
-  console.log(scrolled)
   let ProductHeader = document.getElementById("Product-header")
   if (scrolled >= scrollable) {
     ProductHeader.style.display = "block"
@@ -325,7 +327,6 @@ window.addEventListener("scroll", () => {
 window.page = (name) => {
   var pageName = localStorage.getItem("pageName") || ""
   localStorage.setItem("pageName", name)
-  console.log(name)
   window.location.href = "category.html"
 }
 import header from "/components/navbar.js"
@@ -337,51 +338,32 @@ import mobileNav from "/components/mobilenav.js"
 // document.querySelector("#mobilePtn").innerHTML = mobileNav()
 document.querySelector("#footerPut").innerHTML = footer()
 
-
-for(let i=0; i<13; i++){
-  let sectionDiv = document.querySelectorAll(".section-div > div");
+for (let i = 0; i < 13; i++) {
+  let sectionDiv = document.querySelectorAll(".section-div > div")
   sectionDiv[i].addEventListener("mouseover", function () {
-    let dropDownContainer = document.querySelectorAll(".dropdown-content-part");
-    dropDownContainer[i].style.display = "flex";
-  });
+    let dropDownContainer = document.querySelectorAll(".dropdown-content-part")
+    dropDownContainer[i].style.display = "flex"
+  })
   sectionDiv[i].addEventListener("mouseout", function () {
-    let dropDownContainer = document.querySelectorAll(".dropdown-content-part");
-    dropDownContainer[i].style.display = "none";
+    let dropDownContainer = document.querySelectorAll(".dropdown-content-part")
+    dropDownContainer[i].style.display = "none"
     dropDownContainer[i].addEventListener("mouseover", function () {
-      dropDownContainer[i].style.display = "flex";
-    });
+      dropDownContainer[i].style.display = "flex"
+    })
     dropDownContainer[i].addEventListener("mouseout", function () {
-      dropDownContainer[i].style.display = "none";
-    });
-  });
-}
-
-// let mains = document.querySelectorAll(".dropdown-content-part > div > div > div");
-// for(let i=0; i<mains.length; i++){
-//   mains[i].addEventListener("click",function(){
-//     console.log(mains[i].textContent);
-//     localStorage.setItem("Items",mains[i].textContent);
-//     window.location.href = "productsDisplay.html";
-//   })
-// }
-
-let sectionDiv = document.querySelectorAll(".section-div > div");
-for(let i=0; i<sectionDiv.length; i++){
-  sectionDiv[i].addEventListener("click",function(){
-    console.log(sectionDiv[i].textContent);
-    localStorage.setItem("pageName",sectionDiv[i].textContent);
-    window.location.href = "category.html";
+      dropDownContainer[i].style.display = "none"
+    })
   })
 }
 
-// let blackDiv = document.querySelectorAll(".dark-div");
-// for(let i=0; i<blackDiv.length; i++){
-//   blackDiv[i].addEventListener("click",function(){
-//     console.log(blackDiv[i].textContent);
-//     localStorage.setItem("productsPageName",blackDiv[i].textContent);
-//     window.location.href = "productsDisplay.html";
-//   })
-// }
+let sectionDiv = document.querySelectorAll(".section-div > div")
+for (let i = 0; i < sectionDiv.length; i++) {
+  sectionDiv[i].addEventListener("click", function () {
+    localStorage.setItem("pageName", sectionDiv[i].textContent)
+    window.location.href = "category.html"
+  })
+}
+
 
 let overstockIndex = document.querySelectorAll(".overstockIndex")
 for (let i = 0; i < overstockIndex.length; i++) {
@@ -402,17 +384,16 @@ cart1.addEventListener("click", function () {
 
 let text = document.getElementById("signout")
 
-text.addEventListener("click",() => {
-  if(text.textContent == "Sign Out"){
-    localStorage.setItem("loginCheck","false");
+text.addEventListener("click", () => {
+  if (text.textContent == "Sign Out") {
+    localStorage.setItem("loginCheck", "false")
   }
   window.location.href = "signup.html"
 })
 
-const status = localStorage.getItem("loginCheck") || "false";
-if(status !== "false"){
+const status = localStorage.getItem("loginCheck") || "false"
+if (status !== "false") {
   text.textContent = "Sign Out"
-}
-else{
+} else {
   text.textContent = "Sign In"
 }

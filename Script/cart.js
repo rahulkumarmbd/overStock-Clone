@@ -217,7 +217,7 @@ let displayItems = () => {
       option20
     )
 
-    select.addEventListener("change", function (event) {
+    select.addEventListener("change", async function (event) {
       let qty1 = event.target.value
       for (var i = 0; i < cart.length; i++) {
         if (i == index) {
@@ -227,7 +227,29 @@ let displayItems = () => {
       localStorage.setItem("CartOverStock", JSON.stringify(cart))
       sidebar(cart)
       // window.location.href = "cart.html"
+      let userData = JSON.parse(localStorage.getItem("CartOverStock"))
+      let email = localStorage.getItem("userEmail")
+      let cartData = {
+        userData: userData,
+        email: email,
+      }
+      
+
+      cartData = JSON.stringify(cartData)
+      let login_api = `https://overstock-2.herokuapp.com/cart`
+
+      //fetch request
+
+      let response = await fetch(login_api, {
+        method: "POST",
+        body: cartData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+
     })
+
     iw.append(label, select)
     var ok = document.createElement("div")
     ok.setAttribute("class", "ok")
@@ -350,17 +372,43 @@ cart1.addEventListener("click", function () {
 
 let text = document.getElementById("signout")
 
-text.addEventListener("click",() => {
-  if(text.textContent == "Sign Out"){
-    localStorage.setItem("loginCheck","false");
+text.addEventListener("click", () => {
+  if (text.textContent == "Sign Out") {
+    localStorage.setItem("loginCheck", "false")
   }
-  window.location.href = "signup.html";
+  window.location.href = "signup.html"
 })
 
-const status = localStorage.getItem("loginCheck") || "false";
-if(status !== "false"){
+const status = localStorage.getItem("loginCheck") || "false"
+if (status !== "false") {
   text.textContent = "Sign Out"
-}
-else{
+} else {
   text.textContent = "Sign In"
 }
+
+async function loadCart(params) {
+  localStorage.setItem("CartOverStock", JSON.stringify(cart))
+  sidebar(cart)
+  // window.location.href = "cart.html"
+  let userData = JSON.parse(localStorage.getItem("CartOverStock"))
+  let email = localStorage.getItem("userEmail")
+  let cartData = {
+    userData: userData,
+    email: email,
+  }
+
+  cartData = JSON.stringify(cartData)
+  let login_api = `https://overstock-2.herokuapp.com/cart`
+
+  //fetch request
+
+  let response = await fetch(login_api, {
+    method: "POST",
+    body: cartData,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+}
+
+loadCart()
