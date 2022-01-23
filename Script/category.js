@@ -190,17 +190,16 @@ cart1.addEventListener("click", function () {
 
 let text = document.getElementById("signout")
 
-text.addEventListener("click",() => {
-  if(text.textContent == "Sign Out"){
-    localStorage.setItem("loginCheck","false");
+text.addEventListener("click", () => {
+  if (text.textContent == "Sign Out") {
+    localStorage.setItem("userEmail", "")
   }
-  window.location.href = "signup.html";
+  window.location.href = "signup.html"
 })
 
-const status = localStorage.getItem("loginCheck") || "false";
-if(status !== "false"){
+const status = localStorage.getItem("userEmail") || ""
+if (status !== "") {
   text.textContent = "Sign Out"
-}
-else{
+} else {
   text.textContent = "Sign In"
 }

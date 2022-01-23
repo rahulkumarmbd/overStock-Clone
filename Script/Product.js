@@ -39,7 +39,7 @@ document.getElementById("addToCart").addEventListener("click", () => {
   item["qty"] = qty
 
   let tempcount = 0
-  
+
   if (cart.length != 0) {
     for (let i = 0; i < cart.length; i++) {
       if (cart[i]._id !== item._id) {
@@ -48,7 +48,7 @@ document.getElementById("addToCart").addEventListener("click", () => {
     }
     if (tempcount == cart.length) {
       cart.push(item)
-      
+
       localStorage.setItem("CartOverStock", JSON.stringify(cart))
     } else {
       document.getElementById("addToCart").disabled = true
@@ -364,7 +364,6 @@ for (let i = 0; i < sectionDiv.length; i++) {
   })
 }
 
-
 let overstockIndex = document.querySelectorAll(".overstockIndex")
 for (let i = 0; i < overstockIndex.length; i++) {
   overstockIndex[i].addEventListener("click", function () {
@@ -386,13 +385,13 @@ let text = document.getElementById("signout")
 
 text.addEventListener("click", () => {
   if (text.textContent == "Sign Out") {
-    localStorage.setItem("loginCheck", "false")
+    localStorage.setItem("userEmail", "")
   }
   window.location.href = "signup.html"
 })
 
-const status = localStorage.getItem("loginCheck") || "false"
-if (status !== "false") {
+const status = localStorage.getItem("userEmail") || ""
+if (status !== "") {
   text.textContent = "Sign Out"
 } else {
   text.textContent = "Sign In"

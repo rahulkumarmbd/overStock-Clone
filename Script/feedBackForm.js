@@ -49,18 +49,19 @@ function addFeedBack(event) {
   alert("Thank You For Your Valuable Feedback");
   window.location.href = "index.html";
 }
+
 let text = document.getElementById("signout");
 
 text.addEventListener("click", () => {
   if (text.textContent == "Sign Out") {
-    localStorage.setItem("loginCheck", "false");
+    localStorage.setItem("userEmail", "")
   }
-  window.location.href = "signup.html";
-});
+  window.location.href = "signup.html"
+})
 
-const status = localStorage.getItem("loginCheck") || "false";
-if (status !== "false") {
-  text.textContent = "Sign Out";
+const status = localStorage.getItem("userEmail") || ""
+if (status !== "") {
+  text.textContent = "Sign Out"
 } else {
-  text.textContent = "Sign In";
+  text.textContent = "Sign In"
 }
