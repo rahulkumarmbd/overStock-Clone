@@ -143,23 +143,6 @@ signInBtn.addEventListener("click", async (e) => {
     errorMessage(data.message);
   } else {
     if(data.token) {
-      localStorage.setItem("loginCheck", "true")
-      localStorage.setItem("userEmail", data.user.email)
-      
-      async function getRedis() {
-        let login_api = `https://overstock-2.herokuapp.com/cart/${data.user.email}`
-
-        //fetch request
-
-        let response = await fetch(login_api)
-
-        response = await response.json()
-
-        localStorage.setItem("CartOverStock", JSON.stringify(response))
-      }
-
-      getRedis()
-
       window.location.href = "cart.html"
     }
     else if(data.message){

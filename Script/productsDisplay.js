@@ -280,18 +280,3 @@ low.addEventListener("click",function(){
 
 })
 
-let text = document.getElementById("signout")
-
-text.addEventListener("click", () => {
-  if (text.textContent == "Sign Out") {
-    localStorage.setItem("userEmail", "")
-  }
-  window.location.href = "signup.html"
-})
-
-const status = localStorage.getItem("userEmail") || ""
-if (status !== "") {
-  text.textContent = "Sign Out"
-} else {
-  text.textContent = "Sign In"
-}

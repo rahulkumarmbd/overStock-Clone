@@ -226,27 +226,7 @@ let displayItems = () => {
       }
       localStorage.setItem("CartOverStock", JSON.stringify(cart))
       sidebar(cart)
-      // window.location.href = "cart.html"
-      let userData = JSON.parse(localStorage.getItem("CartOverStock"))
-      let email = localStorage.getItem("userEmail")
-      let cartData = {
-        userData: userData,
-        email: email,
-      }
-      
-
-      cartData = JSON.stringify(cartData)
-      let login_api = `https://overstock-2.herokuapp.com/cart`
-
-      //fetch request
-
-      let response = await fetch(login_api, {
-        method: "POST",
-        body: cartData,
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+      window.location.href = "cart.html"
 
     })
 
@@ -286,8 +266,6 @@ function removeItem(index) {
   cart.splice(index, 1)
   localStorage.setItem("CartOverStock", JSON.stringify(cart))
   if (cart.length === 0) {
-    window.location.href = "productsDisplay.html"
-  } else {
     window.location.href = "index.html"
   }
   displayItems()
@@ -369,46 +347,3 @@ let cart1 = document.getElementById("cart1")
 cart1.addEventListener("click", function () {
   window.location.href = "cart.html"
 })
-
-let text = document.getElementById("signout")
-
-text.addEventListener("click", () => {
-  if (text.textContent == "Sign Out") {
-    localStorage.setItem("userEmail", "")
-  }
-  window.location.href = "signup.html"
-})
-
-const status = localStorage.getItem("userEmail") || ""
-if (status !== "") {
-  text.textContent = "Sign Out"
-} else {
-  text.textContent = "Sign In"
-}
-
-async function loadCart(params) {
-  localStorage.setItem("CartOverStock", JSON.stringify(cart))
-  sidebar(cart)
-  // window.location.href = "cart.html"
-  let userData = JSON.parse(localStorage.getItem("CartOverStock"))
-  let email = localStorage.getItem("userEmail")
-  let cartData = {
-    userData: userData,
-    email: email,
-  }
-
-  cartData = JSON.stringify(cartData)
-  let login_api = `https://overstock-2.herokuapp.com/cart`
-
-  //fetch request
-
-  let response = await fetch(login_api, {
-    method: "POST",
-    body: cartData,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-}
-
-loadCart()

@@ -57,12 +57,7 @@ document.getElementById("addToCart").addEventListener("click", () => {
     cart.push(item)
     localStorage.setItem("CartOverStock", JSON.stringify(cart))
   }
-  let status = localStorage.getItem("loginCheck") || "false"
-  if (status !== "false") {
     window.location.href = "cart.html"
-  } else {
-    window.location.href = "signup.html"
-  }
 })
 
 setTimeout(function () {
@@ -380,19 +375,3 @@ let cart1 = document.getElementById("cart1")
 cart1.addEventListener("click", function () {
   window.location.href = "cart.html"
 })
-
-let text = document.getElementById("signout")
-
-text.addEventListener("click", () => {
-  if (text.textContent == "Sign Out") {
-    localStorage.setItem("userEmail", "")
-  }
-  window.location.href = "signup.html"
-})
-
-const status = localStorage.getItem("userEmail") || ""
-if (status !== "") {
-  text.textContent = "Sign Out"
-} else {
-  text.textContent = "Sign In"
-}
