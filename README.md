@@ -15,7 +15,7 @@
 ## Our Team Members ❤️
 
 - **[Nitesh Baghel](https://github.com/nitesh172)**
-- **[Rahul Sharma](https://github.com/rahulkumarmbd)**
+- **[Rahul Kumar](https://github.com/rahulkumarmbd)**
 - **[Rohan Verma](https://github.com/Rohanverma4)**
 - **[Abhishek Kumar Mishra](https://github.com/abhimis12)**
 
